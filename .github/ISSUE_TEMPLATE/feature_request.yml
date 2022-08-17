@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest an idea for this project
+title: "Feature: "
+labels: ["enhancement"]
+assignees:
+  - octocat
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What is your feature idea?
+      description: Please describe the problem and potential solution you'd like to see.
+      placeholder: Ex. I'm always frustrated when... It would be nice if...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What alternatives have you considered?
+      placeholder: E.g. What workarounds have you tried? Other similar feature ideas that would address the problem?
