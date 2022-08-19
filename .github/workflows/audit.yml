@@ -1,0 +1,36 @@
+# Workflow for validating package dependencies
+name: Audit
+
+# Only run on pull requests that touch yarn.lock
+on:
+  pull_request:
+    branches: [main]
+    paths: ['yarn.lock']
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    name: No new vulnerabilities
+    steps:
+      - name: Setup node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+          check-latest: true
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Install dependencies for main branch
+        run: yarn install --frozen-lockfile
+      - name: Audit the old number of vulnerabilities
+        run: echo "old_num=$(yarn audit --summary | grep vulnerabilities | cut -d ' ' -f1)" >> $GITHUB_ENV
+      - name: Checkout PR branch
+        uses: actions/checkout@v2
+      - name: Install dependencies for PR branch
+        run: yarn install --frozen-lockfile
+      - name: Audit the new number of vulnerabilities
+        run: echo "new_num=$(yarn audit --summary | grep vulnerabilities | cut -d ' ' -f1)" >> $GITHUB_ENV
+      - name: Check whether the audit report has improved
+        run: |
+          ((${{ env.new_num }} < ${{ env.old_num }})) && echo "Less vulnerabilities!" || ((${{ env.new_num }} == ${{ env.old_num }}))
