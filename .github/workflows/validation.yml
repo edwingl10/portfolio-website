@@ -27,7 +27,7 @@ jobs:
         if: steps.modules-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile --prefer-offline
       - name: Build app
-        run: yarn build --frozen-lockfile
+        run: yarn build
 
   # Ensure lint checks pass
   lint:
