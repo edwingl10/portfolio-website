@@ -60,26 +60,26 @@ jobs:
         run: $(yarn global bin)/prettier --check . || $(yarn global bin)/prettier --write . && git diff --exit-code
 
   # Ensure tests pass
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the repo
-        uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        id: modules-cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Install dependencies
-        if: steps.modules-cache.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile --prefer-offline
-      - name: Cache firebase emulators
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/firebase/emulators
-          key: ${{ runner.os }}-firebase-emulators-${{ hashFiles('~/.cache/firebase/emulators/**') }}
-        continue-on-error: true
-      - name: Run tests
-        run: yarn test
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout the repo
+  #       uses: actions/checkout@v2
+  #     - uses: actions/cache@v2
+  #       id: modules-cache
+  #       with:
+  #         path: node_modules
+  #         key: ${{ runner.os }}-modules-${{ hashFiles('yarn.lock') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-yarn-
+  #     - name: Install dependencies
+  #       if: steps.modules-cache.outputs.cache-hit != 'true'
+  #       run: yarn install --frozen-lockfile --prefer-offline
+  #     - name: Cache firebase emulators
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: ~/.cache/firebase/emulators
+  #         key: ${{ runner.os }}-firebase-emulators-${{ hashFiles('~/.cache/firebase/emulators/**') }}
+  #       continue-on-error: true
+  #     - name: Run tests
+  #       run: yarn test
