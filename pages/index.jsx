@@ -7,7 +7,9 @@ import {
   Button,
   Link as MuiLink,
 } from '@mui/material';
+import Image from 'next/image';
 import SocialLinks from '../Components/SocialLinks';
+import WelcomeImg from '../images/welcome.png';
 
 export default function Home() {
   return (
@@ -47,12 +49,12 @@ export default function Home() {
             <SocialLinks />
           </Box>
 
-          {/* <Box
-            component="img"
+          <Image
             src={WelcomeImg}
-            alt="welcome"
-            sx={{ height: { xs: 200, sm: 250 }, m: 'auto' }}
-          /> */}
+            height={270}
+            width={320}
+            objectFit="contain"
+          />
         </Stack>
       </Container>
     </>
