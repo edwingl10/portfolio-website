@@ -23,9 +23,10 @@ export default function Home() {
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
-          spacing={5}
+          justifyContent="space-between"
+          spacing={3}
           sx={{ my: 5 }}>
-          <Grid item xs={12} sm={9}>
+          <Grid item xs={12} sm={8}>
             <Typography variant="h3" paragraph color="primary">
               Hi, I&apos;m{' '}
               <Box component="span" sx={{ color: 'secondary.main' }}>
@@ -49,7 +50,7 @@ export default function Home() {
             <SocialLinks />
           </Grid>
 
-          <Grid item xs={12} sm={3} sx={{ m: 'auto' }}>
+          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
             <Image src={WelcomeImg} height={250} width={220} />
           </Grid>
         </Grid>
