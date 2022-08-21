@@ -2,7 +2,7 @@ import Head from 'next/head';
 import {
   Container,
   Typography,
-  Stack,
+  Grid,
   Box,
   Button,
   Link as MuiLink,
@@ -20,12 +20,12 @@ export default function Home() {
       </Head>
 
       <Container>
-        <Stack
+        <Grid
+          container
           direction={{ xs: 'column-reverse', md: 'row' }}
-          columnGap="20%"
-          justifyContent="space-between"
-          sx={{ py: 5 }}>
-          <Box sx={{ mt: 4 }}>
+          spacing={5}
+          sx={{ my: 5 }}>
+          <Grid item xs={12} sm={9}>
             <Typography variant="h3" paragraph color="primary">
               Hi, I&apos;m{' '}
               <Box component="span" sx={{ color: 'secondary.main' }}>
@@ -47,15 +47,12 @@ export default function Home() {
             </Button>
 
             <SocialLinks />
-          </Box>
+          </Grid>
 
-          <Image
-            src={WelcomeImg}
-            height={270}
-            width={320}
-            objectFit="contain"
-          />
-        </Stack>
+          <Grid item xs={12} sm={3} sx={{ m: 'auto' }}>
+            <Image src={WelcomeImg} height={250} width={220} />
+          </Grid>
+        </Grid>
       </Container>
     </>
   );
