@@ -51,7 +51,13 @@ export default function Home() {
           </Grid>
 
           <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
-            <Image src={WelcomeImg} height={250} width={220} />
+            <Image
+              priority
+              src={WelcomeImg}
+              alt="Memoji of myself"
+              height={250}
+              width={220}
+            />
           </Grid>
         </Grid>
       </Container>
