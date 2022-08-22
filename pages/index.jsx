@@ -106,12 +106,12 @@ export default function Home() {
               direction="row"
               sx={{ flexWrap: 'wrap' }}
               rowGap={3}
+              columnGap={4}
               justifyContent="center">
               {Object.entries(skillsIcons).map(([title, icon]) => (
                 <Box
                   key={title}
                   sx={{
-                    mx: 3,
                     width: 85,
                     height: 80,
                   }}>
