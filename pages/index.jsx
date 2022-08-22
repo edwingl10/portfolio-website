@@ -109,11 +109,10 @@ export default function Home() {
               justifyContent="center">
               {Object.entries(skillsIcons).map(([title, icon]) => (
                 <Box
-                  textAlign="center"
+                  key={title}
                   sx={{
-                    display: 'inline-block',
                     mx: 3,
-                    width: 65,
+                    width: 85,
                     height: 80,
                   }}>
                   <SvgIcon fontSize="large" color="primary">
