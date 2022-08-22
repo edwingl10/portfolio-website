@@ -106,7 +106,7 @@ export default function Home() {
               direction="row"
               sx={{ flexWrap: 'wrap' }}
               rowGap={3}
-              columnGap={4}
+              columnGap={{ xs: 2, sm: 4 }}
               justifyContent="center">
               {Object.entries(skillsIcons).map(([title, icon]) => (
                 <Box
