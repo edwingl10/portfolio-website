@@ -10,7 +10,7 @@ import {
   SvgIcon,
 } from '@mui/material';
 import Image from 'next/image';
-import SocialLinks from '../Components/SocialLinks';
+import SocialLinks from '../components/SocialLinks';
 import WelcomeImg from '../images/welcome.png';
 import ReactIcon from '../images/icons/react.svg';
 import JsIcon from '../images/icons/js.svg';
@@ -20,6 +20,8 @@ import JavaIcon from '../images/icons/java.svg';
 import PythonIcon from '../images/icons/python.svg';
 import MuiIcon from '../images/icons/mui.svg';
 import FigmaIcon from '../images/icons/figma.svg';
+import ProjectSection from '../components/ProjectSection';
+import projectData from '../src/projectData';
 
 const skillsIcons = {
   React: <ReactIcon height="100%" width="100%" />,
@@ -124,6 +126,22 @@ export default function Home() {
             </Stack>
           </Container>
         </Box>
+
+        <Container sx={{ py: 5, textAlign: 'center' }}>
+          <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
+            Projects
+          </Typography>
+
+          <ProjectSection projects={projectData.slice(0, 6)} />
+
+          <Button
+            // component={Link}
+            to="/projects"
+            color="secondary"
+            variant="contained">
+            View More
+          </Button>
+        </Container>
       </Container>
     </>
   );
