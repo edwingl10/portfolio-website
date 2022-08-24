@@ -8,6 +8,7 @@ import {
   Grid,
 } from '@mui/material';
 import Link from 'next/link';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 export default function ProjectSection({ projects }) {
@@ -18,12 +19,14 @@ export default function ProjectSection({ projects }) {
           <Card>
             <Link href={`projects/${project.id}`}>
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="150"
-                  src={project.mainImg}
-                  alt="placeholder image"
-                />
+                <CardMedia>
+                  <Image
+                    src={project.mainImg}
+                    alt="placeholder image"
+                    height={500}
+                    objectFit="cover"
+                  />
+                </CardMedia>
                 <CardContent>
                   <Typography textAlign="left" paragraph>
                     {project.name}
