@@ -52,7 +52,7 @@ ProjectSection.propTypes = {
       description: PropTypes.string,
       type: PropTypes.string,
       link: PropTypes.string,
-      mainImg: PropTypes.element,
+      mainImg: PropTypes.object,
     })
   ).isRequired,
 };
