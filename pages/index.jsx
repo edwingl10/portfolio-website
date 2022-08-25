@@ -10,7 +10,7 @@ import {
   SvgIcon,
 } from '@mui/material';
 import Image from 'next/image';
-import SocialLinks from '../Components/SocialLinks';
+import SocialLinks from '../components/SocialLinks';
 import WelcomeImg from '../images/welcome.png';
 import ReactIcon from '../images/icons/react.svg';
 import JsIcon from '../images/icons/js.svg';
