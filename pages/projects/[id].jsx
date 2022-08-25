@@ -1,3 +1,8 @@
+import { useRouter } from 'next/router';
+
 export default function Project() {
-  return <h1>Project Page</h1>;
+  const router = useRouter();
+  const { id } = router.query;
+
+  return <h1>Project id: {id}</h1>;
 }
