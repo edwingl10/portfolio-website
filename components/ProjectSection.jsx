@@ -13,10 +13,21 @@ import PropTypes from 'prop-types';
 
 export default function ProjectSection({ projects }) {
   return (
-    <Grid container spacing={4} sx={{ mb: 2 }}>
+    <Grid
+      container
+      justifyContent="flex-start"
+      alignItems="stretch"
+      spacing={4}
+      sx={{ mb: 2 }}>
       {projects.map((project) => (
-        <Grid key={project.id} item xs={11} sm={6} md={4}>
-          <Card>
+        <Grid
+          key={project.id}
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{ m: { xs: 'auto', sm: 0 } }}>
+          <Card sx={{ height: '100%' }}>
             <Link href={`projects/${project.id}`}>
               <CardActionArea>
                 <CardMedia>
