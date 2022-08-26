@@ -12,15 +12,14 @@ import {
 import Image from 'next/image';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
-import WelcomeImg from '../images/welcome.png';
-import ReactIcon from '../images/icons/react.svg';
-import JsIcon from '../images/icons/js.svg';
-import HtmlIcon from '../images/icons/html.svg';
-import CssIcon from '../images/icons/css.svg';
-import JavaIcon from '../images/icons/java.svg';
-import PythonIcon from '../images/icons/python.svg';
-import MuiIcon from '../images/icons/mui.svg';
-import FigmaIcon from '../images/icons/figma.svg';
+import ReactIcon from '../public/images/icons/react.svg';
+import JsIcon from '../public/images/icons/js.svg';
+import HtmlIcon from '../public/images/icons/html.svg';
+import CssIcon from '../public/images/icons/css.svg';
+import JavaIcon from '../public/images/icons/java.svg';
+import PythonIcon from '../public/images/icons/python.svg';
+import MuiIcon from '../public/images/icons/mui.svg';
+import FigmaIcon from '../public/images/icons/figma.svg';
 import projectData from '../src/projectData';
 
 const skillsIcons = {
@@ -76,7 +75,7 @@ export default function Home() {
           <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
             <Image
               priority
-              src={WelcomeImg}
+              src="/images/welcome.png"
               alt="Memoji of myself"
               height={250}
               width={220}

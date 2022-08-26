@@ -30,11 +30,12 @@ export default function ProjectSection({ projects }) {
           <Card sx={{ height: '100%' }}>
             <Link href={`projects/${project.id}`}>
               <CardActionArea>
-                <CardMedia>
+                <CardMedia
+                  sx={{ position: 'relative', width: '100%', height: 145 }}>
                   <Image
                     src={project.mainImg}
                     alt="placeholder image"
-                    height={500}
+                    layout="fill"
                     objectFit="cover"
                   />
                 </CardMedia>
