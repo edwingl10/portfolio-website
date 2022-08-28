@@ -60,8 +60,10 @@ ProjectSection.propTypes = {
   projects: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
+      name: PropTypes.string,
       overview: PropTypes.string,
       description: PropTypes.string,
+      description2: PropTypes.string,
       type: PropTypes.string,
       link: PropTypes.string,
       mainImg: PropTypes.string,
