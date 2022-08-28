@@ -55,16 +55,18 @@ export default function ProjectSection({ projects }) {
     </Grid>
   );
 }
-/* eslint-disable react/forbid-prop-types */
+
 ProjectSection.propTypes = {
   projects: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
+      name: PropTypes.string,
       overview: PropTypes.string,
       description: PropTypes.string,
+      description2: PropTypes.string,
       type: PropTypes.string,
       link: PropTypes.string,
-      mainImg: PropTypes.object,
+      mainImg: PropTypes.string,
     })
   ).isRequired,
 };
