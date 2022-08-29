@@ -88,7 +88,7 @@ export default function ViewProject({ project }) {
           <Typography variant="h4" paragraph color="primary">
             Behind the Scenes
           </Typography>
-          <Typography paragraph>{project.description2}</Typography>
+          <Typography paragraph>{project.moreDetails}</Typography>
 
           <Button
             component={MuiLink}
@@ -109,7 +109,8 @@ ViewProject.propTypes = {
     name: PropTypes.string,
     overview: PropTypes.string,
     description: PropTypes.string,
-    description2: PropTypes.string,
+    moreDetails: PropTypes.string,
+    techUsed: PropTypes.arrayOf(PropTypes.string),
     type: PropTypes.string,
     link: PropTypes.string,
     mainImg: PropTypes.string,
