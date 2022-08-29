@@ -10,6 +10,7 @@ import {
   SvgIcon,
 } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
 import ReactIcon from '../public/images/icons/react.svg';
@@ -134,8 +135,9 @@ export default function Home() {
           <ProjectSection projects={projectData.slice(0, 6)} />
 
           <Button
-            // component={Link}
-            to="/projects"
+            component="a"
+            LinkComponent={Link}
+            href="/projects"
             color="secondary"
             variant="contained">
             View More
