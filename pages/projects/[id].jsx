@@ -69,7 +69,7 @@ export default function ViewProject({ project }) {
         direction={{ xs: 'column-reverse', md: 'row' }}
         spacing={3}
         sx={{ my: 5 }}>
-        <Grid item xs={12} sm={5} sx={{ textAlign: 'center' }}>
+        <Grid item xs={12} sm={5}>
           <Box
             sx={{
               position: 'relative',

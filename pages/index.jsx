@@ -10,6 +10,7 @@ import {
   SvgIcon,
 } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
 import ReactIcon from '../public/images/icons/react.svg';
@@ -46,6 +47,7 @@ export default function Home() {
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
           justifyContent="space-between"
+          alignItems="center"
           spacing={3}
           sx={{ my: 5 }}>
           <Grid item xs={12} sm={8}>
@@ -133,13 +135,11 @@ export default function Home() {
 
           <ProjectSection projects={projectData.slice(0, 6)} />
 
-          <Button
-            // component={Link}
-            to="/projects"
-            color="secondary"
-            variant="contained">
-            View More
-          </Button>
+          <Link href="/projects" passHref>
+            <Button color="secondary" variant="contained">
+              View More
+            </Button>
+          </Link>
         </Container>
       </Container>
     </>
