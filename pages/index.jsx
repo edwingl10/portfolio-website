@@ -47,6 +47,7 @@ export default function Home() {
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
           justifyContent="space-between"
+          alignItems="center"
           spacing={3}
           sx={{ my: 5 }}>
           <Grid item xs={12} sm={8}>
@@ -134,14 +135,11 @@ export default function Home() {
 
           <ProjectSection projects={projectData.slice(0, 6)} />
 
-          <Button
-            component="a"
-            LinkComponent={Link}
-            href="/projects"
-            color="secondary"
-            variant="contained">
-            View More
-          </Button>
+          <Link href="/projects" passHref>
+            <Button color="secondary" variant="contained">
+              View More
+            </Button>
+          </Link>
         </Container>
       </Container>
     </>

@@ -15,6 +15,7 @@ export default function ListProjects({ projects }) {
         container
         direction={{ xs: 'column-reverse', md: 'row' }}
         justifyContent="space-between"
+        alignItems="center"
         spacing={3}
         sx={{ my: 5 }}>
         <Grid item xs={12} sm={8}>
