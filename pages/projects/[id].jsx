@@ -7,9 +7,11 @@ import {
   Button,
   Link as MuiLink,
   Box,
+  Stack,
+  SvgIcon,
 } from '@mui/material';
 import Projects from '../../src/projectData';
-// import Icon from '../../components/Icon';
+import Icon, { iconTitles } from '../../components/Icon';
 
 export async function getStaticProps({ params }) {
   const project = Projects.filter((p) => p.id.toString() === params.id)[0];
@@ -102,9 +104,24 @@ export default function ViewProject({ project }) {
       </Grid>
 
       <Box sx={{ py: 5 }} textAlign="center">
-        <Typography variant="h4" color="primary">
+        <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           Technology Used
         </Typography>
+        <Stack
+          direction="row"
+          sx={{ flexWrap: 'wrap' }}
+          rowGap={3}
+          columnGap={{ xs: 2, sm: 4 }}
+          justifyContent="center">
+          {project.techUsed.map((name) => (
+            <Box key={iconTitles[name]} sx={{ width: 85, height: 80 }}>
+              <SvgIcon fontSize="large" color="primary">
+                <Icon name={`${name}`} height="inherit" width="inherit" />
+              </SvgIcon>
+              <Typography>{iconTitles[name]}</Typography>
+            </Box>
+          ))}
+        </Stack>
       </Box>
     </Container>
   );

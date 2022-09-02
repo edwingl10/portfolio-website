@@ -105,12 +105,7 @@ export default function Home() {
               columnGap={{ xs: 2, sm: 4 }}
               justifyContent="center">
               {skillsIcons.map((name) => (
-                <Box
-                  key={iconTitles[name]}
-                  sx={{
-                    width: 85,
-                    height: 80,
-                  }}>
+                <Box key={iconTitles[name]} sx={{ width: 85, height: 80 }}>
                   <SvgIcon fontSize="large" color="primary">
                     <Icon name={`${name}`} height="inherit" width="inherit" />
                   </SvgIcon>
