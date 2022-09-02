@@ -91,7 +91,7 @@ const Projects = [
       'Search-ED is a search engine for navigating web pages from the Informations & Computer Sciences department from UCI. The program displays the top results from a given query.',
     moreDetails:
       'The search engine utilizes tokenization, term frequency, inverse document frequency and weighted tags for page scoring. The BeautifulSoup library was used to parse the corpus of the entire ICS web pages from UCI. Python was used to write the program, MongoDB for the database and TKinter for the GUI.',
-    techUsed: ['python', 'mongodb'],
+    techUsed: ['python', 'mongodb', 'pycharm'],
     type: 'other',
     link: 'https://github.com/edwingl10/Search-ED',
     mainImg: '/images/placeholder.jpg',
@@ -105,7 +105,7 @@ const Projects = [
       'This program implements the Tarantula approach to perform fault localization and locate which lines of code are most suspect of breaking the unit-tests from an open-source project on Github.',
     moreDetails:
       'This program contains over 4 thousand XML files with code coverage analysis. For this algorithm, we look at the test cases that cover each line in the program and compare the ratio of succeeding and failing test cases. The higher the ratio of failing tests cases compared to successful ones, the higher the suspiciousness of that line. Suspiciousness is a number between 0 and 1, where a higher number means a higher chance that the line caused a test to fail.',
-    techUsed: ['python', 'terminal'],
+    techUsed: ['python', 'terminal', 'pycharm'],
     type: 'other',
     link: 'https://github.com/edwingl10/fault-localization',
     mainImg: '/images/placeholder.jpg',
@@ -119,7 +119,7 @@ const Projects = [
       'This program mimics a simple OS system by managing reading, writing and printing requests by users. A GUI is used to display the requests of users, statuses of the disks and printers and the contents of the directory manager.',
     moreDetails:
       'The program supports a dynamic number of users, printers and disks and uses parallelism and threads to execute commands from user files. When the save command is executed, a disk resource is requested, and the file contents are written to the disk until the end command is found. The end command also stores the disk number, starting sector and file length. A new entry is then created in the directory, and the disk resource is released. Lastly, the print command looks up the file name in the directory manager, gets a free printer, and prints the data to an external file.',
-    techUsed: ['java'],
+    techUsed: ['java', 'eclipse'],
     type: 'other',
     link: 'https://github.com/edwingl10/OSGui',
     mainImg: '/images/placeholder.jpg',

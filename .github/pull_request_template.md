@@ -28,7 +28,7 @@ Fixes #
 <!-- DETAIL steps to preview user visible changes on the Render PR server. -->
 <!-- Tip: You can replace the first step with a direct link. -->
 
-1. Click the `Firebase hosting` URL the **github `bot`** posted below.
+1. Click the `Vercel preview` URL the **vercel `bot`** posted below.
 2.
 
 ## Screenshots
