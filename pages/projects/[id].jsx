@@ -9,6 +9,7 @@ import {
   Box,
 } from '@mui/material';
 import Projects from '../../src/projectData';
+// import Icon from '../../components/Icon';
 
 export async function getStaticProps({ params }) {
   const project = Projects.filter((p) => p.id.toString() === params.id)[0];
@@ -99,6 +100,12 @@ export default function ViewProject({ project }) {
           </Button>
         </Grid>
       </Grid>
+
+      <Box sx={{ py: 5 }} textAlign="center">
+        <Typography variant="h4" color="primary">
+          Technology Used
+        </Typography>
+      </Box>
     </Container>
   );
 }
