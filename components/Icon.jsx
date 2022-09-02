@@ -18,6 +18,27 @@ import Terminal from '../public/images/icons/terminal.svg';
 import Typescript from '../public/images/icons/typescript.svg';
 import Unity from '../public/images/icons/unity.svg';
 
+export const iconTitles = {
+  csharp: 'C#',
+  css: 'CSS',
+  figma: 'Figma',
+  firebase: 'Firebase',
+  html: 'HTML',
+  illustrator: 'Illustrator',
+  java: 'Java',
+  jest: 'Jest',
+  jquery: 'JQuery',
+  js: 'Javascript',
+  mongodb: 'MongoDB',
+  mui: 'MUI',
+  photoshop: 'Photoshop',
+  python: 'Python',
+  react: 'React',
+  terminal: 'Terminal',
+  typescript: 'Typescript',
+  unity: 'Unity',
+};
+
 const iconTypes = {
   csharp: CSharp,
   css: Css,

@@ -13,26 +13,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
-import ReactIcon from '../public/images/icons/react.svg';
-import JsIcon from '../public/images/icons/js.svg';
-import HtmlIcon from '../public/images/icons/html.svg';
-import CssIcon from '../public/images/icons/css.svg';
-import JavaIcon from '../public/images/icons/java.svg';
-import PythonIcon from '../public/images/icons/python.svg';
-import MuiIcon from '../public/images/icons/mui.svg';
-import FigmaIcon from '../public/images/icons/figma.svg';
 import projectData from '../src/projectData';
+import Icon, { iconTitles } from '../components/Icon';
 
-const skillsIcons = {
-  React: <ReactIcon height="100%" width="100%" />,
-  Javascript: <JsIcon height="100%" width="100%" />,
-  HTML: <HtmlIcon height="100%" width="100%" />,
-  CSS: <CssIcon height="100%" width="100%" />,
-  Java: <JavaIcon height="100%" width="100%" />,
-  Python: <PythonIcon height="100%" width="100%" />,
-  MUI: <MuiIcon height="100%" width="100%" />,
-  Figma: <FigmaIcon height="100%" width="100%" />,
-};
+const skillsIcons = [
+  'react',
+  'js',
+  'html',
+  'css',
+  'java',
+  'python',
+  'mui',
+  'figma',
+];
 
 export default function Home() {
   return (
@@ -111,17 +104,17 @@ export default function Home() {
               rowGap={3}
               columnGap={{ xs: 2, sm: 4 }}
               justifyContent="center">
-              {Object.entries(skillsIcons).map(([title, icon]) => (
+              {skillsIcons.map((name) => (
                 <Box
-                  key={title}
+                  key={iconTitles[name]}
                   sx={{
                     width: 85,
                     height: 80,
                   }}>
                   <SvgIcon fontSize="large" color="primary">
-                    {icon}
+                    <Icon name={`${name}`} height="inherit" width="inherit" />
                   </SvgIcon>
-                  <Typography>{title}</Typography>
+                  <Typography>{iconTitles[name]}</Typography>
                 </Box>
               ))}
             </Stack>
