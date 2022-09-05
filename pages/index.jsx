@@ -78,7 +78,7 @@ export default function Home() {
           </Grid>
         </Grid>
 
-        <Box sx={{ py: 5 }} textAlign="center">
+        <Box sx={{ py: 5 }} textAlign="center" id="about">
           <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
             I&apos;m a dedicated software developer
           </Typography>
@@ -116,7 +116,7 @@ export default function Home() {
           </Container>
         </Box>
 
-        <Container sx={{ py: 5, textAlign: 'center' }}>
+        <Container sx={{ py: 5, textAlign: 'center' }} id="projects">
           <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
             Projects
           </Typography>
