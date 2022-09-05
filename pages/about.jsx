@@ -43,8 +43,8 @@ export default function about() {
         <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
           <Image
             priority
-            src="/images/projects.png"
-            alt="Memoji of me with a computer"
+            src="/images/wave.png"
+            alt="Memoji of myself waving"
             height={260}
             width={220}
           />
@@ -53,7 +53,7 @@ export default function about() {
 
       <Grid
         container
-        direction={{ xs: 'column-reverse', md: 'row' }}
+        direction={{ xs: 'column', md: 'row' }}
         spacing={3}
         sx={{ my: 5 }}>
         <Grid item xs={12} sm={5}>
