@@ -1,6 +1,16 @@
-import { AppBar, Tabs, Tab, Toolbar, SvgIcon } from '@mui/material';
+import {
+  AppBar,
+  Tabs,
+  Tab,
+  Toolbar,
+  SvgIcon,
+  Button,
+  IconButton,
+} from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import LanguageIcon from '@mui/icons-material/Language';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import Icon from './Icon';
 
 const links = {
@@ -35,13 +45,33 @@ export default function Navbar() {
                 component="a"
                 sx={{
                   textTransform: 'none',
-                  minWidth: { xs: 64, md: 72 },
                   p: 0,
                 }}
               />
             </Link>
           ))}
         </Tabs>
+
+        <Button
+          sx={{
+            textTransform: 'none',
+            color: (theme) => theme.palette.grey[600],
+          }}>
+          Resume
+        </Button>
+        <IconButton aria-label="select language" sx={{ mx: 1 }}>
+          <LanguageIcon />
+        </IconButton>
+        <IconButton aria-label="change theme" sx={{ mx: 1 }}>
+          <DarkModeOutlinedIcon />
+        </IconButton>
+        <Button
+          sx={{
+            textTransform: 'none',
+            color: (theme) => theme.palette.grey[600],
+          }}>
+          Contact
+        </Button>
       </Toolbar>
     </AppBar>
   );
