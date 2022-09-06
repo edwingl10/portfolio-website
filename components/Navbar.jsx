@@ -37,7 +37,25 @@ export default function Navbar() {
           </SvgIcon>
         </Link>
 
-        <Tabs aria-label="navbar tabs" value={currentTab} sx={{ ml: 'auto' }}>
+        <Tabs
+          aria-label="navbar tabs"
+          value={currentTab}
+          sx={{
+            ml: 'auto',
+            '& .MuiTabs-indicator': {
+              display: 'flex',
+              justifyContent: 'center',
+              backgroundColor: 'transparent',
+            },
+            '& .MuiTabs-indicatorSpan': {
+              maxWidth: 60,
+              width: '100%',
+              bgcolor: 'primary.main',
+            },
+          }}
+          TabIndicatorProps={{
+            children: <span className="MuiTabs-indicatorSpan" />,
+          }}>
           {Object.entries(links).map(([title, link]) => (
             <Link href={link} passHref key={title} value={title}>
               <Tab
