@@ -10,6 +10,7 @@ import Java from '../public/images/icons/java.svg';
 import Jest from '../public/images/icons/jest.svg';
 import JQuery from '../public/images/icons/jquery.svg';
 import Javascript from '../public/images/icons/js.svg';
+import Logo from '../public/images/logo.svg';
 import MongoDB from '../public/images/icons/mongodb.svg';
 import Mui from '../public/images/icons/mui.svg';
 import Photoshop from '../public/images/icons/photoshop.svg';
@@ -55,6 +56,7 @@ const iconTypes = {
   jest: Jest,
   jquery: JQuery,
   js: Javascript,
+  logo: Logo,
   mongodb: MongoDB,
   mui: Mui,
   photoshop: Photoshop,
