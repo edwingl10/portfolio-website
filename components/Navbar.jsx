@@ -5,12 +5,13 @@ import {
   Toolbar,
   SvgIcon,
   Button,
-  IconButton,
+  // IconButton,
+  Link as MuiLink,
 } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import LanguageIcon from '@mui/icons-material/Language';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+// import LanguageIcon from '@mui/icons-material/Language';
+// import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import Icon from './Icon';
 
 const links = {
@@ -71,19 +72,25 @@ export default function Navbar() {
         </Tabs>
 
         <Button
+          download
+          href="/resume.pdf"
           sx={{
             textTransform: 'none',
             color: (theme) => theme.palette.grey[600],
           }}>
           Resume
         </Button>
-        <IconButton aria-label="select language" sx={{ mx: 1 }}>
+
+        {/* <IconButton aria-label="select language" sx={{ mx: 1 }}>
           <LanguageIcon />
         </IconButton>
         <IconButton aria-label="change theme" sx={{ mx: 1 }}>
           <DarkModeOutlinedIcon />
-        </IconButton>
+        </IconButton> */}
+
         <Button
+          component={MuiLink}
+          href="mailto:edwingl@uci.edu"
           sx={{
             textTransform: 'none',
             color: (theme) => theme.palette.grey[600],
