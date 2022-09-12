@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 export default function about() {
   return (
-    <Container sx={{ p: 3 }}>
+    <Container sx={{ pb: 3 }}>
       <Grid
         container
         direction={{ xs: 'column-reverse', md: 'row' }}

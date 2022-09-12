@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 
 export default function ViewProject({ project }) {
   return (
-    <Container sx={{ p: 4 }}>
+    <Container sx={{ pb: 4 }}>
       <Grid
         container
         direction={{ xs: 'column-reverse', md: 'row' }}
