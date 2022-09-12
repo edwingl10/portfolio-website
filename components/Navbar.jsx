@@ -30,7 +30,7 @@ export default function Navbar() {
   });
 
   return (
-    <AppBar color="inherit">
+    <AppBar color="inherit" position="sticky">
       <Toolbar>
         <Link href="/">
           <SvgIcon fontSize="large" color="primary" sx={{ cursor: 'pointer' }}>
