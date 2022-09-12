@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
+import MobileNavbar from './MobileNavbar';
 
 export default function Layout({ children }) {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {children}
+      <MobileNavbar />
     </>
   );
 }
