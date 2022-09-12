@@ -1,16 +1,27 @@
-import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material';
-import WindowOutlinedIcon from '@mui/icons-material/WindowOutlined';
-import Logo from '../public/images/logo.svg';
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Paper,
+  SvgIcon,
+} from '@mui/material';
+import GridViewIcon from '@mui/icons-material/GridView';
+import Icon from './Icon';
 
 export default function MobileNavbar() {
   return (
-    <Paper sx={{ position: 'sticky', bottom: 0 }} elevation={10}>
+    <Paper sx={{ position: 'sticky', bottom: 0 }} elevation={3}>
       <BottomNavigation showLabels sx={{ justifyContent: 'space-between' }}>
         <BottomNavigationAction
-          icon={<Logo style={{ height: 30, width: 30 }} />}
+          icon={
+            <SvgIcon color="primary" sx={{ fontSize: 25 }}>
+              <Icon name="logo" />
+            </SvgIcon>
+          }
+          sx={{ maxWidth: 50 }}
         />
         <BottomNavigationAction
-          icon={<WindowOutlinedIcon sx={{ width: 30, height: 30 }} />}
+          icon={<GridViewIcon color="primary" sx={{ fontSize: 25 }} />}
+          sx={{ maxWidth: 50 }}
         />
       </BottomNavigation>
     </Paper>
