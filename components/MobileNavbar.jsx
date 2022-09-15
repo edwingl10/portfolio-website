@@ -18,6 +18,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import LanguageIcon from '@mui/icons-material/Language';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SendIcon from '@mui/icons-material/Send';
+import PropTypes from 'prop-types';
 import Icon from './Icon';
 
 const links = {
@@ -26,6 +27,22 @@ const links = {
     link: '/projects',
     icon: <IntegrationInstructionsIcon color="primary" />,
   },
+};
+
+function CustomMenuItem({ MenuIcon, title, ...menuProps }) {
+  return (
+    <MenuItem {...menuProps}>
+      <Stack alignItems="center" sx={{ width: 85 }}>
+        <MenuIcon color="primary" />
+        <Typography>{title}</Typography>
+      </Stack>
+    </MenuItem>
+  );
+}
+
+CustomMenuItem.propTypes = {
+  MenuIcon: PropTypes.elementType.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default function MobileNavbar() {
@@ -74,33 +91,21 @@ export default function MobileNavbar() {
             </Link>
           ))}
 
-          <MenuItem component="button" download href="/resume.pdf">
-            <Stack alignItems="center" sx={{ width: 85 }}>
-              <DescriptionIcon color="primary" />
-              <Typography>Resume</Typography>
-            </Stack>
-          </MenuItem>
-
-          <MenuItem>
-            <Stack alignItems="center" sx={{ width: 85 }}>
-              <LanguageIcon color="primary" />
-              <Typography>Language</Typography>
-            </Stack>
-          </MenuItem>
-
-          <MenuItem>
-            <Stack alignItems="center" sx={{ width: 85 }}>
-              <DarkModeIcon color="primary" />
-              <Typography>Dark Mode</Typography>
-            </Stack>
-          </MenuItem>
-
-          <MenuItem component={MuiLink} href="mailto:edwingl@uci.edu">
-            <Stack alignItems="center" sx={{ width: 85 }}>
-              <SendIcon color="primary" />
-              <Typography>Contact</Typography>
-            </Stack>
-          </MenuItem>
+          <CustomMenuItem
+            component="button"
+            download
+            href="/resume.pdf"
+            MenuIcon={DescriptionIcon}
+            title="Resume"
+          />
+          <CustomMenuItem MenuIcon={LanguageIcon} title="Language" />
+          <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" />
+          <CustomMenuItem
+            component={MuiLink}
+            href="mailto:edwingl@uci.edu"
+            MenuIcon={SendIcon}
+            title="Contact"
+          />
         </Stack>
       </Menu>
     </>
