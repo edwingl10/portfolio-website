@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import MobileNavbar from './MobileNavbar';
 
 export default function Layout({ children }) {
-  const isDesktop = useMediaQuery((theme) => theme.breakpoints.up('sm'));
+  const isDesktop = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
   return (
     <>

@@ -72,14 +72,17 @@ export default function MobileNavbar() {
         open={Boolean(anchorEl)}
         anchorEl={anchorEl}
         onClose={() => setAnchorEl(null)}
-        anchorOrigin={{ horizontal: 'center', vertical: 'bottom' }}
-        transformOrigin={{ horizontal: 'center', vertical: 'top' }}>
+        anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
+        transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}>
         <Stack
           direction="row"
           rowGap={2}
-          columnGap={2}
+          columnGap={{ xs: 2, sm: 3 }}
           justifyContent="center"
-          sx={{ flexWrap: 'wrap' }}>
+          sx={{
+            flexWrap: 'wrap',
+            maxWidth: 500,
+          }}>
           {Object.entries(links).map(([title, content]) => (
             <Link href={content.link} passHref key={title} value={title}>
               <MenuItem>
