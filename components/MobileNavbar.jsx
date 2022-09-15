@@ -54,9 +54,11 @@ export default function MobileNavbar() {
         <BottomNavigation showLabels sx={{ justifyContent: 'space-between' }}>
           <BottomNavigationAction
             icon={
-              <SvgIcon color="primary" sx={{ fontSize: 25 }}>
-                <Icon name="logo" />
-              </SvgIcon>
+              <Link href="/">
+                <SvgIcon color="primary" sx={{ fontSize: 25 }}>
+                  <Icon name="logo" />
+                </SvgIcon>
+              </Link>
             }
             sx={{ maxWidth: 50 }}
           />
@@ -85,7 +87,7 @@ export default function MobileNavbar() {
           }}>
           {Object.entries(links).map(([title, content]) => (
             <Link href={content.link} passHref key={title} value={title}>
-              <MenuItem>
+              <MenuItem onClick={() => setAnchorEl(null)}>
                 <Stack alignItems="center" sx={{ width: 85 }}>
                   {content.icon}
                   <Typography>{title}</Typography>
@@ -100,6 +102,7 @@ export default function MobileNavbar() {
             href="/resume.pdf"
             MenuIcon={DescriptionIcon}
             title="Resume"
+            onClick={() => setAnchorEl(null)}
           />
           <CustomMenuItem MenuIcon={LanguageIcon} title="Language" />
           <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" />
