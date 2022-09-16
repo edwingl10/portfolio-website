@@ -60,7 +60,7 @@ export default function Home() {
               color="secondary"
               variant="contained"
               href="mailto:edwingl@uci.edu"
-              sx={{ mt: 2 }}>
+              sx={{ mt: 2, mb: 4 }}>
               contact
             </Button>
 
@@ -107,7 +107,7 @@ export default function Home() {
               {skillsIcons.map((name) => (
                 <Box key={iconTitles[name]} sx={{ width: 85, height: 80 }}>
                   <SvgIcon fontSize="large" color="primary">
-                    <Icon name={`${name}`} height="inherit" width="inherit" />
+                    <Icon name={`${name}`} height="100%" width="100%" />
                   </SvgIcon>
                   <Typography>{iconTitles[name]}</Typography>
                 </Box>

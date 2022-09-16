@@ -22,7 +22,7 @@ const socialLinks = {
 
 export default function SocialLinks() {
   return (
-    <Stack direction="row" spacing={2} sx={{ mt: 4 }}>
+    <Stack direction="row" spacing={2}>
       {Object.entries(socialLinks).map(([key, val]) => (
         <MuiLink href={val.link} target="_blank" key={key}>
           {val.icon}
