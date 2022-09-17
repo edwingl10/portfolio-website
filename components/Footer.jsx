@@ -30,7 +30,7 @@ export default function Footer() {
 
           <Grid item xs={12} md={9}>
             <Typography
-              color="grey.100"
+              color="grey.400"
               variant="subtitle2"
               textAlign={{ xs: 'center', md: 'right' }}>
               &copy; {new Date().getFullYear()} All rights reserved. - Designed
