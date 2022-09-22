@@ -77,8 +77,10 @@ export default function Home() {
             />
           </Grid>
         </Grid>
+      </Container>
 
-        <Box sx={{ py: 5 }} textAlign="center" id="about">
+      <Box bgcolor="background.default" sx={{ py: 5 }}>
+        <Box textAlign="center">
           <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
             I&apos;m a dedicated software developer
           </Typography>
@@ -115,20 +117,20 @@ export default function Home() {
             </Stack>
           </Container>
         </Box>
+      </Box>
 
-        <Container sx={{ py: 5, textAlign: 'center' }} id="projects">
-          <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-            Projects
-          </Typography>
+      <Container sx={{ py: 5, textAlign: 'center' }} id="projects">
+        <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
+          Projects
+        </Typography>
 
-          <ProjectSection projects={projectData.slice(0, 6)} />
+        <ProjectSection projects={projectData.slice(0, 6)} />
 
-          <Link href="/projects" passHref>
-            <Button color="secondary" variant="contained">
-              View More
-            </Button>
-          </Link>
-        </Container>
+        <Link href="/projects" passHref>
+          <Button color="secondary" variant="contained">
+            View More
+          </Button>
+        </Link>
       </Container>
     </>
   );
