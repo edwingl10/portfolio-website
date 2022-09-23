@@ -17,8 +17,7 @@ export default function ProjectSection({ projects }) {
       container
       justifyContent="flex-start"
       alignItems="stretch"
-      spacing={4}
-      sx={{ mb: 2 }}>
+      spacing={4}>
       {projects.map((project) => (
         <Grid
           key={project.id}

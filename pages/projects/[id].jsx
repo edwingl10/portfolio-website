@@ -28,80 +28,84 @@ export async function getStaticPaths() {
 
 export default function ViewProject({ project }) {
   return (
-    <Container sx={{ pb: 4 }}>
-      <Grid
-        container
-        direction={{ xs: 'column-reverse', md: 'row' }}
-        spacing={3}
-        sx={{ my: 5 }}>
-        <Grid item xs={12} sm={7}>
-          <Typography variant="h3" paragraph color="secondary">
-            {project.name}
-          </Typography>
-          <Typography paragraph>{project.description}</Typography>
+    <>
+      <Container sx={{ my: 5, py: 2 }}>
+        <Grid
+          container
+          direction={{ xs: 'column-reverse', md: 'row' }}
+          spacing={3}>
+          <Grid item xs={12} sm={7}>
+            <Typography variant="h3" paragraph color="secondary">
+              {project.name}
+            </Typography>
+            <Typography paragraph>{project.description}</Typography>
 
-          <Button
-            component={MuiLink}
-            href={project.link}
-            target="_blank"
-            color="secondary"
-            variant="contained"
-            sx={{ mt: 2 }}>
-            Explore
-          </Button>
+            <Button
+              component={MuiLink}
+              href={project.link}
+              target="_blank"
+              color="secondary"
+              variant="contained"
+              sx={{ mt: 2 }}>
+              Explore
+            </Button>
+          </Grid>
+
+          <Grid item xs={12} sm={5}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: { xs: 250, sm: 300 },
+              }}>
+              <Image
+                src={project.mainImg}
+                alt="Image of project"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
+          </Grid>
         </Grid>
+      </Container>
 
-        <Grid item xs={12} sm={5}>
-          <Box
-            sx={{
-              position: 'relative',
-              height: { xs: 250, sm: 300 },
-            }}>
-            <Image
-              src={project.mainImg}
-              alt="Image of project"
-              layout="fill"
-              objectFit="cover"
-            />
-          </Box>
-        </Grid>
-      </Grid>
+      <Box bgcolor="background.default" sx={{ py: 5 }}>
+        <Container>
+          <Grid
+            container
+            direction={{ xs: 'column-reverse', md: 'row' }}
+            spacing={3}>
+            <Grid item xs={12} sm={5}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  height: { xs: 250, sm: 300 },
+                }}>
+                <Image
+                  src={project.mainImg}
+                  alt="Image of project"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </Box>
+            </Grid>
 
-      <Grid
-        container
-        direction={{ xs: 'column-reverse', md: 'row' }}
-        spacing={3}
-        sx={{ my: 5 }}>
-        <Grid item xs={12} sm={5}>
-          <Box
-            sx={{
-              position: 'relative',
-              height: { xs: 250, sm: 300 },
-            }}>
-            <Image
-              src={project.mainImg}
-              alt="Image of project"
-              layout="fill"
-              objectFit="cover"
-            />
-          </Box>
-        </Grid>
+            <Grid item xs={12} sm={7}>
+              <Typography variant="h4" paragraph color="primary">
+                Behind the Scenes
+              </Typography>
+              <Typography paragraph>{project.moreDetails}</Typography>
 
-        <Grid item xs={12} sm={7}>
-          <Typography variant="h4" paragraph color="primary">
-            Behind the Scenes
-          </Typography>
-          <Typography paragraph>{project.moreDetails}</Typography>
-
-          <Button
-            component={MuiLink}
-            color="secondary"
-            variant="contained"
-            sx={{ mt: 2 }}>
-            Share
-          </Button>
-        </Grid>
-      </Grid>
+              <Button
+                component={MuiLink}
+                color="secondary"
+                variant="contained"
+                sx={{ mt: 2 }}>
+                Share
+              </Button>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
 
       <Box sx={{ py: 5 }} textAlign="center">
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
@@ -123,7 +127,7 @@ export default function ViewProject({ project }) {
           ))}
         </Stack>
       </Box>
-    </Container>
+    </>
   );
 }
 

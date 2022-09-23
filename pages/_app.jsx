@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
+import { GlobalStyles } from '@mui/material';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
@@ -17,6 +18,15 @@ export default function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <GlobalStyles
+          styles={`
+            :root {
+              body {
+                background-color: #fff;
+              }
+            }
+          `}
+        />
         <Layout>
           <Component {...pageProps} />
         </Layout>
