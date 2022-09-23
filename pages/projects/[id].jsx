@@ -29,12 +29,11 @@ export async function getStaticPaths() {
 export default function ViewProject({ project }) {
   return (
     <>
-      <Container>
+      <Container sx={{ my: 5 }}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
-          spacing={3}
-          sx={{ my: 5 }}>
+          spacing={3}>
           <Grid item xs={12} sm={7}>
             <Typography variant="h3" paragraph color="secondary">
               {project.name}
@@ -69,13 +68,12 @@ export default function ViewProject({ project }) {
         </Grid>
       </Container>
 
-      <Box bgcolor="background.default" sx={{ py: 1 }}>
+      <Box bgcolor="background.default" sx={{ py: 5 }}>
         <Container>
           <Grid
             container
             direction={{ xs: 'column-reverse', md: 'row' }}
-            spacing={3}
-            sx={{ my: 5 }}>
+            spacing={3}>
             <Grid item xs={12} sm={5}>
               <Box
                 sx={{

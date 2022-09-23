@@ -11,14 +11,13 @@ export async function getStaticProps() {
 export default function ListProjects({ projects }) {
   return (
     <>
-      <Container sx={{ pb: 3 }}>
+      <Container sx={{ my: 5 }}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
           justifyContent="space-between"
           alignItems="center"
-          spacing={3}
-          sx={{ my: 5 }}>
+          spacing={3}>
           <Grid item xs={12} sm={8}>
             <Typography variant="h3" paragraph color="secondary">
               Projects
