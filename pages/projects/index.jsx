@@ -11,7 +11,7 @@ export async function getStaticProps() {
 export default function ListProjects({ projects }) {
   return (
     <>
-      <Container sx={{ my: 5 }}>
+      <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
