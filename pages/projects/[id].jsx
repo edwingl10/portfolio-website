@@ -55,7 +55,7 @@ export default function ViewProject({ project }) {
             <Box
               sx={{
                 position: 'relative',
-                height: { xs: 250, sm: 300 },
+                height: { xs: 270, sm: 320 },
               }}>
               <Image
                 src={project.mainImg}
@@ -78,10 +78,10 @@ export default function ViewProject({ project }) {
               <Box
                 sx={{
                   position: 'relative',
-                  height: { xs: 250, sm: 300 },
+                  height: { xs: 270, sm: 320 },
                 }}>
                 <Image
-                  src={project.mainImg}
+                  src="/images/placeholder.jpg"
                   alt="Image of project"
                   layout="fill"
                   objectFit="cover"

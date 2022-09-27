@@ -11,7 +11,7 @@ const Projects = [
     techUsed: ['react', 'typescript', 'mui', 'jest', 'firebase'],
     type: 'web',
     link: 'https://dreamscholars.org/',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/dreamscholars.jpg',
   },
   {
     id: 2,
