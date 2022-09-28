@@ -136,7 +136,7 @@ const Projects = [
     techUsed: ['react', 'js', 'css'],
     type: 'web',
     link: 'https://github.com/edwingl10/infoweather',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/infoweather.jpg',
   },
 ];
 
