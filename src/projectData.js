@@ -108,7 +108,7 @@ const Projects = [
     techUsed: ['python', 'terminal', 'pycharm'],
     type: 'other',
     link: 'https://github.com/edwingl10/fault-localization',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/fault-local.jpg',
   },
   {
     id: 9,
@@ -135,7 +135,7 @@ const Projects = [
       'Info Weather is written with React and fetches the information from the OpenWeather API and displays the information in a minimalistic way. In addition, the site determines the appropriate icons based on the weather.',
     techUsed: ['react', 'js', 'css'],
     type: 'web',
-    link: 'https://github.com/edwingl10/infoweather',
+    link: 'https://edwingl10.github.io/infoweather/',
     mainImg: '/images/projects/infoweather.jpg',
   },
 ];
