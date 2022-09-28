@@ -25,7 +25,7 @@ const Projects = [
     techUsed: ['react', 'js', 'css', 'firebase'],
     type: 'web',
     link: 'https://nedflix-2c9c4.web.app/',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/nedflix.jpg',
   },
   {
     id: 3,
