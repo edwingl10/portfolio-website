@@ -122,7 +122,7 @@ const Projects = [
     techUsed: ['java', 'eclipse'],
     type: 'other',
     link: 'https://github.com/edwingl10/OSGui',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/osgui.jpg',
   },
   {
     id: 10,
