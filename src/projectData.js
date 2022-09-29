@@ -94,7 +94,7 @@ const Projects = [
     techUsed: ['python', 'mongodb', 'pycharm'],
     type: 'other',
     link: 'https://github.com/edwingl10/Search-ED',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/search-ed.jpg',
   },
   {
     id: 8,
