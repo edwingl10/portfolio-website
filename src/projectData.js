@@ -67,7 +67,7 @@ const Projects = [
     techUsed: ['unity', 'csharp', 'illustrator', 'photoshop'],
     type: 'game',
     link: 'https://github.com/edwingl10/Pacific-Marine-App',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/pmmc.jpg',
   },
   {
     id: 6,
