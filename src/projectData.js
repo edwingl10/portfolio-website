@@ -53,7 +53,7 @@ const Projects = [
     techUsed: ['unity', 'csharp', 'illustrator', 'photoshop'],
     type: 'game',
     link: 'https://play.google.com/store/apps/details?id=com.Edlo.Trapd&hl=en_US&gl=US',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/trapd.jpg',
   },
   {
     id: 5,
@@ -80,7 +80,7 @@ const Projects = [
     techUsed: ['unity', 'csharp', 'illustrator', 'photoshop'],
     type: 'game',
     link: 'https://github.com/edwingl10/PartyBashCompanion',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/partybash.jpg',
   },
   {
     id: 7,
