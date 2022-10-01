@@ -11,7 +11,7 @@ const Projects = [
     techUsed: ['react', 'typescript', 'mui', 'jest', 'firebase'],
     type: 'web',
     link: 'https://dreamscholars.org/',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/dreamscholars.jpg',
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const Projects = [
     techUsed: ['react', 'js', 'css', 'firebase'],
     type: 'web',
     link: 'https://nedflix-2c9c4.web.app/',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/nedflix.jpg',
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const Projects = [
     techUsed: ['js', 'jquery', 'html', 'css', 'figma'],
     type: 'web',
     link: 'https://casamagda-b1768.web.app/',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/casamagda.jpg',
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const Projects = [
     techUsed: ['unity', 'csharp', 'illustrator', 'photoshop'],
     type: 'game',
     link: 'https://play.google.com/store/apps/details?id=com.Edlo.Trapd&hl=en_US&gl=US',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/trapd.jpg',
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const Projects = [
     techUsed: ['unity', 'csharp', 'illustrator', 'photoshop'],
     type: 'game',
     link: 'https://github.com/edwingl10/Pacific-Marine-App',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/pmmc.jpg',
   },
   {
     id: 6,
@@ -80,7 +80,7 @@ const Projects = [
     techUsed: ['unity', 'csharp', 'illustrator', 'photoshop'],
     type: 'game',
     link: 'https://github.com/edwingl10/PartyBashCompanion',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/partybash.jpg',
   },
   {
     id: 7,
@@ -94,7 +94,7 @@ const Projects = [
     techUsed: ['python', 'mongodb', 'pycharm'],
     type: 'other',
     link: 'https://github.com/edwingl10/Search-ED',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/search-ed.jpg',
   },
   {
     id: 8,
@@ -108,7 +108,7 @@ const Projects = [
     techUsed: ['python', 'terminal', 'pycharm'],
     type: 'other',
     link: 'https://github.com/edwingl10/fault-localization',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/fault-local.jpg',
   },
   {
     id: 9,
@@ -122,7 +122,7 @@ const Projects = [
     techUsed: ['java', 'eclipse'],
     type: 'other',
     link: 'https://github.com/edwingl10/OSGui',
-    mainImg: '/images/placeholder.jpg',
+    mainImg: '/images/projects/osgui.jpg',
   },
   {
     id: 10,
@@ -135,8 +135,8 @@ const Projects = [
       'Info Weather is written with React and fetches the information from the OpenWeather API and displays the information in a minimalistic way. In addition, the site determines the appropriate icons based on the weather.',
     techUsed: ['react', 'js', 'css'],
     type: 'web',
-    link: 'https://github.com/edwingl10/infoweather',
-    mainImg: '/images/placeholder.jpg',
+    link: 'https://edwingl10.github.io/infoweather/',
+    mainImg: '/images/projects/infoweather.jpg',
   },
 ];
 
