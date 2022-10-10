@@ -81,7 +81,7 @@ export default function ViewProject({ project }) {
                   height: { xs: 270, sm: 320 },
                 }}>
                 <Image
-                  src="/images/placeholder.jpg"
+                  src={project.secondImg ?? '/images/placeholder.jpg'}
                   alt="Image of project"
                   layout="fill"
                   objectFit="cover"
@@ -142,5 +142,6 @@ ViewProject.propTypes = {
     type: PropTypes.string,
     link: PropTypes.string,
     mainImg: PropTypes.string,
+    secondImg: PropTypes.string,
   }).isRequired,
 };

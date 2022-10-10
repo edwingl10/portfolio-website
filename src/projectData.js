@@ -12,6 +12,7 @@ const Projects = [
     type: 'web',
     link: 'https://dreamscholars.org/',
     mainImg: '/images/projects/dreamscholars.jpg',
+    secondImg: '/images/projects/dreamscholars2.jpg',
   },
   {
     id: 2,
