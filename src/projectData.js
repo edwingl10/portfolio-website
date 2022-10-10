@@ -42,6 +42,7 @@ const Projects = [
     type: 'web',
     link: 'https://casamagda-b1768.web.app/',
     mainImg: '/images/projects/casamagda.jpg',
+    secondImg: '/images/projects/casamagda2.jpg',
   },
   {
     id: 4,
