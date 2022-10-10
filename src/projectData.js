@@ -27,6 +27,7 @@ const Projects = [
     type: 'web',
     link: 'https://nedflix-2c9c4.web.app/',
     mainImg: '/images/projects/nedflix.jpg',
+    secondImg: '/images/projects/nedflix2.jpg',
   },
   {
     id: 3,
