@@ -140,6 +140,7 @@ const Projects = [
     type: 'web',
     link: 'https://edwingl10.github.io/infoweather/',
     mainImg: '/images/projects/infoweather.jpg',
+    secondImg: '/images/projects/infoweather2.jpg',
   },
 ];
 
