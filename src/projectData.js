@@ -57,6 +57,7 @@ const Projects = [
     type: 'game',
     link: 'https://play.google.com/store/apps/details?id=com.Edlo.Trapd&hl=en_US&gl=US',
     mainImg: '/images/projects/trapd.jpg',
+    secondImg: '/images/projects/trapd2.jpg',
   },
   {
     id: 5,
