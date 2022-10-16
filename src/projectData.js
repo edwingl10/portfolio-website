@@ -85,6 +85,7 @@ const Projects = [
     type: 'game',
     link: 'https://github.com/edwingl10/PartyBashCompanion',
     mainImg: '/images/projects/partybash.jpg',
+    secondImg: '/images/projects/partybash2.jpg',
   },
   {
     id: 7,
