@@ -115,6 +115,7 @@ const Projects = [
     type: 'other',
     link: 'https://github.com/edwingl10/fault-localization',
     mainImg: '/images/projects/fault-local.jpg',
+    secondImg: '/images/projects/fault-local2.jpg',
   },
   {
     id: 9,
