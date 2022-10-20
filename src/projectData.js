@@ -129,6 +129,7 @@ const Projects = [
     type: 'other',
     link: 'https://github.com/edwingl10/OSGui',
     mainImg: '/images/projects/osgui.jpg',
+    secondImg: '/images/projects/osgui2.jpg',
   },
   {
     id: 10,
