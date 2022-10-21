@@ -101,6 +101,7 @@ const Projects = [
     type: 'other',
     link: 'https://github.com/edwingl10/Search-ED',
     mainImg: '/images/projects/search-ed.jpg',
+    secondImg: '/images/projects/search-ed2.jpg',
   },
   {
     id: 8,
