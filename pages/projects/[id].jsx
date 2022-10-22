@@ -9,6 +9,8 @@ import {
   Box,
   Stack,
   SvgIcon,
+  Tooltip,
+  Zoom,
 } from '@mui/material';
 import Projects from '../../src/projectData';
 import Icon, { iconTitles } from '../../components/Icon';
@@ -115,15 +117,18 @@ export default function ViewProject({ project }) {
           direction="row"
           sx={{ flexWrap: 'wrap' }}
           rowGap={3}
-          columnGap={{ xs: 2, sm: 4 }}
+          columnGap={{ xs: 4, md: 6 }}
           justifyContent="center">
           {project.techUsed.map((name) => (
-            <Box key={iconTitles[name]} sx={{ width: 85, height: 80 }}>
+            <Tooltip
+              key={iconTitles[name]}
+              title={iconTitles[name]}
+              enterTouchDelay={50}
+              TransitionComponent={Zoom}>
               <SvgIcon fontSize="large" color="primary">
                 <Icon name={`${name}`} height="inherit" width="inherit" />
               </SvgIcon>
-              <Typography>{iconTitles[name]}</Typography>
-            </Box>
+            </Tooltip>
           ))}
         </Stack>
       </Box>
