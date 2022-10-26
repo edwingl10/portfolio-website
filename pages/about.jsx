@@ -59,10 +59,10 @@ export default function about() {
               <Box
                 sx={{
                   position: 'relative',
-                  height: { xs: 250, sm: 300 },
+                  height: { xs: 270, sm: 320 },
                 }}>
                 <Image
-                  src="/images/placeholder.jpg"
+                  src="/images/coding.svg"
                   alt="Image of project"
                   layout="fill"
                   objectFit="cover"
