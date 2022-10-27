@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
+    "@vercel/analytics": "^0.1.1",
     "eslint": "8.22.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.2.5",
