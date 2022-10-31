@@ -30,10 +30,20 @@ export async function getStaticPaths() {
 }
 
 export default function ViewProject({ project }) {
+  const format = project.techUsed.map((p) => iconTitles[p]);
+
   return (
     <>
       <Head>
         <title>Edwin Lopez | {project.name}</title>
+        <meta
+          name="description"
+          content={`Explore ${project.name} and learn how ${format.join(
+            ', '
+          )} were used to create this ${
+            project.type === 'other' ? 'program.' : `${project.type} project.`
+          }`}
+        />
       </Head>
 
       <Container sx={{ my: 5, py: 2 }}>

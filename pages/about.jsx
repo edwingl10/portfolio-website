@@ -14,6 +14,10 @@ export default function about() {
     <>
       <Head>
         <title>Edwin Lopez | About</title>
+        <meta
+          name="description"
+          content="Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects."
+        />
       </Head>
       <Container sx={{ my: 5, py: 2 }}>
         <Grid

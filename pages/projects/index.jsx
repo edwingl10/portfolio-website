@@ -14,6 +14,10 @@ export default function ListProjects({ projects }) {
     <>
       <Head>
         <title>Edwin Lopez | Projects</title>
+        <meta
+          name="description"
+          content="A showcase of Edwin's various web / mobile projects and computer science programs."
+        />
       </Head>
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
