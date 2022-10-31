@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { Container, Grid, Typography, Box } from '@mui/material';
 import Image from 'next/image';
@@ -11,6 +12,9 @@ export async function getStaticProps() {
 export default function ListProjects({ projects }) {
   return (
     <>
+      <Head>
+        <title>Edwin Lopez | Projects</title>
+      </Head>
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container

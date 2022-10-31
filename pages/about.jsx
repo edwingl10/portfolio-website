@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import {
   Container,
   Grid,
@@ -11,6 +12,9 @@ import Image from 'next/image';
 export default function about() {
   return (
     <>
+      <Head>
+        <title>Edwin Lopez | About</title>
+      </Head>
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container

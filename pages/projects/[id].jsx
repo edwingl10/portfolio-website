@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import {
@@ -31,6 +32,10 @@ export async function getStaticPaths() {
 export default function ViewProject({ project }) {
   return (
     <>
+      <Head>
+        <title>Edwin Lopez | {project.name}</title>
+      </Head>
+
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container
