@@ -30,9 +30,15 @@ export default class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3d5a80" />
-          <meta name="msapplication-TileColor" content="#3d5a80" />
-          <meta name="theme-color" content="#ffffff" />
+          <link
+            rel="mask-icon"
+            href="/safari-pinned-tab.svg"
+            color={theme.palette.primary.main}
+          />
+          <meta
+            name="msapplication-TileColor"
+            content={theme.palette.primary.main}
+          />
 
           <link
             href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap"
