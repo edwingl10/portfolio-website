@@ -33,7 +33,7 @@ export default function ProjectSection({ projects }) {
                   sx={{ position: 'relative', width: '100%', height: 145 }}>
                   <Image
                     src={project.mainImg}
-                    alt="placeholder image"
+                    alt="project main image"
                     layout="fill"
                     objectFit="cover"
                   />

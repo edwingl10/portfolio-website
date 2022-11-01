@@ -18,6 +18,10 @@ export default function ListProjects({ projects }) {
           name="description"
           content="A showcase of Edwin's various web / mobile projects and computer science programs."
         />
+        <meta
+          name="keywords"
+          content="projects, mobile development, web development, frameworks, software engineer, front end, back end"
+        />
       </Head>
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
@@ -40,7 +44,7 @@ export default function ListProjects({ projects }) {
             <Image
               priority
               src="/images/projects.png"
-              alt="Memoji of me with a computer"
+              alt="Memoji of myself behind a laptop"
               height={260}
               width={220}
             />

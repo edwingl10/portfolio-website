@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 }
 
 export default function ViewProject({ project }) {
-  const format = project.techUsed.map((p) => iconTitles[p]);
+  const formatedTechUsed = project.techUsed.map((p) => iconTitles[p]);
 
   return (
     <>
@@ -38,12 +38,15 @@ export default function ViewProject({ project }) {
         <title>Edwin Lopez | {project.name}</title>
         <meta
           name="description"
-          content={`Explore ${project.name} and learn how ${format.join(
+          content={`Explore ${
+            project.name
+          } and learn how ${formatedTechUsed.join(
             ', '
           )} were used to create this ${
             project.type === 'other' ? 'program.' : `${project.type} project.`
           }`}
         />
+        <meta name="keywords" content={formatedTechUsed.join(', ')} />
       </Head>
 
       <Container sx={{ my: 5, py: 2 }}>

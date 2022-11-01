@@ -18,6 +18,10 @@ export default function about() {
           name="description"
           content="Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects."
         />
+        <meta
+          name="keywords"
+          content="software engineer, university of california irvine, front end, back end"
+        />
       </Head>
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
@@ -52,7 +56,7 @@ export default function about() {
             <Image
               priority
               src="/images/wave.png"
-              alt="Memoji of myself waving"
+              alt="Memoji of myself smiling and waving"
               height={260}
               width={220}
             />
@@ -71,7 +75,7 @@ export default function about() {
                 }}>
                 <Image
                   src="/images/coding.svg"
-                  alt="Image of project"
+                  alt="Hands typing on a keyboard with a plant, coffee, mouse, and monitor on the workspace"
                   layout="fill"
                   objectFit="cover"
                 />
