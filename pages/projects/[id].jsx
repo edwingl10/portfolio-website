@@ -79,7 +79,7 @@ export default function ViewProject({ project }) {
               }}>
               <Image
                 src={project.mainImg}
-                alt="Image of project"
+                alt={project.mainImgAltText}
                 layout="fill"
                 objectFit="cover"
               />
@@ -101,8 +101,8 @@ export default function ViewProject({ project }) {
                   height: { xs: 270, sm: 320 },
                 }}>
                 <Image
-                  src={project.secondImg ?? '/images/placeholder.jpg'}
-                  alt="Image of project"
+                  src={project.secondImg}
+                  alt={project.secondImgAltText}
                   layout="fill"
                   objectFit="cover"
                 />
@@ -166,5 +166,7 @@ ViewProject.propTypes = {
     link: PropTypes.string,
     mainImg: PropTypes.string,
     secondImg: PropTypes.string,
+    mainImgAltText: PropTypes.string,
+    secondImgAltText: PropTypes.string,
   }).isRequired,
 };
