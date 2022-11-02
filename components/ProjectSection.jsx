@@ -33,7 +33,7 @@ export default function ProjectSection({ projects }) {
                   sx={{ position: 'relative', width: '100%', height: 145 }}>
                   <Image
                     src={project.mainImg}
-                    alt="placeholder image"
+                    alt={project.mainImgAltText}
                     layout="fill"
                     objectFit="cover"
                   />
@@ -62,10 +62,14 @@ ProjectSection.propTypes = {
       name: PropTypes.string,
       overview: PropTypes.string,
       description: PropTypes.string,
-      description2: PropTypes.string,
+      moreDetails: PropTypes.string,
+      techUsed: PropTypes.arrayOf(PropTypes.string),
       type: PropTypes.string,
       link: PropTypes.string,
       mainImg: PropTypes.string,
+      secondImg: PropTypes.string,
+      mainImgAltText: PropTypes.string,
+      secondImgAltText: PropTypes.string,
     })
   ).isRequired,
 };

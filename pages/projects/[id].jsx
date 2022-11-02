@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import {
@@ -29,8 +30,25 @@ export async function getStaticPaths() {
 }
 
 export default function ViewProject({ project }) {
+  const formatedTechUsed = project.techUsed.map((p) => iconTitles[p]);
+
   return (
     <>
+      <Head>
+        <title>{`Edwin Lopez | ${project.name}`}</title>
+        <meta
+          name="description"
+          content={`Explore ${
+            project.name
+          } and learn how ${formatedTechUsed.join(
+            ', '
+          )} were used to create this ${
+            project.type === 'other' ? 'program.' : `${project.type} project.`
+          }`}
+        />
+        <meta name="keywords" content={formatedTechUsed.join(', ')} />
+      </Head>
+
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container
@@ -61,7 +79,7 @@ export default function ViewProject({ project }) {
               }}>
               <Image
                 src={project.mainImg}
-                alt="Image of project"
+                alt={project.mainImgAltText}
                 layout="fill"
                 objectFit="cover"
               />
@@ -83,8 +101,8 @@ export default function ViewProject({ project }) {
                   height: { xs: 270, sm: 320 },
                 }}>
                 <Image
-                  src={project.secondImg ?? '/images/placeholder.jpg'}
-                  alt="Image of project"
+                  src={project.secondImg}
+                  alt={project.secondImgAltText}
                   layout="fill"
                   objectFit="cover"
                 />
@@ -148,5 +166,7 @@ ViewProject.propTypes = {
     link: PropTypes.string,
     mainImg: PropTypes.string,
     secondImg: PropTypes.string,
+    mainImgAltText: PropTypes.string,
+    secondImgAltText: PropTypes.string,
   }).isRequired,
 };
