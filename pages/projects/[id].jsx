@@ -35,7 +35,7 @@ export default function ViewProject({ project }) {
   return (
     <>
       <Head>
-        <title>Edwin Lopez | {project.name}</title>
+        <title>{`Edwin Lopez | ${project.name}`}</title>
         <meta
           name="description"
           content={`Explore ${
