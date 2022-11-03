@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import {
   Container,
   Grid,
@@ -8,21 +7,19 @@ import {
   Box,
 } from '@mui/material';
 import Image from 'next/image';
+import SEOHead from '../components/SEOHead';
 
 export default function about() {
+  const title = 'Edwin Lopez | About';
+  const description =
+    'Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects.';
+  const keywords =
+    'software engineer, university of california irvine, front end, back end';
+
   return (
     <>
-      <Head>
-        <title>Edwin Lopez | About</title>
-        <meta
-          name="description"
-          content="Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects."
-        />
-        <meta
-          name="keywords"
-          content="software engineer, university of california irvine, front end, back end"
-        />
-      </Head>
+      <SEOHead {...{ title, description, keywords }} />
+
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container

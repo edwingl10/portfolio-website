@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import {
   Container,
   Typography,
@@ -15,6 +14,7 @@ import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
 import projectData from '../src/projectData';
 import Icon, { iconTitles } from '../components/Icon';
+import SEOHead from '../components/SEOHead';
 
 const skillsIcons = [
   'react',
@@ -28,19 +28,15 @@ const skillsIcons = [
 ];
 
 export default function Home() {
+  const title = 'Edwin Lopez | Home';
+  const description =
+    'Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks.';
+  const keywords =
+    'portfolio, software engineer, web development, mobile development, computer science, game development';
+
   return (
     <>
-      <Head>
-        <title>Edwin Lopez | Home</title>
-        <meta
-          name="description"
-          content="Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks."
-        />
-        <meta
-          name="keywords"
-          content="portfolio, software engineer, web development, mobile development, computer science, game development"
-        />
-      </Head>
+      <SEOHead {...{ title, description, keywords }} />
 
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
