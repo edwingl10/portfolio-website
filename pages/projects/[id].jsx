@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import {
@@ -15,6 +14,7 @@ import {
 } from '@mui/material';
 import Projects from '../../src/projectData';
 import Icon, { iconTitles } from '../../components/Icon';
+import SEOHead from '../../components/SEOHead';
 
 export async function getStaticProps({ params }) {
   const project = Projects.filter((p) => p.id.toString() === params.id)[0];
@@ -31,23 +31,17 @@ export async function getStaticPaths() {
 
 export default function ViewProject({ project }) {
   const formatedTechUsed = project.techUsed.map((p) => iconTitles[p]);
+  const title = `Edwin Lopez | ${project.name}`;
+  const description = `Explore ${
+    project.name
+  } and learn how ${formatedTechUsed.join(', ')} were used to create this ${
+    project.type === 'other' ? 'program.' : `${project.type} project.`
+  }`;
+  const keywords = formatedTechUsed.join(', ');
 
   return (
     <>
-      <Head>
-        <title>{`Edwin Lopez | ${project.name}`}</title>
-        <meta
-          name="description"
-          content={`Explore ${
-            project.name
-          } and learn how ${formatedTechUsed.join(
-            ', '
-          )} were used to create this ${
-            project.type === 'other' ? 'program.' : `${project.type} project.`
-          }`}
-        />
-        <meta name="keywords" content={formatedTechUsed.join(', ')} />
-      </Head>
+      <SEOHead {...{ title, description, keywords }} />
 
       <Container sx={{ my: 5, py: 2 }}>
         <Grid
