@@ -12,13 +12,17 @@ import {
   Tooltip,
   Zoom,
 } from '@mui/material';
+import { getPlaiceholder } from 'plaiceholder';
 import Projects from '../../src/projectData';
 import Icon, { iconTitles } from '../../components/Icon';
 import SEOHead from '../../components/SEOHead';
 
 export async function getStaticProps({ params }) {
   const project = Projects.filter((p) => p.id.toString() === params.id)[0];
-  return { props: { project } };
+  const { base64: mainBlurData } = await getPlaiceholder(project.mainImg);
+  const { base64: secondBlurData } = await getPlaiceholder(project.secondImg);
+
+  return { props: { project, mainBlurData, secondBlurData } };
 }
 
 export async function getStaticPaths() {
@@ -29,7 +33,7 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export default function ViewProject({ project }) {
+export default function ViewProject({ project, mainBlurData, secondBlurData }) {
   const formatedTechUsed = project.techUsed.map((p) => iconTitles[p]);
   const title = `Edwin Lopez | ${project.name}`;
   const description = `Explore ${
@@ -72,10 +76,13 @@ export default function ViewProject({ project }) {
                 height: { xs: 270, sm: 320 },
               }}>
               <Image
+                priority
                 src={project.mainImg}
                 alt={project.mainImgAltText}
                 layout="fill"
                 objectFit="cover"
+                placeholder="blur"
+                blurDataURL={mainBlurData}
               />
             </Box>
           </Grid>
@@ -99,6 +106,8 @@ export default function ViewProject({ project }) {
                   alt={project.secondImgAltText}
                   layout="fill"
                   objectFit="cover"
+                  placeholder="blur"
+                  blurDataURL={secondBlurData}
                 />
               </Box>
             </Grid>
@@ -163,4 +172,6 @@ ViewProject.propTypes = {
     mainImgAltText: PropTypes.string,
     secondImgAltText: PropTypes.string,
   }).isRequired,
+  mainBlurData: PropTypes.string.isRequired,
+  secondBlurData: PropTypes.string.isRequired,
 };
