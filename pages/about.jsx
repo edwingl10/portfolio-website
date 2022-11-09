@@ -7,9 +7,16 @@ import {
   Box,
 } from '@mui/material';
 import Image from 'next/image';
+import { getPlaiceholder } from 'plaiceholder';
 import SEOHead from '../components/SEOHead';
 
-export default function about() {
+export async function getStaticProps() {
+  const { base64: bannerBlur } = await getPlaiceholder('/images/coding.svg');
+  const { base64: secondaryBlur } = await getPlaiceholder('/images/coding.svg');
+  return { props: { bannerBlur, secondaryBlur } };
+}
+
+export default function about({ bannerBlur, secondaryBlur }) {
   const title = 'Edwin Lopez | About';
   const description =
     'Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects.';
@@ -56,6 +63,8 @@ export default function about() {
               alt="Memoji of myself smiling and waving"
               height={260}
               width={220}
+              placeholder="blur"
+              blurDataURL={bannerBlur}
             />
           </Grid>
         </Grid>
@@ -75,6 +84,8 @@ export default function about() {
                   alt="Hands typing on a keyboard with a plant, coffee, mouse, and monitor on the workspace"
                   layout="fill"
                   objectFit="cover"
+                  placeholder="blur"
+                  blurDataURL={secondaryBlur}
                 />
               </Box>
             </Grid>
