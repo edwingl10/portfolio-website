@@ -10,6 +10,8 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getPlaiceholder } from 'plaiceholder';
+import PropTypes from 'prop-types';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
 import projectData from '../src/projectData';
@@ -27,7 +29,12 @@ const skillsIcons = [
   'figma',
 ];
 
-export default function Home() {
+export async function getStaticProps() {
+  const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png');
+  return { props: { bannerBlur } };
+}
+
+export default function Home({ bannerBlur }) {
   const title = 'Edwin Lopez | Home';
   const description =
     'Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks.';
@@ -76,6 +83,8 @@ export default function Home() {
               alt="Memoji of myself smiling"
               height={250}
               width={220}
+              placeholder="blur"
+              blurDataURL={bannerBlur}
             />
           </Grid>
         </Grid>
@@ -137,3 +146,7 @@ export default function Home() {
     </>
   );
 }
+
+Home.propTypes = {
+  bannerBlur: PropTypes.string.isRequired,
+};
