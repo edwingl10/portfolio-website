@@ -11,8 +11,13 @@ import { getPlaiceholder } from 'plaiceholder';
 import SEOHead from '../components/SEOHead';
 
 export async function getStaticProps() {
-  const { base64: bannerBlur } = await getPlaiceholder('/images/coding.svg');
-  const { base64: secondaryBlur } = await getPlaiceholder('/images/coding.svg');
+  const { base64: bannerBlur } = await getPlaiceholder('/images/coding.svg', {
+    size: 10,
+  });
+  const { base64: secondaryBlur } = await getPlaiceholder(
+    '/images/coding.svg',
+    { size: 10 }
+  );
   return { props: { bannerBlur, secondaryBlur } };
 }
 

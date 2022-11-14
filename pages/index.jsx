@@ -30,7 +30,9 @@ const skillsIcons = [
 ];
 
 export async function getStaticProps() {
-  const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png');
+  const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png', {
+    size: 10,
+  });
   return { props: { bannerBlur } };
 }
 

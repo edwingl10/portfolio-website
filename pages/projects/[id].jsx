@@ -19,8 +19,12 @@ import SEOHead from '../../components/SEOHead';
 
 export async function getStaticProps({ params }) {
   const project = Projects.filter((p) => p.id.toString() === params.id)[0];
-  const { base64: mainBlurData } = await getPlaiceholder(project.mainImg);
-  const { base64: secondBlurData } = await getPlaiceholder(project.secondImg);
+  const { base64: mainBlurData } = await getPlaiceholder(project.mainImg, {
+    size: 10,
+  });
+  const { base64: secondBlurData } = await getPlaiceholder(project.secondImg, {
+    size: 10,
+  });
 
   return { props: { project, mainBlurData, secondBlurData } };
 }
