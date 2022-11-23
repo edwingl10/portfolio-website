@@ -30,12 +30,11 @@ const skillsIcons = [
 ];
 
 export async function getStaticProps() {
-  const placeholders = {};
   const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png', {
     size: 10,
   });
 
-  placeholders.banner = bannerBlur;
+  const placeholders = {};
   await Promise.all(
     Projects.map(async (data) => {
       const { base64 } = await getPlaiceholder(data.mainImg, { size: 10 });
@@ -43,10 +42,10 @@ export async function getStaticProps() {
     })
   );
 
-  return { props: { placeholders } };
+  return { props: { placeholders, bannerBlur } };
 }
 
-export default function Home({ placeholders }) {
+export default function Home({ placeholders, bannerBlur }) {
   const title = 'Edwin Lopez | Home';
   const description =
     'Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks.';
@@ -96,7 +95,7 @@ export default function Home({ placeholders }) {
               height={250}
               width={220}
               placeholder="blur"
-              blurDataURL={placeholders.banner}
+              blurDataURL={bannerBlur}
             />
           </Grid>
         </Grid>
@@ -161,4 +160,5 @@ export default function Home({ placeholders }) {
 
 Home.propTypes = {
   placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
+  bannerBlur: PropTypes.string.isRequired,
 };

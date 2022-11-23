@@ -7,12 +7,11 @@ import ProjectSection from '../../components/ProjectSection';
 import SEOHead from '../../components/SEOHead';
 
 export async function getStaticProps() {
-  const placeholders = {};
   const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png', {
     size: 10,
   });
 
-  placeholders.banner = bannerBlur;
+  const placeholders = {};
   await Promise.all(
     Projects.map(async (data) => {
       const { base64 } = await getPlaiceholder(data.mainImg, { size: 10 });
@@ -20,10 +19,10 @@ export async function getStaticProps() {
     })
   );
 
-  return { props: { placeholders } };
+  return { props: { placeholders, bannerBlur } };
 }
 
-export default function ListProjects({ placeholders }) {
+export default function ListProjects({ placeholders, bannerBlur }) {
   const title = 'Edwin Lopez | Projects';
   const description =
     "A showcase of Edwin's various web / mobile projects and computer science programs.";
@@ -59,7 +58,7 @@ export default function ListProjects({ placeholders }) {
               height={260}
               width={220}
               placeholder="blur"
-              blurDataURL={placeholders.banner}
+              blurDataURL={bannerBlur}
             />
           </Grid>
         </Grid>
@@ -76,4 +75,5 @@ export default function ListProjects({ placeholders }) {
 
 ListProjects.propTypes = {
   placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
+  bannerBlur: PropTypes.string.isRequired,
 };
