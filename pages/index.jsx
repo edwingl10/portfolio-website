@@ -14,7 +14,7 @@ import { getPlaiceholder } from 'plaiceholder';
 import PropTypes from 'prop-types';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
-import projectData from '../src/projectData';
+import Projects from '../src/projectData';
 import Icon, { iconTitles } from '../components/Icon';
 import SEOHead from '../components/SEOHead';
 
@@ -30,13 +30,23 @@ const skillsIcons = [
 ];
 
 export async function getStaticProps() {
+  const placeholders = {};
   const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png', {
     size: 10,
   });
-  return { props: { bannerBlur } };
+
+  placeholders.banner = bannerBlur;
+  await Promise.all(
+    Projects.map(async (data) => {
+      const { base64 } = await getPlaiceholder(data.mainImg, { size: 10 });
+      placeholders[data.id] = base64;
+    })
+  );
+
+  return { props: { placeholders } };
 }
 
-export default function Home({ bannerBlur }) {
+export default function Home({ placeholders }) {
   const title = 'Edwin Lopez | Home';
   const description =
     'Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks.';
@@ -86,7 +96,7 @@ export default function Home({ bannerBlur }) {
               height={250}
               width={220}
               placeholder="blur"
-              blurDataURL={bannerBlur}
+              blurDataURL={placeholders.banner}
             />
           </Grid>
         </Grid>
@@ -137,7 +147,7 @@ export default function Home({ bannerBlur }) {
           Projects
         </Typography>
 
-        <ProjectSection projects={projectData.slice(0, 6)} />
+        <ProjectSection projects={Projects.slice(0, 6)} {...{ placeholders }} />
 
         <Link href="/projects" passHref>
           <Button color="secondary" variant="contained" sx={{ mt: 4 }}>
@@ -150,5 +160,5 @@ export default function Home({ bannerBlur }) {
 }
 
 Home.propTypes = {
-  bannerBlur: PropTypes.string.isRequired,
+  placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
 };

@@ -11,7 +11,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-export default function ProjectSection({ projects }) {
+export default function ProjectSection({ projects, placeholders }) {
   return (
     <Grid
       container
@@ -36,6 +36,8 @@ export default function ProjectSection({ projects }) {
                     alt={project.mainImgAltText}
                     layout="fill"
                     objectFit="cover"
+                    placeholder="blur"
+                    blurDataURL={placeholders[project.id]}
                   />
                 </CardMedia>
                 <CardContent>
@@ -72,4 +74,5 @@ ProjectSection.propTypes = {
       secondImgAltText: PropTypes.string,
     })
   ).isRequired,
+  placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
 };

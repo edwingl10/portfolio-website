@@ -11,17 +11,18 @@ import { getPlaiceholder } from 'plaiceholder';
 import SEOHead from '../components/SEOHead';
 
 export async function getStaticProps() {
-  const { base64: bannerBlur } = await getPlaiceholder('/images/coding.svg', {
+  const { base64: bannerBlur } = await getPlaiceholder('/images/wave.png', {
     size: 10,
   });
   const { base64: secondaryBlur } = await getPlaiceholder(
     '/images/coding.svg',
     { size: 10 }
   );
-  return { props: { bannerBlur, secondaryBlur } };
+  const placeholders = { bannerBlur, secondaryBlur };
+  return { props: { placeholders } };
 }
 
-export default function about({ bannerBlur, secondaryBlur }) {
+export default function about({ placeholders }) {
   const title = 'Edwin Lopez | About';
   const description =
     'Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects.';
@@ -69,7 +70,7 @@ export default function about({ bannerBlur, secondaryBlur }) {
               height={260}
               width={220}
               placeholder="blur"
-              blurDataURL={bannerBlur}
+              blurDataURL={placeholders.bannerBlur}
             />
           </Grid>
         </Grid>
@@ -90,7 +91,7 @@ export default function about({ bannerBlur, secondaryBlur }) {
                   layout="fill"
                   objectFit="cover"
                   placeholder="blur"
-                  blurDataURL={secondaryBlur}
+                  blurDataURL={placeholders.secondaryBlur}
                 />
               </Box>
             </Grid>

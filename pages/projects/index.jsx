@@ -1,15 +1,29 @@
 import PropTypes from 'prop-types';
 import { Container, Grid, Typography, Box } from '@mui/material';
 import Image from 'next/image';
+import { getPlaiceholder } from 'plaiceholder';
 import Projects from '../../src/projectData';
 import ProjectSection from '../../components/ProjectSection';
 import SEOHead from '../../components/SEOHead';
 
 export async function getStaticProps() {
-  return { props: { projects: Projects } };
+  const placeholders = {};
+  const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png', {
+    size: 10,
+  });
+
+  placeholders.banner = bannerBlur;
+  await Promise.all(
+    Projects.map(async (data) => {
+      const { base64 } = await getPlaiceholder(data.mainImg, { size: 10 });
+      placeholders[data.id] = base64;
+    })
+  );
+
+  return { props: { placeholders } };
 }
 
-export default function ListProjects({ projects }) {
+export default function ListProjects({ placeholders }) {
   const title = 'Edwin Lopez | Projects';
   const description =
     "A showcase of Edwin's various web / mobile projects and computer science programs.";
@@ -44,6 +58,8 @@ export default function ListProjects({ projects }) {
               alt="Memoji of myself behind a laptop"
               height={260}
               width={220}
+              placeholder="blur"
+              blurDataURL={placeholders.banner}
             />
           </Grid>
         </Grid>
@@ -51,7 +67,7 @@ export default function ListProjects({ projects }) {
 
       <Box bgcolor="background.default" sx={{ py: 5 }}>
         <Container>
-          <ProjectSection projects={projects} />
+          <ProjectSection projects={Projects} {...{ placeholders }} />
         </Container>
       </Box>
     </>
@@ -59,17 +75,5 @@ export default function ListProjects({ projects }) {
 }
 
 ListProjects.propTypes = {
-  projects: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      overview: PropTypes.string,
-      description: PropTypes.string,
-      moreDetails: PropTypes.string,
-      techUsed: PropTypes.arrayOf(PropTypes.string),
-      type: PropTypes.string,
-      link: PropTypes.string,
-      mainImg: PropTypes.string,
-    })
-  ).isRequired,
+  placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
 };
