@@ -10,6 +10,7 @@ import {
   Typography,
   Stack,
   Link as MuiLink,
+  Backdrop,
 } from '@mui/material';
 import GridViewIcon from '@mui/icons-material/GridView';
 import PersonIcon from '@mui/icons-material/Person';
@@ -70,50 +71,52 @@ export default function MobileNavbar() {
         </BottomNavigation>
       </Paper>
 
-      <Menu
-        open={Boolean(anchorEl)}
-        anchorEl={anchorEl}
-        onClose={() => setAnchorEl(null)}
-        anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
-        transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}>
-        <Stack
-          direction="row"
-          rowGap={2}
-          columnGap={{ xs: 2, sm: 3 }}
-          justifyContent="center"
-          sx={{
-            flexWrap: 'wrap',
-            maxWidth: 500,
-          }}>
-          {Object.entries(links).map(([title, content]) => (
-            <Link href={content.link} passHref key={title} value={title}>
-              <MenuItem onClick={() => setAnchorEl(null)}>
-                <Stack alignItems="center" sx={{ width: 85 }}>
-                  {content.icon}
-                  <Typography>{title}</Typography>
-                </Stack>
-              </MenuItem>
-            </Link>
-          ))}
+      <Backdrop open={Boolean(anchorEl)} sx={{ bgcolor: 'rgba(0,0,0,0.2)' }}>
+        <Menu
+          open={Boolean(anchorEl)}
+          anchorEl={anchorEl}
+          onClose={() => setAnchorEl(null)}
+          anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
+          transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}>
+          <Stack
+            direction="row"
+            rowGap={2}
+            columnGap={{ xs: 2, sm: 3 }}
+            justifyContent="center"
+            sx={{
+              flexWrap: 'wrap',
+              maxWidth: 500,
+            }}>
+            {Object.entries(links).map(([title, content]) => (
+              <Link href={content.link} passHref key={title} value={title}>
+                <MenuItem onClick={() => setAnchorEl(null)}>
+                  <Stack alignItems="center" sx={{ width: 85 }}>
+                    {content.icon}
+                    <Typography>{title}</Typography>
+                  </Stack>
+                </MenuItem>
+              </Link>
+            ))}
 
-          <CustomMenuItem
-            component="button"
-            download
-            href="/resume.pdf"
-            MenuIcon={DescriptionIcon}
-            title="Resume"
-            onClick={() => setAnchorEl(null)}
-          />
-          {/* <CustomMenuItem MenuIcon={LanguageIcon} title="Language" />
+            <CustomMenuItem
+              component="button"
+              download
+              href="/resume.pdf"
+              MenuIcon={DescriptionIcon}
+              title="Resume"
+              onClick={() => setAnchorEl(null)}
+            />
+            {/* <CustomMenuItem MenuIcon={LanguageIcon} title="Language" />
           <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" /> */}
-          <CustomMenuItem
-            component={MuiLink}
-            href="mailto:edwingl@uci.edu"
-            MenuIcon={SendIcon}
-            title="Contact"
-          />
-        </Stack>
-      </Menu>
+            <CustomMenuItem
+              component={MuiLink}
+              href="mailto:edwingl@uci.edu"
+              MenuIcon={SendIcon}
+              title="Contact"
+            />
+          </Stack>
+        </Menu>
+      </Backdrop>
     </>
   );
 }
