@@ -3,6 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import { GlobalStyles } from '@mui/material';
+import { appWithTranslation } from 'next-i18next';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
@@ -11,7 +12,7 @@ import Layout from '../components/Layout';
 const clientSideEmotionCache = createEmotionCache();
 
 /* eslint-disable react/prop-types */
-export default function MyApp(props) {
+function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   return (
@@ -34,3 +35,5 @@ export default function MyApp(props) {
     </CacheProvider>
   );
 }
+
+export default appWithTranslation(MyApp);

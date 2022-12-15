@@ -17,11 +17,14 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.1",
     "@plaiceholder/next": "^2.5.0",
+    "i18next": "^22.4.3",
     "next": "12.2.5",
+    "next-i18next": "^13.0.1",
     "plaiceholder": "^2.5.0",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^12.1.1",
     "sharp": "^0.31.2"
   },
   "devDependencies": {
