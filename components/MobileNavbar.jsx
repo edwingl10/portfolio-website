@@ -16,7 +16,7 @@ import GridViewIcon from '@mui/icons-material/GridView';
 import PersonIcon from '@mui/icons-material/Person';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DescriptionIcon from '@mui/icons-material/Description';
-// import LanguageIcon from '@mui/icons-material/Language';
+import LanguageIcon from '@mui/icons-material/Language';
 // import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SendIcon from '@mui/icons-material/Send';
 import PropTypes from 'prop-types';
@@ -106,8 +106,8 @@ export default function MobileNavbar() {
               title="Resume"
               onClick={() => setAnchorEl(null)}
             />
-            {/* <CustomMenuItem MenuIcon={LanguageIcon} title="Language" />
-          <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" /> */}
+            <CustomMenuItem MenuIcon={LanguageIcon} title="Language" />
+            {/* <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" /> */}
             <CustomMenuItem
               component={MuiLink}
               href="mailto:edwingl@uci.edu"
