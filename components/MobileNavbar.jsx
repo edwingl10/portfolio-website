@@ -20,6 +20,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 // import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SendIcon from '@mui/icons-material/Send';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import Icon from './Icon';
 
 const links = {
@@ -48,6 +49,13 @@ CustomMenuItem.propTypes = {
 
 export default function MobileNavbar() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const router = useRouter();
+
+  const onToggleLanguageClick = (newLocale) => {
+    const { pathname, asPath, query } = router;
+    setAnchorEl(null);
+    router.push({ pathname, query }, asPath, { locale: newLocale });
+  };
 
   return (
     <>
@@ -106,7 +114,13 @@ export default function MobileNavbar() {
               title="Resume"
               onClick={() => setAnchorEl(null)}
             />
-            <CustomMenuItem MenuIcon={LanguageIcon} title="Language" />
+            <CustomMenuItem
+              MenuIcon={LanguageIcon}
+              title={router.locale === 'en' ? 'Español' : 'English'}
+              onClick={() =>
+                onToggleLanguageClick(router.locale === 'en' ? 'es' : 'en')
+              }
+            />
             {/* <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" /> */}
             <CustomMenuItem
               component={MuiLink}
