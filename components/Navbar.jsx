@@ -10,9 +10,9 @@ import {
 } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// import LanguageIcon from '@mui/icons-material/Language';
 // import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import Icon from './Icon';
+import TranslationMenu from './TranslationMenu';
 
 const links = {
   About: '/about',
@@ -81,10 +81,9 @@ export default function Navbar() {
           Resume
         </Button>
 
-        {/* <IconButton aria-label="select language" sx={{ mx: 1 }}>
-          <LanguageIcon />
-        </IconButton>
-        <IconButton aria-label="change theme" sx={{ mx: 1 }}>
+        <TranslationMenu />
+
+        {/* <IconButton aria-label="change theme" sx={{ mx: 1 }}>
           <DarkModeOutlinedIcon />
         </IconButton> */}
 
