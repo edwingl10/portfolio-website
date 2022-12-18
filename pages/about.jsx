@@ -12,23 +12,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import SEOHead from '../components/SEOHead';
 
-export async function getStaticProps({ locale }) {
-  const { base64: bannerBlur } = await getPlaiceholder('/images/wave.png', {
-    size: 10,
-  });
-  const { base64: secondaryBlur } = await getPlaiceholder(
-    '/images/coding.svg',
-    { size: 10 }
-  );
-  const placeholders = { bannerBlur, secondaryBlur };
-  return {
-    props: {
-      placeholders,
-      ...(await serverSideTranslations(locale, ['about'])),
-    },
-  };
-}
-
 export default function about({ placeholders }) {
   const title = 'Edwin Lopez | About';
   const description =
@@ -36,7 +19,7 @@ export default function about({ placeholders }) {
   const keywords =
     'software engineer, university of california irvine, front end, back end';
 
-  const { t } = useTranslation('about');
+  const { t } = useTranslation(['about', 'common']);
 
   return (
     <>
@@ -61,7 +44,7 @@ export default function about({ placeholders }) {
               variant="contained"
               href="mailto:edwingl@uci.edu"
               sx={{ mt: 2 }}>
-              contact
+              {t('common:btn.contact')}
             </Button>
           </Grid>
 
@@ -110,4 +93,21 @@ export default function about({ placeholders }) {
       </Box>
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  const { base64: bannerBlur } = await getPlaiceholder('/images/wave.png', {
+    size: 10,
+  });
+  const { base64: secondaryBlur } = await getPlaiceholder(
+    '/images/coding.svg',
+    { size: 10 }
+  );
+  const placeholders = { bannerBlur, secondaryBlur };
+  return {
+    props: {
+      placeholders,
+      ...(await serverSideTranslations(locale, ['about', 'common'])),
+    },
+  };
 }
