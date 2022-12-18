@@ -8,19 +8,9 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import { getPlaiceholder } from 'plaiceholder';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import SEOHead from '../components/SEOHead';
-
-export async function getStaticProps() {
-  const { base64: bannerBlur } = await getPlaiceholder('/images/wave.png', {
-    size: 10,
-  });
-  const { base64: secondaryBlur } = await getPlaiceholder(
-    '/images/coding.svg',
-    { size: 10 }
-  );
-  const placeholders = { bannerBlur, secondaryBlur };
-  return { props: { placeholders } };
-}
 
 export default function about({ placeholders }) {
   const title = 'Edwin Lopez | About';
@@ -28,6 +18,8 @@ export default function about({ placeholders }) {
     'Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects.';
   const keywords =
     'software engineer, university of california irvine, front end, back end';
+
+  const { t } = useTranslation(['about', 'common']);
 
   return (
     <>
@@ -42,15 +34,9 @@ export default function about({ placeholders }) {
           spacing={3}>
           <Grid item xs={12} sm={8}>
             <Typography variant="h3" paragraph color="secondary">
-              About
+              {t('about')}
             </Typography>
-            <Typography paragraph>
-              I am a first generation college student that graduated from the
-              University of California, Irvine as a Software Engineer. I enjoy
-              working on various projects, from game development to web
-              development. At the moment, I am interested in working on
-              front-end/back-end web projects.
-            </Typography>
+            <Typography paragraph>{t('ImAFirstGen')}</Typography>
 
             <Button
               component={MuiLink}
@@ -58,7 +44,7 @@ export default function about({ placeholders }) {
               variant="contained"
               href="mailto:edwingl@uci.edu"
               sx={{ mt: 2 }}>
-              contact
+              {t('common:btn.contact')}
             </Button>
           </Grid>
 
@@ -98,21 +84,30 @@ export default function about({ placeholders }) {
 
             <Grid item xs={12} sm={7}>
               <Typography variant="h4" paragraph color="primary">
-                My Passion
+                {t('myPassion')}
               </Typography>
-              <Typography paragraph>
-                I uncovered my passion for coding in High School when I took a
-                semester long computer science class. Although it was about
-                moving code blocks to program, it piqued my curiosity when I
-                finished a functional replica of the Mario game. I enjoy the
-                process of building programs, from beginning to end because for
-                me it&apos;s all about the experience and the new skills you
-                learn along the way.
-              </Typography>
+              <Typography paragraph>{t('uncoveredMyPassion')}</Typography>
             </Grid>
           </Grid>
         </Container>
       </Box>
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  const { base64: bannerBlur } = await getPlaiceholder('/images/wave.png', {
+    size: 10,
+  });
+  const { base64: secondaryBlur } = await getPlaiceholder(
+    '/images/coding.svg',
+    { size: 10 }
+  );
+  const placeholders = { bannerBlur, secondaryBlur };
+  return {
+    props: {
+      placeholders,
+      ...(await serverSideTranslations(locale, ['about', 'common'])),
+    },
+  };
 }

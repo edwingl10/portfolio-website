@@ -6,8 +6,8 @@ module.exports = {
   /* eslint-disable global-require */
   localePath:
     typeof window === 'undefined'
-      ? require('path').resolve('./my-custom/path')
-      : '/public/my-custom/path',
+      ? require('path').resolve('./public/locales')
+      : '/locales',
 
   reloadOnPrerender: true,
 };
