@@ -10,8 +10,11 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'next-i18next';
 
-export default function ProjectSection({ projects, placeholders, t }) {
+export default function ProjectSection({ projects, placeholders }) {
+  const { t } = useTranslation('projects');
+
   return (
     <Grid
       container
@@ -75,9 +78,4 @@ ProjectSection.propTypes = {
     })
   ).isRequired,
   placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
-  t: PropTypes.func,
-};
-
-ProjectSection.defaultProps = {
-  t: () => {},
 };

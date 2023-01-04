@@ -53,7 +53,7 @@ export default function ListProjects({ placeholders, bannerBlur }) {
 
       <Box bgcolor="background.default" sx={{ py: 5 }}>
         <Container>
-          <ProjectSection projects={Projects} {...{ placeholders, t }} />
+          <ProjectSection projects={Projects} {...{ placeholders }} />
         </Container>
       </Box>
     </>

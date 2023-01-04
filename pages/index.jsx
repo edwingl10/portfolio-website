@@ -38,7 +38,7 @@ export default function Home({ placeholders, bannerBlur }) {
   const keywords =
     'portfolio, software engineer, web development, mobile development, computer science, game development';
 
-  const { t } = useTranslation(['home', 'common']);
+  const { t } = useTranslation(['home', 'common', 'projects']);
 
   return (
     <>
@@ -161,7 +161,7 @@ export async function getStaticProps({ locale }) {
     props: {
       placeholders,
       bannerBlur,
-      ...(await serverSideTranslations(locale, ['home', 'common'])),
+      ...(await serverSideTranslations(locale, ['home', 'common', 'projects'])),
     },
   };
 }
