@@ -2,8 +2,7 @@ const Projects = [
   {
     id: 1,
     name: 'DreamScholars',
-    overview:
-      'A web application that facilitates the discoverability of scholarships for students.',
+    overview: 'dreamScholarsOverview',
     description:
       'Dreamscholars is a web application for exploring, searching, adding, sharing and filtering scholarships by various attributes such as major, award amount, grade, state and school. The team is constantly working on and planning to implement more enticing features in the near future.',
     moreDetails:

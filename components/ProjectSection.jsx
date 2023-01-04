@@ -11,7 +11,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-export default function ProjectSection({ projects, placeholders }) {
+export default function ProjectSection({ projects, placeholders, t }) {
   return (
     <Grid
       container
@@ -45,7 +45,7 @@ export default function ProjectSection({ projects, placeholders }) {
                     {project.name}
                   </Typography>
                   <Typography textAlign="left" variant="body2">
-                    {project.overview}
+                    {t(project.overview)}
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -75,4 +75,9 @@ ProjectSection.propTypes = {
     })
   ).isRequired,
   placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
+  t: PropTypes.func,
+};
+
+ProjectSection.defaultProps = {
+  t: () => {},
 };
