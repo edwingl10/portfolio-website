@@ -12,6 +12,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
 import PropTypes from 'prop-types';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
 import Projects from '../src/projectData';
@@ -29,7 +31,7 @@ const skillsIcons = [
   'figma',
 ];
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png', {
     size: 10,
   });
@@ -42,7 +44,13 @@ export async function getStaticProps() {
     })
   );
 
-  return { props: { placeholders, bannerBlur } };
+  return {
+    props: {
+      placeholders,
+      bannerBlur,
+      ...(await serverSideTranslations(locale, ['home', 'common'])),
+    },
+  };
 }
 
 export default function Home({ placeholders, bannerBlur }) {
@@ -51,6 +59,8 @@ export default function Home({ placeholders, bannerBlur }) {
     'Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks.';
   const keywords =
     'portfolio, software engineer, web development, mobile development, computer science, game development';
+
+  const { t } = useTranslation(['home', 'common']);
 
   return (
     <>
@@ -65,14 +75,13 @@ export default function Home({ placeholders, bannerBlur }) {
           spacing={3}>
           <Grid item xs={12} sm={8}>
             <Typography variant="h3" paragraph color="primary">
-              Hi, I&apos;m{' '}
+              {t('hi')}
               <Box component="span" sx={{ color: 'secondary.main' }}>
                 Edwin
               </Box>
             </Typography>
             <Typography variant="h5" paragraph>
-              I am a software engineer currently focusing on bringing web
-              projects to life.
+              {t('IamASoftwareEngineer')}
             </Typography>
 
             <Button
@@ -81,7 +90,7 @@ export default function Home({ placeholders, bannerBlur }) {
               variant="contained"
               href="mailto:edwingl@uci.edu"
               sx={{ mt: 2, mb: 4 }}>
-              contact
+              {t('common:btn.contact')}
             </Button>
 
             <SocialLinks />
@@ -104,22 +113,16 @@ export default function Home({ placeholders, bannerBlur }) {
       <Box bgcolor="background.default" sx={{ py: 5 }}>
         <Box textAlign="center">
           <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-            I&apos;m a dedicated software developer
+            {t('dedicatedDeveloper')}
           </Typography>
           <Container maxWidth="md">
-            <Typography>
-              I graduated from the University of California, Irvine as a
-              Software Engineer. I am a bilingual and committed developer who
-              has experience designing, implementing, debugging and testing
-              several projects in different languages, technologies and
-              frameworks.
-            </Typography>
+            <Typography>{t('IGraduatedFrom')}</Typography>
           </Container>
         </Box>
 
         <Box sx={{ pt: 5 }} textAlign="center">
           <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-            My Skills
+            {t('mySkills')}
           </Typography>
           <Container maxWidth="sm">
             <Stack
@@ -143,14 +146,14 @@ export default function Home({ placeholders, bannerBlur }) {
 
       <Container sx={{ py: 5, textAlign: 'center' }} id="projects">
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-          Projects
+          {t('projects')}
         </Typography>
 
         <ProjectSection projects={Projects.slice(0, 6)} {...{ placeholders }} />
 
         <Link href="/projects" passHref>
           <Button color="secondary" variant="contained" sx={{ mt: 4 }}>
-            View More
+            {t('common:btn.viewMore')}
           </Button>
         </Link>
       </Container>
