@@ -21,11 +21,12 @@ import LanguageIcon from '@mui/icons-material/Language';
 import SendIcon from '@mui/icons-material/Send';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import Icon from './Icon';
 
 const links = {
-  About: { link: '/about', icon: <PersonIcon color="primary" /> },
-  Projects: {
+  about: { link: '/about', icon: <PersonIcon color="primary" /> },
+  projects: {
     link: '/projects',
     icon: <IntegrationInstructionsIcon color="primary" />,
   },
@@ -50,6 +51,7 @@ CustomMenuItem.propTypes = {
 export default function MobileNavbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const router = useRouter();
+  const { t } = useTranslation('common');
 
   const onToggleLanguageClick = (newLocale) => {
     const { pathname, asPath, query } = router;
@@ -100,7 +102,7 @@ export default function MobileNavbar() {
                 <MenuItem onClick={() => setAnchorEl(null)}>
                   <Stack alignItems="center" sx={{ width: 85 }}>
                     {content.icon}
-                    <Typography>{title}</Typography>
+                    <Typography>{t(title)}</Typography>
                   </Stack>
                 </MenuItem>
               </Link>
@@ -111,7 +113,7 @@ export default function MobileNavbar() {
               download
               href="/resume.pdf"
               MenuIcon={DescriptionIcon}
-              title="Resume"
+              title={t('resume')}
               onClick={() => setAnchorEl(null)}
             />
             <CustomMenuItem
@@ -126,7 +128,7 @@ export default function MobileNavbar() {
               component={MuiLink}
               href="mailto:edwingl@uci.edu"
               MenuIcon={SendIcon}
-              title="Contact"
+              title={t('contact')}
             />
           </Stack>
         </Menu>
