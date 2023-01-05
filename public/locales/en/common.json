@@ -5,5 +5,9 @@
         "explore": "explore",
         "share": "share"
     },
-    "rightsReserved": "All rights reserved. - Designed & coded by Edwin Lopez."
+    "rightsReserved": "All rights reserved. - Designed & coded by Edwin Lopez.",
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contact": "Contact"
 }

@@ -10,16 +10,18 @@ import {
 } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 // import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
 
 const links = {
-  About: '/about',
-  Projects: '/projects',
+  about: '/about',
+  projects: '/projects',
 };
 
 export default function Navbar() {
+  const { t } = useTranslation('common');
   const router = useRouter();
   let currentTab = false;
 
@@ -60,7 +62,7 @@ export default function Navbar() {
           {Object.entries(links).map(([title, link]) => (
             <Link href={link} passHref key={title} value={title}>
               <Tab
-                label={title}
+                label={t(title)}
                 component="a"
                 sx={{
                   textTransform: 'none',
@@ -78,7 +80,7 @@ export default function Navbar() {
             textTransform: 'none',
             color: (theme) => theme.palette.grey[600],
           }}>
-          Resume
+          {t('resume')}
         </Button>
 
         <TranslationMenu />
@@ -94,7 +96,7 @@ export default function Navbar() {
             textTransform: 'none',
             color: (theme) => theme.palette.grey[600],
           }}>
-          Contact
+          {t('contact')}
         </Button>
       </Toolbar>
     </AppBar>
