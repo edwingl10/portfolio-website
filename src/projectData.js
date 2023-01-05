@@ -2,11 +2,9 @@ const Projects = [
   {
     id: 1,
     name: 'DreamScholars',
-    overview: 'dreamScholarsOverview',
-    description:
-      'Dreamscholars is a web application for exploring, searching, adding, sharing and filtering scholarships by various attributes such as major, award amount, grade, state and school. The team is constantly working on and planning to implement more enticing features in the near future.',
-    moreDetails:
-      'I primarily work on the UI and implementing the designs and functionality to the site such as data validation, filtering scholarships, language translation etc. I have also worked on the backend functionality that allows interaction between components and the database such as saving and fetching scholarships and adding database security rules. Lastly, I validate the functionality of components by incorporating unit tests using Jest and React Testing Library. Apart from coding I also conduct code reviews for other teammates.',
+    overview: 'dreamScholars.overview',
+    description: 'dreamScholars.description',
+    moreDetails: 'dreamScholars.moreDetails',
     techUsed: ['react', 'typescript', 'mui', 'jest', 'firebase'],
     type: 'web',
     link: 'https://dreamscholars.org/',
@@ -20,12 +18,9 @@ const Projects = [
   {
     id: 2,
     name: 'Nedflix',
-    overview:
-      'A web application for exploring, discovering and listing movies and shows.',
-    description:
-      'Nedflix allows users to browse, search and watch trailers. Users can discover movies and shows by most trending, top rated and other popular categories. To easily track their favorites, users can also add/remove movies and shows to their personal list.',
-    moreDetails:
-      'To ensure the site content is dynamic and reflects the latests trends in media, the site fetches the data from themoviedb API. User authentication, Lazy loading and infinite scrolling was added to enhance the user experience.',
+    overview: 'nedflix.overview',
+    description: 'nedflix.description',
+    moreDetails: 'nedflix.moreDetails',
     techUsed: ['react', 'js', 'css', 'firebase'],
     type: 'web',
     link: 'https://nedflix-2c9c4.web.app/',
@@ -39,12 +34,9 @@ const Projects = [
   {
     id: 3,
     name: 'Casa Magda',
-    overview:
-      'A website highlighting the services of a small housekeeping company.',
-    description:
-      'Casa Magda is a one-page site to showcase the services for a small cleaning company. Furthermore, the site highlights the company history, reasons to work with them, locations, and a contact form.',
-    moreDetails:
-      'The site is written using HTML, CSS, Javascript and JQuery. Utilizing CSS animations, SEO techniques and UX principles, the website increased visibility and profits by over 50%.',
+    overview: 'casaMagda.overview',
+    description: 'casaMagda.description',
+    moreDetails: 'casaMagda.moreDetails',
     techUsed: ['js', 'jquery', 'html', 'css', 'figma'],
     type: 'web',
     link: 'https://casamagda-b1768.web.app/',
@@ -58,12 +50,9 @@ const Projects = [
   {
     id: 4,
     name: 'TRAPD',
-    overview:
-      'An endless action mobile platformer game available on the Google play store.',
-    description:
-      'TRAPD is an action platformer where the goal of the game is to survive as long as possible while dodging obstacles, cannons and lasers. The game offers various playable characters, each with different supers to aid them in game. There are various coins, each with a different value and XP, as well as obstacles that appear randomly in the game.',
-    moreDetails:
-      "TRAPD is my most ambitious solo project and it's free to download on the Google play store. Players' progress and high scores are automatically saved and tracked, and transactions are supported. With coins, players can upgrade their character abilities and purchase new characters. The UI, animations, scripting, game assets/sprites, and music were all created by me.",
+    overview: 'trapd.overview',
+    description: 'trapd.description',
+    moreDetails: 'trapd.moreDetails',
     techUsed: ['unity', 'csharp', 'illustrator', 'photoshop'],
     type: 'game',
     link: 'https://play.google.com/store/apps/details?id=com.Edlo.Trapd&hl=en_US&gl=US',
@@ -76,12 +65,9 @@ const Projects = [
   {
     id: 5,
     name: 'Pacific Marine App',
-    overview:
-      'An interactive game aimed at educating vistors of the Pacific Marine Mammal Center.',
-    description:
-      'A game created for displaying and educating users about the rehabilitation work the Pacific Marine Mammal Center does. The game tells the story of four sea-lions and allows users to walkthrough the rehab process of each animal.',
-    moreDetails:
-      'I worked on this as my capstone project for UCI with 4 other team members. The game was made with Unity, and I was responsible for the scripting, animations and level design. In addition to programming, I was also responsible for the UI, game assets and sound effects as well as overseeing the progress of the other members of my team.',
+    overview: 'pacificMarineApp.overview',
+    description: 'pacificMarineApp.description',
+    moreDetails: 'pacificMarineApp.moreDetails',
     techUsed: ['unity', 'csharp', 'illustrator', 'photoshop'],
     type: 'game',
     link: 'https://github.com/edwingl10/Pacific-Marine-App',

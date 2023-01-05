@@ -1,5 +1,54 @@
 {
     "projects": "Proyectos",
     "checkOutProjects": "Visite algunos de los proyectos en los que he trabajado, utilizando diferentes lenguajes y frameworks.",
-    "dreamScholarsOverview": "Una aplicación web que facilita la visibilidad de becas para estudiantes."
+    "dreamScholars": {
+        "overview": "Una aplicación web que facilita la visibilidad de becas para estudiantes.",
+        "description": "Dreamscholars es una aplicación web para explorar, buscar, agregar, compartir y filtrar becas por varios atributos, como especialización, monto del premio, grado, estado y escuela. El equipo trabaja constantemente y planea implementar funciones más atractivas en un futuro próximo.",
+        "moreDetails": "Principalmente trabajo en la interfaz de usuario e implemento los diseños y la funcionalidad del sitio, como la validación de datos, el filtrado de becas, la traducción de idiomas, etc. También trabajé en la funcionalidad de back-end que permite la interacción entre los componentes y la base de datos, como guardar y obtener becas y agregar reglas de seguridad de la base de datos. Por último, valido la funcionalidad de los componentes incorporando pruebas unitarias usando Jest y React Testing Library. Además de programar, también realizo revisiones de código para otros compañeros de equipo."
+    },
+    "nedflix": {
+        "overview": "Una aplicación web para explorar, descubrir y listar películas y programas.",
+        "description":  "Nedflix permite a usuarios navegar, buscar y ver avances. Los usuarios pueden descubrir películas y programas según las categorías más populares, mejor valoradas y más populares. Para rastrear fácilmente sus favoritos, los usuarios también pueden agregar o eliminar películas y programas de su lista personal.",
+        "moreDetails": "Para garantizar que el contenido del sitio sea dinámico y refleje las últimas tendencias en los medios, el sitio obtiene los datos de la API de The Movie Database. Se agregaron autenticación de usuario, carga diferida y desplazamiento infinito para mejorar la experiencia del usuario."
+    },
+    "casaMagda": {
+        "overview": "Un sitio web que destaca los servicios de una pequeña empresa de limpieza.",
+        "description":  "Casa Magda es un sitio de una página para mostrar los servicios de una pequeña empresa de limpieza. Además, el sitio destaca la historia de la empresa, las razones para trabajar con ellos, las ubicaciones y un formulario de contacto.",
+        "moreDetails": "El sitio está escrito usando HTML, CSS, Javascript y JQuery. Utilizando animaciones CSS, técnicas de SEO y principios de UX, el sitio web aumentó la visibilidad y las ganancias en más del 50%."
+    },
+    "trapd": {
+        "overview": "Un juego de plataformas móvil de acción sin fin disponible en Google Play Store.",
+        "description":  "TRAPD es un juego de plataformas de acción donde el objetivo del juego es sobrevivir el mayor tiempo posible mientras esquivas obstáculos, cañones y láseres. El juego ofrece varios personajes jugables, cada uno con diferentes poderes para ayudarlos en el juego. Hay varias monedas, cada una con un valor y XP diferente, así como obstáculos que aparecen aleatoriamente en el juego.",
+        "moreDetails": "TRAPD es mi proyecto en solitario más ambicioso y se puede descargar gratis en Google Play Store. El progreso y las puntuaciones más altas de los jugadores se guardan y rastrean automáticamente, y se admiten transacciones. Con monedas, los jugadores pueden mejorar las habilidades de sus personajes y comprar nuevos personajes. La interfaz de usuario, las animaciones, las secuencias de comandos, los activos/sprites del juego y la música fueron creados por mí."
+    },
+    "pacificMarineApp": {
+        "overview": "Un juego interactivo destinado a educar a los visitantes del Centro de Mamíferos Marinos del Pacífico.",
+        "description":  "Un juego creado para mostrar y educar a los usuarios sobre el trabajo de rehabilitación que realiza el Centro de Mamíferos Marinos del Pacífico. El juego cuenta la historia de cuatro leones marinos y permite a los usuarios recorrer el proceso de rehabilitación de cada animal.",
+        "moreDetails": "Este fue mi proyecto final para UCI junto con otros 4 miembros del equipo. El juego se hizo con Unity y yo era el responsable de la programación, las animaciones y el diseño de niveles. Además de la programación, también era responsable de la interfaz de usuario, los recursos del juego y los efectos de sonido, además de supervisar el progreso de los demás miembros de mi equipo."
+    },
+    "partyBash": {
+        "overview": "",
+        "description":  "",
+        "moreDetails": ""
+    },
+    "searchEd": {
+        "overview": "",
+        "description":  "",
+        "moreDetails": ""
+    },
+    "faultLocalization": {
+        "overview": "",
+        "description":  "",
+        "moreDetails": ""
+    },
+    "operatingSystemGui": {
+        "overview": "",
+        "description":  "",
+        "moreDetails": ""
+    },
+    "infoWeather": {
+        "overview": "",
+        "description":  "",
+        "moreDetails": ""
+    }
 }
