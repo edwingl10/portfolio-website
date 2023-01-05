@@ -27,28 +27,28 @@
         "moreDetails": "Este fue mi proyecto final para UCI junto con otros 4 miembros del equipo. El juego se hizo con Unity y yo era el responsable de la programación, las animaciones y el diseño de niveles. Además de la programación, también era responsable de la interfaz de usuario, los recursos del juego y los efectos de sonido, además de supervisar el progreso de los demás miembros de mi equipo."
     },
     "partyBash": {
-        "overview": "",
-        "description":  "",
-        "moreDetails": ""
+        "overview": "Una aplicación complementaria para un juego de mesa que creé.",
+        "description":  "Party bash consiste de jugadores que se mueven a lo largo de un tablero de juego, tratando de llegar primero a la línea de meta. Cada cuadro del tablero contiene un evento como ganar/perder monedas, comprar acciones, ganar premios, desafiar y robar monedas de otros.",
+        "moreDetails": "La aplicación permite a los jugadores lanzar dados, cambiar de turno y realizar cálculos que de otro modo serían tediosos. Los cálculos incluyen la gestión de monedas, la obtención de premios aleatorios, desafiar a jugadores y ventajas de compra."
     },
     "searchEd": {
-        "overview": "",
-        "description":  "",
-        "moreDetails": ""
+        "overview": "Buscador de las páginas web de las Ciencias de la Información y Computación de UCI.",
+        "description":  "Search-ED es un motor de búsqueda para navegar páginas web del departamento de Ciencias de la Información y Computación de UCI. El programa muestra los mejores resultados de una consulta dada.",
+        "moreDetails": "El motor de búsqueda utiliza tokenización, frecuencia de términos, frecuencia de documentos inversa y etiquetas ponderadas para la calificación de páginas. La biblioteca BeautifulSoup se utilizó para analizar el corpus de todas las páginas web de ICS de UCI. Se usó Python para escribir el programa, MongoDB para la base de datos y TKinter para la GUI."
     },
     "faultLocalization": {
-        "overview": "",
-        "description":  "",
-        "moreDetails": ""
+        "overview": "Un programa que encuentra qué líneas de código tienen más probabilidades de fallar las pruebas unitarias.",
+        "description":  "Este programa implementa el enfoque de Tarántula para realizar la localización de fallas y ubicar qué líneas de código son más sospechosas de romper las pruebas unitarias de un proyecto de código abierto en Github.",
+        "moreDetails": "Este programa contiene más de 4 mil archivos XML con análisis de cobertura de código. Para este algoritmo, observamos los casos de prueba que cubren cada línea del programa y comparamos la proporción de casos de prueba exitosos y fallidos. Cuanto mayor sea la proporción de casos de pruebas fallidas en comparación con las exitosas, mayor será la sospecha de esa línea. La sospecha es un número entre 0 y 1, donde un número más alto significa una probabilidad más alta de que la línea haya provocado que una prueba falle."
     },
     "operatingSystemGui": {
-        "overview": "",
-        "description":  "",
-        "moreDetails": ""
+        "overview": "Un sistema operativo simple que simula a los usuarios escribiendo en discos e imprimiendo archivos.",
+        "description":  "Este programa imita un sistema operativo simple al administrar las solicitudes de lectura, escritura e impresión de los usuarios. Se utiliza una GUI para mostrar las solicitudes de los usuarios, los estados de los discos e impresoras y el contenido del administrador de directorios.",
+        "moreDetails": "El programa admite una cantidad dinámica de usuarios, impresoras y discos y utiliza paralelismo e hilos para ejecutar comandos desde archivos de usuario. Cuando se ejecuta el comando guardar, se solicita un recurso de disco y el contenido del archivo se escribe en el disco hasta que se encuentra el comando final. El comando final también almacena el número de disco, el sector de inicio y la longitud del archivo. A continuación, se crea una nueva entrada en el directorio y se libera el recurso de disco. Por último, el comando de impresión busca el nombre del archivo en el administrador de directorios, obtiene una impresora libre e imprime los datos en un archivo externo."
     },
     "infoWeather": {
-        "overview": "",
-        "description":  "",
-        "moreDetails": ""
+        "overview": "Un sitio web para buscar y ver información meteorológica desde varios lugares.",
+        "description":  "Info Weather es un sitio web simple que muestra el clima actual y el pronóstico de cualquier ubicación determinada.",
+        "moreDetails": "Info Weather está escrito con React y obtiene la información de la API de OpenWeather y muestra la información de forma minimalista. Además, el sitio determina los íconos apropiados según el clima."
     }
 }
