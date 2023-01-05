@@ -10,8 +10,11 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'next-i18next';
 
 export default function ProjectSection({ projects, placeholders }) {
+  const { t } = useTranslation('projects');
+
   return (
     <Grid
       container
@@ -45,7 +48,7 @@ export default function ProjectSection({ projects, placeholders }) {
                     {project.name}
                   </Typography>
                   <Typography textAlign="left" variant="body2">
-                    {project.overview}
+                    {t(project.overview)}
                   </Typography>
                 </CardContent>
               </CardActionArea>

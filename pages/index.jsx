@@ -31,28 +31,6 @@ const skillsIcons = [
   'figma',
 ];
 
-export async function getStaticProps({ locale }) {
-  const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png', {
-    size: 10,
-  });
-
-  const placeholders = {};
-  await Promise.all(
-    Projects.map(async (data) => {
-      const { base64 } = await getPlaiceholder(data.mainImg, { size: 10 });
-      placeholders[data.id] = base64;
-    })
-  );
-
-  return {
-    props: {
-      placeholders,
-      bannerBlur,
-      ...(await serverSideTranslations(locale, ['home', 'common'])),
-    },
-  };
-}
-
 export default function Home({ placeholders, bannerBlur }) {
   const title = 'Edwin Lopez | Home';
   const description =
@@ -60,7 +38,7 @@ export default function Home({ placeholders, bannerBlur }) {
   const keywords =
     'portfolio, software engineer, web development, mobile development, computer science, game development';
 
-  const { t } = useTranslation(['home', 'common']);
+  const { t } = useTranslation(['home', 'common', 'projects']);
 
   return (
     <>
@@ -165,3 +143,25 @@ Home.propTypes = {
   placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
   bannerBlur: PropTypes.string.isRequired,
 };
+
+export async function getStaticProps({ locale }) {
+  const { base64: bannerBlur } = await getPlaiceholder('/images/welcome.png', {
+    size: 10,
+  });
+
+  const placeholders = {};
+  await Promise.all(
+    Projects.map(async (data) => {
+      const { base64 } = await getPlaiceholder(data.mainImg, { size: 10 });
+      placeholders[data.id] = base64;
+    })
+  );
+
+  return {
+    props: {
+      placeholders,
+      bannerBlur,
+      ...(await serverSideTranslations(locale, ['home', 'common', 'projects'])),
+    },
+  };
+}

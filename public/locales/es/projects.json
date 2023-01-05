@@ -1,0 +1,56 @@
+{
+    "projects": "Proyectos",
+    "checkOutProjects": "Visite algunos de los proyectos en los que he trabajado, utilizando diferentes lenguajes y frameworks.",
+    "dreamScholars": {
+        "overview": "Una aplicación web que facilita la visibilidad de becas para estudiantes.",
+        "description": "Dreamscholars es una aplicación web para explorar, buscar, agregar, compartir y filtrar becas por varios atributos, como especialización, monto del premio, grado, estado y escuela. El equipo trabaja constantemente y planea implementar funciones más atractivas en un futuro próximo.",
+        "moreDetails": "Principalmente trabajo en la interfaz de usuario e implemento los diseños y la funcionalidad del sitio, como la validación de datos, el filtrado de becas, la traducción de idiomas, etc. También trabajé en la funcionalidad de back-end que permite la interacción entre los componentes y la base de datos, como guardar y obtener becas y agregar reglas de seguridad de la base de datos. Por último, valido la funcionalidad de los componentes incorporando pruebas unitarias usando Jest y React Testing Library. Además de programar, también realizo revisiones de código para otros compañeros de equipo."
+    },
+    "nedflix": {
+        "overview": "Una aplicación web para explorar, descubrir y listar películas y programas.",
+        "description":  "Nedflix permite a usuarios navegar, buscar y ver avances. Los usuarios pueden descubrir películas y programas según las categorías más populares, mejor valoradas y más populares. Para rastrear fácilmente sus favoritos, los usuarios también pueden agregar o eliminar películas y programas de su lista personal.",
+        "moreDetails": "Para garantizar que el contenido del sitio sea dinámico y refleje las últimas tendencias en los medios, el sitio obtiene los datos de la API de The Movie Database. Se agregaron autenticación de usuario, carga diferida y desplazamiento infinito para mejorar la experiencia del usuario."
+    },
+    "casaMagda": {
+        "overview": "Un sitio web que destaca los servicios de una pequeña empresa de limpieza.",
+        "description":  "Casa Magda es un sitio de una página para mostrar los servicios de una pequeña empresa de limpieza. Además, el sitio destaca la historia de la empresa, las razones para trabajar con ellos, las ubicaciones y un formulario de contacto.",
+        "moreDetails": "El sitio está escrito usando HTML, CSS, Javascript y JQuery. Utilizando animaciones CSS, técnicas de SEO y principios de UX, el sitio web aumentó la visibilidad y las ganancias en más del 50%."
+    },
+    "trapd": {
+        "overview": "Un juego de plataformas móvil de acción sin fin disponible en Google Play Store.",
+        "description":  "TRAPD es un juego de plataformas de acción donde el objetivo del juego es sobrevivir el mayor tiempo posible mientras esquivas obstáculos, cañones y láseres. El juego ofrece varios personajes jugables, cada uno con diferentes poderes para ayudarlos en el juego. Hay varias monedas, cada una con un valor y XP diferente, así como obstáculos que aparecen aleatoriamente en el juego.",
+        "moreDetails": "TRAPD es mi proyecto en solitario más ambicioso y se puede descargar gratis en Google Play Store. El progreso y las puntuaciones más altas de los jugadores se guardan y rastrean automáticamente, y se admiten transacciones. Con monedas, los jugadores pueden mejorar las habilidades de sus personajes y comprar nuevos personajes. La interfaz de usuario, las animaciones, las secuencias de comandos, los activos/sprites del juego y la música fueron creados por mí."
+    },
+    "pacificMarineApp": {
+        "overview": "Un juego interactivo destinado a educar a los visitantes del Centro de Mamíferos Marinos del Pacífico.",
+        "description":  "Un juego creado para mostrar y educar a los usuarios sobre el trabajo de rehabilitación que realiza el Centro de Mamíferos Marinos del Pacífico. El juego cuenta la historia de cuatro leones marinos y permite a los usuarios recorrer el proceso de rehabilitación de cada animal.",
+        "moreDetails": "Este fue mi proyecto final para UCI junto con otros 4 miembros del equipo. El juego se hizo con Unity y yo era el responsable de la programación, las animaciones y el diseño de niveles. Además de la programación, también era responsable de la interfaz de usuario, los recursos del juego y los efectos de sonido, además de supervisar el progreso de los demás miembros de mi equipo."
+    },
+    "partyBash": {
+        "overview": "Una aplicación complementaria para un juego de mesa que creé.",
+        "description":  "Party bash consiste de jugadores que se mueven a lo largo de un tablero de juego, tratando de llegar primero a la línea de meta. Cada cuadro del tablero contiene un evento como ganar/perder monedas, comprar acciones, ganar premios, desafiar y robar monedas de otros.",
+        "moreDetails": "La aplicación permite a los jugadores lanzar dados, cambiar de turno y realizar cálculos que de otro modo serían tediosos. Los cálculos incluyen la gestión de monedas, la obtención de premios aleatorios, desafiar a jugadores y ventajas de compra."
+    },
+    "searchEd": {
+        "overview": "Buscador de las páginas web de las Ciencias de la Información y Computación de UCI.",
+        "description":  "Search-ED es un motor de búsqueda para navegar páginas web del departamento de Ciencias de la Información y Computación de UCI. El programa muestra los mejores resultados de una consulta dada.",
+        "moreDetails": "El motor de búsqueda utiliza tokenización, frecuencia de términos, frecuencia de documentos inversa y etiquetas ponderadas para la calificación de páginas. La biblioteca BeautifulSoup se utilizó para analizar el corpus de todas las páginas web de ICS de UCI. Se usó Python para escribir el programa, MongoDB para la base de datos y TKinter para la GUI."
+    },
+    "faultLocalization": {
+        "overview": "Un programa que encuentra qué líneas de código tienen más probabilidades de fallar las pruebas unitarias.",
+        "description":  "Este programa implementa el enfoque de Tarántula para realizar la localización de fallas y ubicar qué líneas de código son más sospechosas de romper las pruebas unitarias de un proyecto de código abierto en Github.",
+        "moreDetails": "Este programa contiene más de 4 mil archivos XML con análisis de cobertura de código. Para este algoritmo, observamos los casos de prueba que cubren cada línea del programa y comparamos la proporción de casos de prueba exitosos y fallidos. Cuanto mayor sea la proporción de casos de pruebas fallidas en comparación con las exitosas, mayor será la sospecha de esa línea. La sospecha es un número entre 0 y 1, donde un número más alto significa una probabilidad más alta de que la línea haya provocado que una prueba falle."
+    },
+    "operatingSystemGui": {
+        "overview": "Un sistema operativo simple que simula a los usuarios escribiendo en discos e imprimiendo archivos.",
+        "description":  "Este programa imita un sistema operativo simple al administrar las solicitudes de lectura, escritura e impresión de los usuarios. Se utiliza una GUI para mostrar las solicitudes de los usuarios, los estados de los discos e impresoras y el contenido del administrador de directorios.",
+        "moreDetails": "El programa admite una cantidad dinámica de usuarios, impresoras y discos y utiliza paralelismo e hilos para ejecutar comandos desde archivos de usuario. Cuando se ejecuta el comando guardar, se solicita un recurso de disco y el contenido del archivo se escribe en el disco hasta que se encuentra el comando final. El comando final también almacena el número de disco, el sector de inicio y la longitud del archivo. A continuación, se crea una nueva entrada en el directorio y se libera el recurso de disco. Por último, el comando de impresión busca el nombre del archivo en el administrador de directorios, obtiene una impresora libre e imprime los datos en un archivo externo."
+    },
+    "infoWeather": {
+        "overview": "Un sitio web para buscar y ver información meteorológica desde varios lugares.",
+        "description":  "Info Weather es un sitio web simple que muestra el clima actual y el pronóstico de cualquier ubicación determinada.",
+        "moreDetails": "Info Weather está escrito con React y obtiene la información de la API de OpenWeather y muestra la información de forma minimalista. Además, el sitio determina los íconos apropiados según el clima."
+    },
+    "behindTheScenes": "Más del proyecto",
+    "technologyUsed": "Tecnología utilizada"
+}
