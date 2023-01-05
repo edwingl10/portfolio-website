@@ -183,10 +183,13 @@ export async function getStaticProps({ locale, params }) {
   };
 }
 
-export async function getStaticPaths() {
-  const paths = Projects.map((project) => ({
-    params: { id: project.id.toString() },
-  }));
+export async function getStaticPaths({ locales }) {
+  const paths = Projects.map((project) =>
+    locales.map((locale) => ({
+      params: { id: project.id.toString() },
+      locale,
+    }))
+  ).flat();
 
   return { paths, fallback: false };
 }
