@@ -13,29 +13,11 @@ import {
   Zoom,
 } from '@mui/material';
 import { getPlaiceholder } from 'plaiceholder';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import Projects from '../../src/projectData';
 import Icon, { iconTitles } from '../../components/Icon';
 import SEOHead from '../../components/SEOHead';
-
-export async function getStaticProps({ params }) {
-  const project = Projects.filter((p) => p.id.toString() === params.id)[0];
-  const { base64: mainBlurData } = await getPlaiceholder(project.mainImg, {
-    size: 10,
-  });
-  const { base64: secondBlurData } = await getPlaiceholder(project.secondImg, {
-    size: 10,
-  });
-
-  return { props: { project, mainBlurData, secondBlurData } };
-}
-
-export async function getStaticPaths() {
-  const paths = Projects.map((project) => ({
-    params: { id: project.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-}
 
 export default function ViewProject({ project, mainBlurData, secondBlurData }) {
   const formatedTechUsed = project.techUsed.map((p) => iconTitles[p]);
@@ -46,6 +28,8 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
     project.type === 'other' ? 'program.' : `${project.type} project.`
   }`;
   const keywords = formatedTechUsed.join(', ');
+
+  const { t } = useTranslation(['projects', 'common']);
 
   return (
     <>
@@ -60,7 +44,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
             <Typography variant="h3" paragraph color="secondary">
               {project.name}
             </Typography>
-            <Typography paragraph>{project.description}</Typography>
+            <Typography paragraph>{t(project.description)}</Typography>
 
             <Button
               component={MuiLink}
@@ -69,7 +53,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               color="secondary"
               variant="contained"
               sx={{ mt: 2 }}>
-              Explore
+              {t('common:btn.explore')}
             </Button>
           </Grid>
 
@@ -118,16 +102,16 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
 
             <Grid item xs={12} sm={7}>
               <Typography variant="h4" paragraph color="primary">
-                Behind the Scenes
+                {t('behindTheScenes')}
               </Typography>
-              <Typography paragraph>{project.moreDetails}</Typography>
+              <Typography paragraph>{t(project.moreDetails)}</Typography>
 
               <Button
                 component={MuiLink}
                 color="secondary"
                 variant="contained"
                 sx={{ mt: 2 }}>
-                Share
+                {t('common:btn.share')}
               </Button>
             </Grid>
           </Grid>
@@ -136,7 +120,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
 
       <Box sx={{ py: 5 }} textAlign="center">
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-          Technology Used
+          {t('technologyUsed')}
         </Typography>
         <Stack
           direction="row"
@@ -179,3 +163,30 @@ ViewProject.propTypes = {
   mainBlurData: PropTypes.string.isRequired,
   secondBlurData: PropTypes.string.isRequired,
 };
+
+export async function getStaticProps({ locale, params }) {
+  const project = Projects.filter((p) => p.id.toString() === params.id)[0];
+  const { base64: mainBlurData } = await getPlaiceholder(project.mainImg, {
+    size: 10,
+  });
+  const { base64: secondBlurData } = await getPlaiceholder(project.secondImg, {
+    size: 10,
+  });
+
+  return {
+    props: {
+      project,
+      mainBlurData,
+      secondBlurData,
+      ...(await serverSideTranslations(locale, ['projects', 'common'])),
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const paths = Projects.map((project) => ({
+    params: { id: project.id.toString() },
+  }));
+
+  return { paths, fallback: false };
+}

@@ -50,5 +50,7 @@
         "overview": "Un sitio web para buscar y ver información meteorológica desde varios lugares.",
         "description":  "Info Weather es un sitio web simple que muestra el clima actual y el pronóstico de cualquier ubicación determinada.",
         "moreDetails": "Info Weather está escrito con React y obtiene la información de la API de OpenWeather y muestra la información de forma minimalista. Además, el sitio determina los íconos apropiados según el clima."
-    }
+    },
+    "behindTheScenes": "Más del proyecto",
+    "technologyUsed": "Tecnología utilizada"
 }

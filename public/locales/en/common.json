@@ -1,6 +1,8 @@
 {
     "btn":{
         "contact": "contact",
-        "viewMore": "view more"
+        "viewMore": "view more",
+        "explore": "explore",
+        "share": "share"
     }
 }
