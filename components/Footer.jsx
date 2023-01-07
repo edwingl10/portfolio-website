@@ -1,8 +1,11 @@
 import { Box, Container, Grid, Typography, IconButton } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { useTranslation } from 'next-i18next';
 import SocialLinks from './SocialLinks';
 
 export default function Footer() {
+  const { t } = useTranslation('common');
+
   return (
     <Box sx={{ bgcolor: 'primary.dark' }}>
       <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -33,8 +36,7 @@ export default function Footer() {
               color="grey.400"
               variant="subtitle2"
               textAlign={{ xs: 'center', md: 'right' }}>
-              &copy; {new Date().getFullYear()} All rights reserved. - Designed
-              & coded by Edwin Lopez.
+              &copy; {new Date().getFullYear()} {t('rightsReserved')}
             </Typography>
           </Grid>
         </Grid>
