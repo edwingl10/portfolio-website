@@ -56,6 +56,7 @@ export default function MobileNavbar() {
   const onToggleLanguageClick = (newLocale) => {
     const { pathname, asPath, query } = router;
     setAnchorEl(null);
+    document.cookie = `NEXT_LOCALE=${newLocale}; max-age=15768017; path=/`;
     router.push({ pathname, query }, asPath, { locale: newLocale });
   };
 
