@@ -1,4 +1,9 @@
 {
+     "head":  {
+        "title": "Edwin Lopez | Inicio",
+        "description": "Edwin López es un ingeniero de software que ha diseñado y construido varios proyectos en diferentes lenguajes y frameworks de software.",
+        "keywords": "portafolio, ingeniero de software, desarrollo web, desarrollo móvil, ciencias de la computación, desarrollo de juegos"
+    },
     "hi": "Hola, soy ",
     "IamASoftwareEngineer": "Soy ingeniero de software actualmente enfocándome en el diseño y desarrollo de proyectos web.",
     "dedicatedDeveloper": "Soy un desarrollador de software dedicado",
