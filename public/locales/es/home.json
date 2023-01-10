@@ -9,5 +9,8 @@
     "dedicatedDeveloper": "Soy un desarrollador de software dedicado",
     "IGraduatedFrom": "Me gradué de la Universidad de California, Irvine como ingeniero de software. Soy un desarrollador bilingüe y comprometido con experiencia en el diseño, implementación, depuración y prueba de varios proyectos en diferentes lenguajes, tecnologías y frameworks de software.",
     "mySkills": "Mis habilidades",
-    "projects": "Proyectos"
+    "projects": "Proyectos",
+    "images": {
+        "welcome": "Memoji de mi mismo sonriendo"
+    }
 }

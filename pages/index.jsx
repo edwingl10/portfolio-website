@@ -76,7 +76,7 @@ export default function Home({ placeholders, bannerBlur }) {
             <Image
               priority
               src="/images/welcome.png"
-              alt="Memoji of myself smiling"
+              alt={t('images.welcome')}
               height={250}
               width={220}
               placeholder="blur"
