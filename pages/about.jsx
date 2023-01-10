@@ -13,13 +13,11 @@ import { useTranslation } from 'next-i18next';
 import SEOHead from '../components/SEOHead';
 
 export default function about({ placeholders }) {
-  const title = 'Edwin Lopez | About';
-  const description =
-    'Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects.';
-  const keywords =
-    'software engineer, university of california irvine, front end, back end';
-
   const { t } = useTranslation(['about', 'common']);
+
+  const title = t('head.title');
+  const description = t('head.description');
+  const keywords = t('head.keywords');
 
   return (
     <>
@@ -52,7 +50,7 @@ export default function about({ placeholders }) {
             <Image
               priority
               src="/images/wave.png"
-              alt="Memoji of myself smiling and waving"
+              alt={t('images.wave')}
               height={260}
               width={220}
               placeholder="blur"
@@ -73,7 +71,7 @@ export default function about({ placeholders }) {
                 }}>
                 <Image
                   src="/images/coding.svg"
-                  alt="Hands typing on a keyboard with a plant, coffee, mouse, and monitor on the workspace"
+                  alt={t('images.coding')}
                   layout="fill"
                   objectFit="cover"
                   placeholder="blur"
