@@ -1,4 +1,9 @@
 {
+     "head":  {
+        "title": "Edwin López | Proyectos",
+        "description": "Una muestra de los diversos proyectos web/móviles y programas informáticos de Edwin.",
+        "keywords": "proyectos, desarrollo móvil, desarrollo web, frameworks, ingeniero de software, front-end, back-end"
+    },
     "projects": "Proyectos",
     "checkOutProjects": "Visite algunos de los proyectos en los que he trabajado, utilizando diferentes lenguajes y frameworks.",
     "dreamScholars": {

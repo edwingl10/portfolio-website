@@ -1,4 +1,9 @@
 {
+     "head":  {
+        "title": "Edwin Lopez | Projects",
+        "description": "A showcase of Edwin's various web / mobile projects and computer science programs.",
+        "keywords": "projects, mobile development, web development, frameworks, software engineer, front end, back end"
+    },
     "projects": "Projects",
     "checkOutProjects": "Check out some of the projects I have worked on, using different languages and frameworks.",
     "dreamScholars": {
