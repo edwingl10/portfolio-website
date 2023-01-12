@@ -1,6 +1,15 @@
 {
+     "head":  {
+        "title": "Edwin Lopez | About",
+        "description": "Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects.",
+        "keywords": "software engineer, university of california irvine, front end, back end"
+    },
     "about": "About",
     "ImAFirstGen": "I am a first generation college student that graduated from the University of California, Irvine as a Software Engineer. I enjoy working on various projects, from game development to web development. At the moment, I am interested in working on front-end/back-end web projects.",
     "myPassion": "My Passion",
-    "uncoveredMyPassion": "I uncovered my passion for coding in High School when I took a semester long computer science class. Although it was about moving code blocks to program, it piqued my curiosity when I finished a functional replica of the Mario game. I enjoy the process of building programs, from beginning to end because for me it's all about the experience and the new skills you learn along the way."
+    "uncoveredMyPassion": "I uncovered my passion for coding in High School when I took a semester long computer science class. Although it was about moving code blocks to program, it piqued my curiosity when I finished a functional replica of the Mario game. I enjoy the process of building programs, from beginning to end because for me it's all about the experience and the new skills you learn along the way.",
+    "images": {
+        "wave": "Memoji of myself smiling and waving.",
+        "coding": "Hands typing on a keyboard with a plant, coffee, mouse, and monitor on the workspace."
+    }
 }

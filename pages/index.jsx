@@ -32,13 +32,11 @@ const skillsIcons = [
 ];
 
 export default function Home({ placeholders, bannerBlur }) {
-  const title = 'Edwin Lopez | Home';
-  const description =
-    'Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks.';
-  const keywords =
-    'portfolio, software engineer, web development, mobile development, computer science, game development';
-
   const { t } = useTranslation(['home', 'common', 'projects']);
+
+  const title = t('head.title');
+  const description = t('head.description');
+  const keywords = t('head.keywords');
 
   return (
     <>
@@ -78,7 +76,7 @@ export default function Home({ placeholders, bannerBlur }) {
             <Image
               priority
               src="/images/welcome.png"
-              alt="Memoji of myself smiling"
+              alt={t('images.welcome')}
               height={250}
               width={220}
               placeholder="blur"

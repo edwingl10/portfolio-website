@@ -9,13 +9,11 @@ import ProjectSection from '../../components/ProjectSection';
 import SEOHead from '../../components/SEOHead';
 
 export default function ListProjects({ placeholders, bannerBlur }) {
-  const title = 'Edwin Lopez | Projects';
-  const description =
-    "A showcase of Edwin's various web / mobile projects and computer science programs.";
-  const keywords =
-    'projects, mobile development, web development, frameworks, software engineer, front end, back end';
-
   const { t } = useTranslation('projects');
+
+  const title = t('head.title');
+  const description = t('head.description');
+  const keywords = t('head.keywords');
 
   return (
     <>
@@ -41,7 +39,7 @@ export default function ListProjects({ placeholders, bannerBlur }) {
             <Image
               priority
               src="/images/projects.png"
-              alt="Memoji of myself behind a laptop"
+              alt={t('behindLaptopImgAlt')}
               height={260}
               width={220}
               placeholder="blur"

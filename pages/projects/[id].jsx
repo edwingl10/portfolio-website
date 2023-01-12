@@ -20,16 +20,15 @@ import Icon, { iconTitles } from '../../components/Icon';
 import SEOHead from '../../components/SEOHead';
 
 export default function ViewProject({ project, mainBlurData, secondBlurData }) {
+  const { t } = useTranslation(['project', 'projects', 'common']);
+
   const formatedTechUsed = project.techUsed.map((p) => iconTitles[p]);
   const title = `Edwin Lopez | ${project.name}`;
-  const description = `Explore ${
-    project.name
-  } and learn how ${formatedTechUsed.join(', ')} were used to create this ${
-    project.type === 'other' ? 'program.' : `${project.type} project.`
-  }`;
+  const description = t('head.description', {
+    project: project.name,
+    tech: formatedTechUsed.join(', '),
+  });
   const keywords = formatedTechUsed.join(', ');
-
-  const { t } = useTranslation(['projects', 'common']);
 
   return (
     <>
@@ -44,7 +43,9 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
             <Typography variant="h3" paragraph color="secondary">
               {project.name}
             </Typography>
-            <Typography paragraph>{t(project.description)}</Typography>
+            <Typography paragraph>
+              {t(`projects:${project.description}`)}
+            </Typography>
 
             <Button
               component={MuiLink}
@@ -66,7 +67,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               <Image
                 priority
                 src={project.mainImg}
-                alt={project.mainImgAltText}
+                alt={t(`projects:${project.mainImgAltText}`)}
                 layout="fill"
                 objectFit="cover"
                 placeholder="blur"
@@ -91,7 +92,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
                 }}>
                 <Image
                   src={project.secondImg}
-                  alt={project.secondImgAltText}
+                  alt={t(`projects:${project.secondImgAltText}`)}
                   layout="fill"
                   objectFit="cover"
                   placeholder="blur"
@@ -104,7 +105,9 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               <Typography variant="h4" paragraph color="primary">
                 {t('behindTheScenes')}
               </Typography>
-              <Typography paragraph>{t(project.moreDetails)}</Typography>
+              <Typography paragraph>
+                {t(`projects:${project.moreDetails}`)}
+              </Typography>
 
               <Button
                 component={MuiLink}
@@ -178,7 +181,11 @@ export async function getStaticProps({ locale, params }) {
       project,
       mainBlurData,
       secondBlurData,
-      ...(await serverSideTranslations(locale, ['projects', 'common'])),
+      ...(await serverSideTranslations(locale, [
+        'project',
+        'projects',
+        'common',
+      ])),
     },
   };
 }

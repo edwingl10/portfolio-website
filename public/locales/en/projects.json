@@ -1,56 +1,80 @@
 {
+     "head":  {
+        "title": "Edwin Lopez | Projects",
+        "description": "A showcase of Edwin's various webs/mobile projects and computer science programs.",
+        "keywords": "projects, mobile development, web development, frameworks, software engineer, front end, back end"
+    },
     "projects": "Projects",
     "checkOutProjects": "Check out some of the projects I have worked on, using different languages and frameworks.",
+    "behindLaptopImgAlt": "Memoji of myself behind a laptop.",
     "dreamScholars": {
         "overview": "A web application that facilitates the discoverability of scholarships for students.",
         "description": "Dreamscholars is a web application for exploring, searching, adding, sharing and filtering scholarships by various attributes such as major, award amount, grade, state and school. The team is constantly working on and planning to implement more enticing features in the near future.",
-        "moreDetails": "I primarily work on the UI and implementing the designs and functionality to the site such as data validation, filtering scholarships, language translation etc. I have also worked on the backend functionality that allows interaction between components and the database such as saving and fetching scholarships and adding database security rules. Lastly, I validate the functionality of components by incorporating unit tests using Jest and React Testing Library. Apart from coding I also conduct code reviews for other teammates."
+        "moreDetails": "I primarily work on the UI and implementing the designs and functionality to the site such as data validation, filtering scholarships, language translation etc. I have also worked on the backend functionality that allows interaction between components and the database such as saving and fetching scholarships and adding database security rules. Lastly, I validate the functionality of components by incorporating unit tests using Jest and React Testing Library. Apart from coding I also conduct code reviews for other teammates.",
+        "mainAltText": "A tablet and iPhone showcasing the home page of the scholarship website.",
+        "secondaryAltText": "Various views of the website displaying the filters, scholarship page, and scholarship form."
     },
     "nedflix": {
         "overview": "A web application for exploring, discovering and listing movies and shows.",
         "description":  "Nedflix allows users to browse, search and watch trailers. Users can discover movies and shows by most trending, top rated and other popular categories. To easily track their favorites, users can also add/remove movies and shows to their personal list.",
-        "moreDetails": "To ensure the site content is dynamic and reflects the latests trends in media, the site fetches the data from The Movie Database API. User authentication, Lazy loading and infinite scrolling was added to enhance the user experience."
+        "moreDetails": "To ensure the site content is dynamic and reflects the latests trends in media, the site fetches the data from The Movie Database API. User authentication, Lazy loading and infinite scrolling was added to enhance the user experience.",
+        "mainAltText": "A tablet and iPhone displaying a movie banner followed by movie posters to explore.",
+        "secondaryAltText": "Various screens displaying the my list, sign-in, search and movie page."
     },
     "casaMagda": {
         "overview": "A website highlighting the services of a small housekeeping company.",
         "description":  "Casa Magda is a one-page site to showcase the services for a small cleaning company. Furthermore, the site highlights the company history, reasons to work with them, locations, and a contact form.",
-        "moreDetails": "The site is written using HTML, CSS, Javascript and JQuery. Utilizing CSS animations, SEO techniques and UX principles, the website increased visibility and profits by over 50 %."
+        "moreDetails": "The site is written using HTML, CSS, Javascript and JQuery. Utilizing CSS animations, SEO techniques and UX principles, the website increased visibility and profits by over 50 %.",
+        "mainAltText": "An iPhone and Macbook displaying the landing page of the website.",
+        "secondaryAltText": "2 screens showing the landing page, about us, our services, locations and contact form sections of the website."
     },
     "trapd": {
         "overview": "An endless action mobile platformer game available on the Google Play store.",
         "description":  "TRAPD is an action platformer where the goal of the game is to survive as long as possible while dodging obstacles, cannons and lasers. The game offers various playable characters, each with different supers to aid them in game. There are various coins, each with a different value and XP, as well as obstacles that appear randomly in the game.",
-        "moreDetails": "TRAPD is my most ambitious solo project and it's free to download on the Google play store. Players' progress and high scores are automatically saved and tracked, and transactions are supported. With coins, players can upgrade their character abilities and purchase new characters. The UI, animations, scripting, game assets/sprites, and music were all created by me."
+        "moreDetails": "TRAPD is my most ambitious solo project and it's free to download on the Google play store. Players' progress and high scores are automatically saved and tracked, and transactions are supported. With coins, players can upgrade their character abilities and purchase new characters. The UI, animations, scripting, game assets/sprites, and music were all created by me.",
+        "mainAltText": "A mobile phone showcasing the main menu of the TRAPD game.",
+        "secondaryAltText": "Multiple phones displaying the shop, creatures, highscores, game over and gameplay screens."
     },
     "pacificMarineApp": {
         "overview": "An interactive game aimed at educating vistors of the Pacific Marine Mammal Center.",
         "description":  "A game created for displaying and educating users about the rehabilitation work the Pacific Marine Mammal Center does. The game tells the story of four sea-lions and allows users to walkthrough the rehab process of each animal.",
-        "moreDetails": "I worked on this as my capstone project for UCI with 4 other team members. The game was made with Unity, and I was responsible for the scripting, animations and level design. In addition to programming, I was also responsible for the UI, game assets and sound effects as well as overseeing the progress of the other members of my team."
+        "moreDetails": "I worked on this as my capstone project for UCI with 4 other team members. The game was made with Unity, and I was responsible for the scripting, animations and level design. In addition to programming, I was also responsible for the UI, game assets and sound effects as well as overseeing the progress of the other members of my team.",
+        "mainAltText": "A tablet showing a sea lion with an inventory of tools below it.",
+        "secondaryAltText": "Multiple tablets showing different sea lions being treated and rehabilited by the tools in the inventory."
     },
     "partyBash": {
         "overview": "A companion application to a board game I created.",
         "description":  "Party bash consists of players moving along a game board, trying to reach the finish line first. Each board square contains an event such as winning/losing coins, buying actions, winning prizes, challenging and stealing coins from others.",
-        "moreDetails": "The app allows players to roll dice, switch turns, and perform calculations that would otherwise be tedious. Calculations include coin management, winning random prizes, challenging players, and purchasing perks."
+        "moreDetails": "The app allows players to roll dice, switch turns, and perform calculations that would otherwise be tedious. Calculations include coin management, winning random prizes, challenging players, and purchasing perks.",
+        "mainAltText": "A phone displaying the menu of the game, with 2 players ready to play.",
+        "secondaryAltText": "Numerous phones showcasing the coins, shop, wheel, challenge and dice roll screens"
     },
     "searchEd": {
         "overview": "A search engine of the web pages for the Information & Computer Sciences from UCI.",
         "description":  "Search-ED is a search engine for navigating web pages from the Informations & Computer Sciences department from UCI. The program displays the top results from a given query.",
-        "moreDetails": "The search engine utilizes tokenization, term frequency, inverse document frequency and weighted tags for page scoring. The BeautifulSoup library was used to parse the corpus of the entire ICS web pages from UCI. Python was used to write the program, MongoDB for the database and TKinter for the GUI."
+        "moreDetails": "The search engine utilizes tokenization, term frequency, inverse document frequency and weighted tags for page scoring. The BeautifulSoup library was used to parse the corpus of the entire ICS web pages from UCI. Python was used to write the program, MongoDB for the database and TKinter for the GUI.",
+        "mainAltText": "A laptop displaying a split screen with 2 Python code files open.",
+        "secondaryAltText": "2 monitors displaying the search field followed by the results and a MongoDB database."
     },
     "faultLocalization": {
         "overview": "A program that finds which lines of code are most likely to break unit tests.",
         "description":  "This program implements the Tarantula approach to perform fault localization and locate which lines of code are most suspect of breaking the unit-tests from an open-source project on Github.",
-        "moreDetails": "This program contains over 4 thousand XML files with code coverage analysis. For this algorithm, we look at the test cases that cover each line in the program and compare the ratio of succeeding and failing test cases. The higher the ratio of failing tests cases compared to successful ones, the higher the suspiciousness of that line. Suspiciousness is a number between 0 and 1, where a higher number means a higher chance that the line caused a test to fail."
+        "moreDetails": "This program contains over 4 thousand XML files with code coverage analysis. For this algorithm, we look at the test cases that cover each line in the program and compare the ratio of succeeding and failing test cases. The higher the ratio of failing tests cases compared to successful ones, the higher the suspiciousness of that line. Suspiciousness is a number between 0 and 1, where a higher number means a higher chance that the line caused a test to fail.",
+        "mainAltText": "A laptop displaying a split screen with 2 Python code files open.",
+        "secondaryAltText": "A monitor with a split screen of a CSV file with scores and a code file open next to it."
     },
     "operatingSystemGui": {
         "overview": "A simple operating system that simulates users writing to disks and printing files.",
         "description":  "This program mimics a simple OS system by managing reading, writing and printing requests by users. A GUI is used to display the requests of users, statuses of the disks and printers and the contents of the directory manager.",
-        "moreDetails": "The program supports a dynamic number of users, printers and disks and uses parallelism and threads to execute commands from user files. When the save command is executed, a disk resource is requested, and the file contents are written to the disk until the end command is found. The end command also stores the disk number, starting sector and file length. A new entry is then created in the directory, and the disk resource is released. Lastly, the print command looks up the file name in the directory manager, gets a free printer, and prints the data to an external file."
+        "moreDetails": "The program supports a dynamic number of users, printers and disks and uses parallelism and threads to execute commands from user files. When the save command is executed, a disk resource is requested, and the file contents are written to the disk until the end command is found. The end command also stores the disk number, starting sector and file length. A new entry is then created in the directory, and the disk resource is released. Lastly, the print command looks up the file name in the directory manager, gets a free printer, and prints the data to an external file.",
+        "mainAltText": "A laptop displaying a split screen with 2 Java code files open.",
+        "secondaryAltText": "A monitor with a python file open and a GUI next to it showcasing the users, disks, printers and directory manager status."
     },
     "infoWeather": {
         "overview": "A website to search and view weather information from various locations.",
         "description":  "Info Weather is a simple website that displays the current weather and forecast of any given location.",
-        "moreDetails": "Info Weather is written with React and fetches the information from the OpenWeather API and displays the information in a minimalistic way. In addition, the site determines the appropriate icons based on the weather."
-    },
-    "behindTheScenes": "Behind the Scenes",
-    "technologyUsed": "Technology Used"
+        "moreDetails": "Info Weather is written with React and fetches the information from the OpenWeather API and displays the information in a minimalistic way. In addition, the site determines the appropriate icons based on the weather.",
+        "mainAltText": "A phone and tablet displaying weather information.",
+        "secondaryAltText": "A website screen of weather information."
+    }
 }
