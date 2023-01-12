@@ -76,7 +76,5 @@
         "moreDetails": "Info Weather está escrito con React y obtiene la información de la API de OpenWeather y muestra la información de forma minimalista. Además, el sitio determina los íconos apropiados según el clima.",
         "mainAltText": "Un teléfono y una tableta que muestran información meteorológica.",
         "secondaryAltText": "Una pantalla de sitio web de información meteorológica."
-    },
-    "behindTheScenes": "Más del proyecto",
-    "technologyUsed": "Tecnología utilizada"
+    }
 }
