@@ -23,7 +23,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
   const { t } = useTranslation(['project', 'projects', 'common']);
 
   const formatedTechUsed = project.techUsed.map((p) => iconTitles[p]);
-  const title = t('head.title', { project: project.name });
+  const title = `Edwin Lopez | ${project.name}`;
   const description = t('head.description', {
     project: project.name,
     tech: formatedTechUsed.join(', '),

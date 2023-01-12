@@ -25,7 +25,7 @@
         "overview": "Un sitio web que destaca los servicios de una pequeña empresa de limpieza.",
         "description":  "Casa Magda es un sitio de una página para mostrar los servicios de una pequeña empresa de limpieza. Además, el sitio destaca la historia de la empresa, las razones para trabajar con ellos, las ubicaciones y un formulario de contacto.",
         "moreDetails": "El sitio está escrito usando HTML, CSS, Javascript y JQuery. Utilizando animaciones CSS, técnicas de SEO y principios de UX, el sitio web aumentó la visibilidad y las ganancias en más del 50%.",
-        "mainAltText": "Un iphone y un macbook que muestran la página de destino del sitio web.",
+        "mainAltText": "Un iPhone y un Macbook que muestran la página de destino del sitio web.",
         "secondaryAltText": "2 pantallas que muestran la página de inicio, sobre nosotros, nuestros servicios, ubicaciones y secciones del formulario de contacto del sitio web."
     },
     "trapd": {
@@ -61,7 +61,7 @@
         "description":  "Este programa implementa el enfoque de Tarántula para realizar la localización de fallas y ubicar qué líneas de código son más sospechosas de romper las pruebas unitarias de un proyecto de código abierto en Github.",
         "moreDetails": "Este programa contiene más de 4 mil archivos XML con análisis de cobertura de código. Para este algoritmo, observamos los casos de prueba que cubren cada línea del programa y comparamos la proporción de casos de prueba exitosos y fallidos. Cuanto mayor sea la proporción de casos de pruebas fallidas en comparación con las exitosas, mayor será la sospecha de esa línea. La sospecha es un número entre 0 y 1, donde un número más alto significa una probabilidad más alta de que la línea haya provocado que una prueba falle.",
         "mainAltText": "Una computadora portátil que muestra una pantalla dividida con 2 archivos de código Python abiertos.",
-        "secondaryAltText": "Un monitor con una pantalla dividida de un archivo csv con puntajes y un archivo de código abierto al lado."
+        "secondaryAltText": "Un monitor con una pantalla dividida de un archivo CSV con puntajes y un archivo de código abierto al lado."
     },
     "operatingSystemGui": {
         "overview": "Un sistema operativo simple que simula a los usuarios escribiendo en discos e imprimiendo archivos.",

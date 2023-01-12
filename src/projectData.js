@@ -39,7 +39,7 @@ const Projects = [
     mainImg: '/images/projects/casamagda.jpg',
     secondImg: '/images/projects/casamagda2.jpg',
     mainImgAltText: 'casaMagda.mainAltText',
-    secondImgAltText: 'caseMagda.secondaryAltText',
+    secondImgAltText: 'casaMagda.secondaryAltText',
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const Projects = [
     mainImg: '/images/projects/trapd.jpg',
     secondImg: '/images/projects/trapd2.jpg',
     mainImgAltText: 'trapd.mainAltText',
-    secondImgAltText: 'trapd.secondarAltText',
+    secondImgAltText: 'trapd.secondaryAltText',
   },
   {
     id: 5,

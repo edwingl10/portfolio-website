@@ -1,6 +1,5 @@
 {
      "head":  {
-        "title": "Edwin Lopez | {{project}}",
         "description": "Explore {{project}} and learn how {{tech}} were used to create this project."
     },
     "behindTheScenes": "Behind the Scenes",
