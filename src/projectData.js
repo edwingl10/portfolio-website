@@ -10,10 +10,8 @@ const Projects = [
     link: 'https://dreamscholars.org/',
     mainImg: '/images/projects/dreamscholars.jpg',
     secondImg: '/images/projects/dreamscholars2.jpg',
-    mainImgAltText:
-      'A tablet and iphone showcasing the home page of the scholarship website',
-    secondImgAltText:
-      'Various views of the website displaying the filters, schoalrship page, and scholarship form',
+    mainImgAltText: 'dreamScholars.mainAltText',
+    secondImgAltText: 'dreamScholars.secondaryAltText',
   },
   {
     id: 2,
@@ -26,10 +24,8 @@ const Projects = [
     link: 'https://nedflix-2c9c4.web.app/',
     mainImg: '/images/projects/nedflix.jpg',
     secondImg: '/images/projects/nedflix2.jpg',
-    mainImgAltText:
-      'A tablet and iphone displaying a movie banner followed by movie posters to explore',
-    secondImgAltText:
-      'Various screens displaying the my list, sign-in, search and movie page',
+    mainImgAltText: 'nedflix.mainAltText',
+    secondImgAltText: 'nedflix.secondaryAltText',
   },
   {
     id: 3,
@@ -42,10 +38,8 @@ const Projects = [
     link: 'https://casamagda-b1768.web.app/',
     mainImg: '/images/projects/casamagda.jpg',
     secondImg: '/images/projects/casamagda2.jpg',
-    mainImgAltText:
-      'An iphone and mackbook displaying the landing page of the website',
-    secondImgAltText:
-      '2 screens showing the landing page, about us, our services, locations and contact form sections of the website',
+    mainImgAltText: 'casaMagda.mainAltText',
+    secondImgAltText: 'caseMagda.secondaryAltText',
   },
   {
     id: 4,
@@ -58,9 +52,8 @@ const Projects = [
     link: 'https://play.google.com/store/apps/details?id=com.Edlo.Trapd&hl=en_US&gl=US',
     mainImg: '/images/projects/trapd.jpg',
     secondImg: '/images/projects/trapd2.jpg',
-    mainImgAltText: 'A mobile phone showcasing the main menu of the TRAPD game',
-    secondImgAltText:
-      'Multiple phones displaying the shop, creatures, highscores, game over and gameplay screens',
+    mainImgAltText: 'trapd.mainAltText',
+    secondImgAltText: 'trapd.secondarAltText',
   },
   {
     id: 5,
@@ -73,10 +66,8 @@ const Projects = [
     link: 'https://github.com/edwingl10/Pacific-Marine-App',
     mainImg: '/images/projects/pmmc.jpg',
     secondImg: '/images/projects/pmmc2.jpg',
-    mainImgAltText:
-      'A tablet showing a seal with an inventory of tools below it',
-    secondImgAltText:
-      'Multiple tablets showing different seals being treated and rehabilited by the tools in the inventory',
+    mainImgAltText: 'pacificMarineApp.mainAltText',
+    secondImgAltText: 'pacificMarineApp.secondaryAltText',
   },
   {
     id: 6,
@@ -89,10 +80,8 @@ const Projects = [
     link: 'https://github.com/edwingl10/PartyBashCompanion',
     mainImg: '/images/projects/partybash.jpg',
     secondImg: '/images/projects/partybash2.jpg',
-    mainImgAltText:
-      'A phone displaying the menu of the game, with 2 players ready to play',
-    secondImgAltText:
-      'Numerous phones showcasing the coins, shop, wheel, challenge and dice roll screens',
+    mainImgAltText: 'partyBash.mainAltText',
+    secondImgAltText: 'partyBash.secondaryAltText',
   },
   {
     id: 7,
@@ -105,10 +94,8 @@ const Projects = [
     link: 'https://github.com/edwingl10/Search-ED',
     mainImg: '/images/projects/search-ed.jpg',
     secondImg: '/images/projects/search-ed2.jpg',
-    mainImgAltText:
-      'A laptop displaying a split screen with 2 Python code files open',
-    secondImgAltText:
-      '2 monitors displaying the search field followed by the results and a mongodb database',
+    mainImgAltText: 'searchEd.mainAltText',
+    secondImgAltText: 'searchEd.secondaryAltText',
   },
   {
     id: 8,
@@ -121,10 +108,8 @@ const Projects = [
     link: 'https://github.com/edwingl10/fault-localization',
     mainImg: '/images/projects/fault-local.jpg',
     secondImg: '/images/projects/fault-local2.jpg',
-    mainImgAltText:
-      'A laptop displaying a split screen with 2 Python code files open',
-    secondImgAltText:
-      'A monitor with a split screen of a csv file with scores and a code file open next to it',
+    mainImgAltText: 'faultLocalization.mainAltText',
+    secondImgAltText: 'faultLocalization.secondaryAltText',
   },
   {
     id: 9,
@@ -137,10 +122,8 @@ const Projects = [
     link: 'https://github.com/edwingl10/OSGui',
     mainImg: '/images/projects/osgui.jpg',
     secondImg: '/images/projects/osgui2.jpg',
-    mainImgAltText:
-      'A laptop displaying a split screen with 2 Java code files open',
-    secondImgAltText:
-      'A monitor with a python file open and q GUI next to it showcasing the users, disks, printers and directory manager status',
+    mainImgAltText: 'operatingSystemGui.mainAltText',
+    secondImgAltText: 'operatingSystemGui.secondaryAltText',
   },
   {
     id: 10,
@@ -153,8 +136,8 @@ const Projects = [
     link: 'https://edwingl10.github.io/infoweather/',
     mainImg: '/images/projects/infoweather.jpg',
     secondImg: '/images/projects/infoweather2.jpg',
-    mainImgAltText: 'A phone and tablet displaying weather information',
-    secondImgAltText: 'A website screen of weather information',
+    mainImgAltText: 'infoWeather.mainAltText',
+    secondImgAltText: 'infoWeather.secondaryAltText',
   },
 ];
 
