@@ -39,7 +39,7 @@ export default function ListProjects({ placeholders, bannerBlur }) {
             <Image
               priority
               src="/images/projects.png"
-              alt="Memoji of myself behind a laptop"
+              alt={t('behindLaptopImgAlt')}
               height={260}
               width={220}
               placeholder="blur"
