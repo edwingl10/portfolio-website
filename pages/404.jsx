@@ -1,8 +1,11 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 import { Button, Container, Typography, Box } from '@mui/material';
+import { useTranslation } from 'next-i18next';
 
 export default function NotFound() {
+  const { t } = useTranslation();
+
   return (
     <Box textAlign="center">
       <Container sx={{ my: 5, py: 2 }}>
@@ -14,13 +17,13 @@ export default function NotFound() {
           height={480}
         />
         <Typography variant="h3" paragraph>
-          Page Not Found
+          {t('404.pageNotFound')}
         </Typography>
         <Typography variant="h5" paragraph>
-          The page you are looking for is not available.
+          {t('404.notAvailable')}
         </Typography>
         <Button variant="contained" color="secondary">
-          go home
+          {t('btn.backToHome')}
         </Button>
       </Container>
     </Box>
