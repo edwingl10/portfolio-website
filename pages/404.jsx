@@ -2,6 +2,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 import { Button, Container, Typography, Box } from '@mui/material';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 export default function NotFound() {
   const { t } = useTranslation();
@@ -22,9 +23,12 @@ export default function NotFound() {
         <Typography variant="h5" paragraph>
           {t('404.notAvailable')}
         </Typography>
-        <Button variant="contained" color="secondary">
-          {t('btn.backToHome')}
-        </Button>
+
+        <Link href="/" passHref>
+          <Button variant="contained" color="secondary">
+            {t('btn.backToHome')}
+          </Button>
+        </Link>
       </Container>
     </Box>
   );
