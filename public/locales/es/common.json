@@ -3,11 +3,17 @@
         "contact": "contacto",
         "viewMore": "ver más",
         "explore": "explorar",
-        "share": "compartir"
+        "share": "compartir",
+        "backToHome": "volver a pagina inicial"
     },
     "rightsReserved": "Reservados todos los derechos. - Diseñado y programado por Edwin López.",
     "about": "Sobre",
     "projects": "Proyectos",
     "resume": "Currículo",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "404": {
+        "imageAlt": "Una computadora portátil que muestra un mensaje de 404",
+        "pageNotFound": "Página no existe",
+        "notAvailable": "Lo sentimos, la página que busca no está disponible."
+    }
 }
