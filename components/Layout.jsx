@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useMediaQuery } from '@mui/material';
+import { useMediaQuery, Box } from '@mui/material';
 import Navbar from './Navbar';
 import MobileNavbar from './MobileNavbar';
 import Footer from './Footer';
@@ -10,7 +10,10 @@ export default function Layout({ children }) {
   return (
     <>
       {isDesktop && <Navbar />}
-      {children}
+      <Box
+        sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        {children}
+      </Box>
       <Footer />
       {!isDesktop && <MobileNavbar />}
     </>
