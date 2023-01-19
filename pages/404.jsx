@@ -13,7 +13,7 @@ export default function NotFound() {
         <Image
           priority
           src="/images/404.png"
-          alt="A laptop showing a 404 message"
+          alt={t('404.imageAlt')}
           width={700}
           height={480}
         />

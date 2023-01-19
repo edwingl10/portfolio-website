@@ -12,6 +12,7 @@
     "resume": "Currículo",
     "contact": "Contacto",
     "404": {
+        "imageAlt": "Una computadora portátil que muestra un mensaje de 404",
         "pageNotFound": "Página no existe",
         "notAvailable": "Lo sentimos, la página que busca no está disponible."
     }
