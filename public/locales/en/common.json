@@ -15,5 +15,6 @@
         "imageAlt": "A laptop showing a 404 message",
         "pageNotFound": "Page Not Found",
         "notAvailable": "Sorry, the page you are looking for is not available."
-    }
+    },
+    "copiedToClipboard": "Copied to clipboard"
 }
