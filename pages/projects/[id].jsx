@@ -129,14 +129,6 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         </Container>
       </Box>
 
-      <Snackbar
-        open={open}
-        onClose={() => setOpen(false)}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-        autoHideDuration={2000}
-        message="Copied to clipboard"
-      />
-
       <Box sx={{ py: 5 }} textAlign="center">
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           {t('technologyUsed')}
@@ -160,6 +152,14 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           ))}
         </Stack>
       </Box>
+
+      <Snackbar
+        open={open}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        autoHideDuration={2000}
+        message={t('common:copiedToClipboard')}
+      />
     </>
   );
 }
