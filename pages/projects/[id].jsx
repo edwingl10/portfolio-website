@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
+import { useState } from 'react';
 import {
   Container,
   Grid,
@@ -11,6 +12,7 @@ import {
   SvgIcon,
   Tooltip,
   Zoom,
+  Snackbar,
 } from '@mui/material';
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -29,6 +31,12 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
     tech: formatedTechUsed.join(', '),
   });
   const keywords = formatedTechUsed.join(', ');
+
+  const [open, setOpen] = useState(false);
+  const shareClick = () => {
+    setOpen(true);
+    navigator.clipboard.writeText(window.location.toString());
+  };
 
   return (
     <>
@@ -110,9 +118,9 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               </Typography>
 
               <Button
-                component={MuiLink}
                 color="secondary"
                 variant="contained"
+                onClick={shareClick}
                 sx={{ mt: 2 }}>
                 {t('common:btn.share')}
               </Button>
@@ -120,6 +128,14 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           </Grid>
         </Container>
       </Box>
+
+      <Snackbar
+        open={open}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        autoHideDuration={2000}
+        message="Copied to clipboard"
+      />
 
       <Box sx={{ py: 5 }} textAlign="center">
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
