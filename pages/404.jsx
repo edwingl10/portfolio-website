@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 import { Button, Container, Typography, Box } from '@mui/material';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+import { getPlaiceholder } from 'plaiceholder';
 
-export default function NotFound() {
+export default function NotFound({ blurData }) {
   const { t } = useTranslation();
 
   return (
@@ -16,6 +18,8 @@ export default function NotFound() {
           alt={t('404.imageAlt')}
           width={700}
           height={480}
+          placeholder="blur"
+          blurDataURL={blurData}
         />
         <Typography variant="h3" paragraph>
           {t('404.pageNotFound')}
@@ -34,6 +38,14 @@ export default function NotFound() {
   );
 }
 
+NotFound.propTypes = {
+  blurData: PropTypes.string.isRequired,
+};
+
 export async function getStaticProps({ locale }) {
-  return { props: { ...(await serverSideTranslations(locale, 'common')) } };
+  const { base64: blurData } = await getPlaiceholder('/images/404.png');
+
+  return {
+    props: { blurData, ...(await serverSideTranslations(locale, 'common')) },
+  };
 }
