@@ -39,7 +39,7 @@ export default function Home({ placeholders, bannerBlur }) {
   const keywords = t('head.keywords');
 
   return (
-    <>
+    <Box bgcolor="background.paper">
       <SEOHead {...{ title, description, keywords }} />
 
       <Container sx={{ my: 5, py: 2 }}>
@@ -133,7 +133,7 @@ export default function Home({ placeholders, bannerBlur }) {
           </Button>
         </Link>
       </Container>
-    </>
+    </Box>
   );
 }
 

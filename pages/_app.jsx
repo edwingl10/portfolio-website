@@ -4,7 +4,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import { GlobalStyles } from '@mui/material';
 import { appWithTranslation } from 'next-i18next';
-import theme from '../src/theme';
+/* eslint-disable no-unused-vars */
+import { lightTheme, darkTheme } from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
 
@@ -17,7 +18,7 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={lightTheme}>
         <CssBaseline />
         <GlobalStyles
           styles={`
