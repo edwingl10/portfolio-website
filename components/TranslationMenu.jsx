@@ -24,7 +24,11 @@ export default function TranslationMenu() {
       <IconButton
         aria-label="select language"
         onClick={(e) => setAnchorEl(e.currentTarget)}
-        sx={{ mx: 1 }}>
+        sx={{
+          mx: 1,
+          color: (theme) => theme.palette.text.primary,
+          opacity: '0.6',
+        }}>
         <LanguageIcon />
       </IconButton>
 
