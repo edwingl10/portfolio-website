@@ -32,7 +32,12 @@ export default function Navbar() {
   });
 
   return (
-    <AppBar color="inherit" position="sticky">
+    <AppBar
+      position="sticky"
+      sx={{
+        '& .MuiToolbar-root': { bgcolor: 'background.paper' },
+        color: (theme) => theme.palette.text.primary,
+      }}>
       <Toolbar>
         <Link href="/">
           <SvgIcon fontSize="large" color="primary" sx={{ cursor: 'pointer' }}>
@@ -45,6 +50,7 @@ export default function Navbar() {
           value={currentTab}
           sx={{
             ml: 'auto',
+            color: 'text.primary',
             '& .MuiTabs-indicator': {
               display: 'flex',
               justifyContent: 'center',
@@ -78,7 +84,8 @@ export default function Navbar() {
           href="/resume.pdf"
           sx={{
             textTransform: 'none',
-            color: (theme) => theme.palette.grey[600],
+            color: (theme) => theme.palette.text.primary,
+            opacity: '0.6',
           }}>
           {t('resume')}
         </Button>
@@ -94,7 +101,8 @@ export default function Navbar() {
           href="mailto:edwingl@uci.edu"
           sx={{
             textTransform: 'none',
-            color: (theme) => theme.palette.grey[600],
+            color: (theme) => theme.palette.text.primary,
+            opacity: '0.6',
           }}>
           {t('contact')}
         </Button>

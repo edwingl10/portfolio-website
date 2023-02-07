@@ -20,7 +20,7 @@ export default function about({ placeholders }) {
   const keywords = t('head.keywords');
 
   return (
-    <>
+    <Box bgcolor="background.paper">
       <SEOHead {...{ title, description, keywords }} />
 
       <Container sx={{ my: 5, py: 2 }}>
@@ -89,7 +89,7 @@ export default function about({ placeholders }) {
           </Grid>
         </Container>
       </Box>
-    </>
+    </Box>
   );
 }
 

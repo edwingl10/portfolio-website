@@ -7,13 +7,14 @@ export default function Footer() {
   const { t } = useTranslation('common');
 
   return (
-    <Box sx={{ bgcolor: 'primary.dark' }}>
+    <Box bgcolor="footer.main">
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Grid container item justifyContent="flex-end" sx={{ mb: 2 }}>
           <IconButton
             size="small"
             sx={{
-              bgcolor: 'background.paper',
+              bgcolor: 'common.white',
+              color: 'common.black',
               '&:hover': { bgcolor: 'grey.500' },
             }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -28,7 +29,7 @@ export default function Footer() {
             xs={12}
             md={3}
             justifyContent={{ xs: 'center', md: 'flex-start' }}>
-            <SocialLinks color="background.paper" />
+            <SocialLinks color="common.white" />
           </Grid>
 
           <Grid item xs={12} md={9}>

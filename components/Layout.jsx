@@ -11,6 +11,7 @@ export default function Layout({ children }) {
     <>
       {isDesktop && <Navbar />}
       <Box
+        bgcolor="background.paper"
         sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         {children}
       </Box>
