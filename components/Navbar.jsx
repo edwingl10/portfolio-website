@@ -5,13 +5,13 @@ import {
   Toolbar,
   SvgIcon,
   Button,
-  // IconButton,
+  IconButton,
   Link as MuiLink,
 } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-// import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
 
@@ -92,9 +92,9 @@ export default function Navbar() {
 
         <TranslationMenu />
 
-        {/* <IconButton aria-label="change theme" sx={{ mx: 1 }}>
+        <IconButton aria-label="change theme" sx={{ mx: 1 }}>
           <DarkModeOutlinedIcon />
-        </IconButton> */}
+        </IconButton>
 
         <Button
           component={MuiLink}

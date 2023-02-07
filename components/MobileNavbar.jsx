@@ -17,7 +17,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DescriptionIcon from '@mui/icons-material/Description';
 import LanguageIcon from '@mui/icons-material/Language';
-// import DarkModeIcon from '@mui/icons-material/DarkMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SendIcon from '@mui/icons-material/Send';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
@@ -124,7 +124,7 @@ export default function MobileNavbar() {
                 onToggleLanguageClick(router.locale === 'en' ? 'es' : 'en')
               }
             />
-            {/* <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" /> */}
+            <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" />
             <CustomMenuItem
               component={MuiLink}
               href="mailto:edwingl@uci.edu"
