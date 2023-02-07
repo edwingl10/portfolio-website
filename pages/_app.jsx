@@ -20,15 +20,7 @@ function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={lightTheme}>
         <CssBaseline />
-        <GlobalStyles
-          styles={`
-            :root {
-              body {
-                background-color: #fff;
-              }
-            }
-          `}
-        />
+        <GlobalStyles />
         <Layout>
           <Component {...pageProps} />
         </Layout>
