@@ -18,7 +18,7 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={lightTheme}>
         <CssBaseline />
         <GlobalStyles
           styles={`

@@ -1,5 +1,6 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
 
+const rawTheme = createTheme();
 const lightTheme = responsiveFontSizes(
   createTheme({
     palette: {
@@ -13,6 +14,9 @@ const lightTheme = responsiveFontSizes(
       background: {
         default: '#fafafa',
       },
+      footer: rawTheme.palette.augmentColor({
+        color: { main: '#283a53' },
+      }),
     },
     typography: {
       fontFamily: "'Sora', sans-serif",
@@ -34,6 +38,9 @@ const darkTheme = responsiveFontSizes(
         default: '#121212',
         paper: '#0a0a0a',
       },
+      footer: rawTheme.palette.augmentColor({
+        color: { main: '#141d29' },
+      }),
     },
     typography: {
       fontFamily: "'Sora', sans-serif",

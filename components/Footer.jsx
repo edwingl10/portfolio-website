@@ -7,7 +7,7 @@ export default function Footer() {
   const { t } = useTranslation('common');
 
   return (
-    <Box sx={{ bgcolor: '#03121C' }}>
+    <Box bgcolor="footer.main">
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Grid container item justifyContent="flex-end" sx={{ mb: 2 }}>
           <IconButton
