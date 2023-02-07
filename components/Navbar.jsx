@@ -36,7 +36,6 @@ export default function Navbar() {
       position="sticky"
       sx={{
         '& .MuiToolbar-root': { bgcolor: 'background.paper' },
-        color: (theme) => theme.palette.text.primary,
       }}>
       <Toolbar>
         <Link href="/">
@@ -50,7 +49,6 @@ export default function Navbar() {
           value={currentTab}
           sx={{
             ml: 'auto',
-            color: 'text.primary',
             '& .MuiTabs-indicator': {
               display: 'flex',
               justifyContent: 'center',
