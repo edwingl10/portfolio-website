@@ -8,10 +8,12 @@ import {
   IconButton,
   Link as MuiLink,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
 import { useThemeUpdate } from './ThemeContext';
@@ -29,7 +31,7 @@ export default function Navbar() {
   const { t } = useTranslation('common');
   const router = useRouter();
   let currentTab = false;
-
+  const currentTheme = useTheme();
   const { toggleColorMode } = useThemeUpdate();
 
   Object.entries(links).forEach(([title, link]) => {
@@ -105,7 +107,11 @@ export default function Navbar() {
             mx: 1,
             ...iconStyles,
           }}>
-          <DarkModeOutlinedIcon />
+          {currentTheme.palette.mode === 'light' ? (
+            <DarkModeOutlinedIcon />
+          ) : (
+            <LightModeOutlinedIcon />
+          )}
         </IconButton>
 
         <Button
