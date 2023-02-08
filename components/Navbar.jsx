@@ -12,8 +12,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import { useContext } from 'react';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
+import { ColorModeContext } from './ThemeContext';
 
 const links = {
   about: '/about',
@@ -24,6 +26,8 @@ export default function Navbar() {
   const { t } = useTranslation('common');
   const router = useRouter();
   let currentTab = false;
+
+  const { toggleColorMode } = useContext(ColorModeContext);
 
   Object.entries(links).forEach(([title, link]) => {
     if (router.pathname === link) {
@@ -92,7 +96,14 @@ export default function Navbar() {
 
         <TranslationMenu />
 
-        <IconButton aria-label="change theme" sx={{ mx: 1 }}>
+        <IconButton
+          aria-label="change theme"
+          onClick={toggleColorMode}
+          sx={{
+            mx: 1,
+            color: (theme) => theme.palette.text.primary,
+            opacity: '0.6',
+          }}>
           <DarkModeOutlinedIcon />
         </IconButton>
 

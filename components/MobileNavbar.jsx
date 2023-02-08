@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Link from 'next/link';
 import {
   BottomNavigation,
@@ -23,6 +23,7 @@ import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import Icon from './Icon';
+import { ColorModeContext } from './ThemeContext';
 
 const links = {
   about: { link: '/about', icon: <PersonIcon color="primary" /> },
@@ -52,6 +53,7 @@ export default function MobileNavbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const router = useRouter();
   const { t } = useTranslation('common');
+  const { toggleColorMode } = useContext(ColorModeContext);
 
   const onToggleLanguageClick = (newLocale) => {
     const { pathname, asPath, query } = router;
@@ -124,7 +126,11 @@ export default function MobileNavbar() {
                 onToggleLanguageClick(router.locale === 'en' ? 'es' : 'en')
               }
             />
-            <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" />
+            <CustomMenuItem
+              MenuIcon={DarkModeIcon}
+              title="Dark Mode"
+              onClick={toggleColorMode}
+            />
             <CustomMenuItem
               component={MuiLink}
               href="mailto:edwingl@uci.edu"

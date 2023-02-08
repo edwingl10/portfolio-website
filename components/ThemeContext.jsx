@@ -6,10 +6,10 @@ import {
 } from '@mui/material/styles';
 import { darkTheme, lightTheme } from '../src/theme';
 
-const ColorModeContext = createContext({ toggleColorMode: () => {} });
+export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 /* eslint-disable react/prop-types */
-export default function ToggleColorMode({ children }) {
+export default function MUIThemeProvider({ children }) {
   const [mode, setMode] = useState('dark');
   const colorMode = React.useMemo(
     () => ({

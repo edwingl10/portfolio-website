@@ -5,7 +5,7 @@ import { GlobalStyles } from '@mui/material';
 import { appWithTranslation } from 'next-i18next';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
-import ToggleColorMode from '../components/ThemeContext';
+import MUIThemeProvider from '../components/ThemeContext';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -16,13 +16,13 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <ToggleColorMode>
+      <MUIThemeProvider>
         <CssBaseline />
         <GlobalStyles />
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </ToggleColorMode>
+      </MUIThemeProvider>
     </CacheProvider>
   );
 }
