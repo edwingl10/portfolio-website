@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import {
   BottomNavigation,
@@ -23,7 +23,7 @@ import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import Icon from './Icon';
-import { ColorModeContext } from './ThemeContext';
+import { useThemeUpdate } from './ThemeContext';
 
 const links = {
   about: { link: '/about', icon: <PersonIcon color="primary" /> },
@@ -53,7 +53,7 @@ export default function MobileNavbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const router = useRouter();
   const { t } = useTranslation('common');
-  const { toggleColorMode } = useContext(ColorModeContext);
+  const { toggleColorMode } = useThemeUpdate();
 
   const onToggleLanguageClick = (newLocale) => {
     const { pathname, asPath, query } = router;

@@ -12,10 +12,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import { useContext } from 'react';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
-import { ColorModeContext } from './ThemeContext';
+import { useThemeUpdate } from './ThemeContext';
 
 const links = {
   about: '/about',
@@ -31,7 +30,7 @@ export default function Navbar() {
   const router = useRouter();
   let currentTab = false;
 
-  const { toggleColorMode } = useContext(ColorModeContext);
+  const { toggleColorMode } = useThemeUpdate();
 
   Object.entries(links).forEach(([title, link]) => {
     if (router.pathname === link) {
