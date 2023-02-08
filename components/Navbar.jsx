@@ -21,6 +21,10 @@ const links = {
   about: '/about',
   projects: '/projects',
 };
+const iconStyles = {
+  color: (theme) => theme.palette.text.primary,
+  opacity: '0.6',
+};
 
 export default function Navbar() {
   const { t } = useTranslation('common');
@@ -88,8 +92,7 @@ export default function Navbar() {
           href="/resume.pdf"
           sx={{
             textTransform: 'none',
-            color: (theme) => theme.palette.text.primary,
-            opacity: '0.6',
+            ...iconStyles,
           }}>
           {t('resume')}
         </Button>
@@ -101,8 +104,7 @@ export default function Navbar() {
           onClick={toggleColorMode}
           sx={{
             mx: 1,
-            color: (theme) => theme.palette.text.primary,
-            opacity: '0.6',
+            ...iconStyles,
           }}>
           <DarkModeOutlinedIcon />
         </IconButton>
@@ -112,8 +114,7 @@ export default function Navbar() {
           href="mailto:edwingl@uci.edu"
           sx={{
             textTransform: 'none',
-            color: (theme) => theme.palette.text.primary,
-            opacity: '0.6',
+            ...iconStyles,
           }}>
           {t('contact')}
         </Button>

@@ -25,7 +25,7 @@ export default function MUIThemeProvider({ children }) {
       createTheme({
         ...(mode === 'light' ? lightTheme : darkTheme),
       }),
-      [mode]
+      []
     )
   );
 
