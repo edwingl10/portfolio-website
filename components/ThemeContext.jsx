@@ -1,4 +1,11 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, {
+  useState,
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+} from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import {
   createTheme,
   ThemeProvider,
@@ -14,7 +21,9 @@ export function useThemeUpdate() {
 
 /* eslint-disable react/prop-types */
 export default function MUIThemeProvider({ children }) {
-  const [mode, setMode] = useState('dark');
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [mode, setMode] = useState(prefersDarkMode ? 'dark' : 'light');
+
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -24,7 +33,7 @@ export default function MUIThemeProvider({ children }) {
     []
   );
 
-  const theme = React.useMemo(() =>
+  const theme = useMemo(() =>
     responsiveFontSizes(
       createTheme({
         ...(mode === 'light' ? lightTheme : darkTheme),
@@ -32,6 +41,10 @@ export default function MUIThemeProvider({ children }) {
       []
     )
   );
+
+  useEffect(() => {
+    setMode(prefersDarkMode ? 'dark' : 'light');
+  }, [prefersDarkMode]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
