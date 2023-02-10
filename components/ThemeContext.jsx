@@ -22,7 +22,28 @@ export function useThemeUpdate() {
 /* eslint-disable react/prop-types */
 export default function MUIThemeProvider({ children }) {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const [mode, setMode] = useState(prefersDarkMode ? 'dark' : 'light');
+  const [mode, setMode] = useState();
+  const [mounted, setMounted] = useState(false);
+
+  // sets theme to user preference and if none, will default to system preference
+  useEffect(() => {
+    const userSetPreference = localStorage.getItem('theme');
+    if (userSetPreference !== null && userSetPreference !== mode) {
+      setMode(userSetPreference);
+    } else {
+      setMode(prefersDarkMode ? 'dark' : 'light');
+    }
+  }, [prefersDarkMode]);
+
+  useEffect(() => {
+    if (mode) {
+      localStorage.setItem('theme', mode);
+    }
+  }, [mode]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const colorMode = React.useMemo(
     () => ({
@@ -42,9 +63,9 @@ export default function MUIThemeProvider({ children }) {
     )
   );
 
-  useEffect(() => {
-    setMode(prefersDarkMode ? 'dark' : 'light');
-  }, [prefersDarkMode]);
+  if (!mounted) {
+    return <div />;
+  }
 
   return (
     <ColorModeContext.Provider value={colorMode}>
