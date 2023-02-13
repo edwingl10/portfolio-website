@@ -11,6 +11,8 @@
     "projects": "Projects",
     "resume": "Resume",
     "contact": "Contact",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
     "404": {
         "imageAlt": "A laptop showing a 404 message",
         "pageNotFound": "Page Not Found",

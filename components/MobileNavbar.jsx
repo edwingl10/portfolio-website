@@ -30,11 +30,11 @@ import { useThemeUpdate } from './ThemeContext';
 const links = {
   about: {
     link: '/about',
-    icon: <PersonIcon color="primary" sx={{ mb: 0.5 }} />,
+    icon: <PersonIcon color="primary" sx={{ mb: 1 }} />,
   },
   projects: {
     link: '/projects',
-    icon: <IntegrationInstructionsIcon color="primary" sx={{ mb: 0.5 }} />,
+    icon: <IntegrationInstructionsIcon color="primary" sx={{ mb: 1 }} />,
   },
 };
 
@@ -42,7 +42,7 @@ function CustomMenuItem({ MenuIcon, title, ...menuProps }) {
   return (
     <MenuItem {...menuProps}>
       <Stack alignItems="center" sx={{ width: 75 }}>
-        <MenuIcon color="primary" sx={{ mb: 0.5 }} />
+        <MenuIcon color="primary" sx={{ mb: 1 }} />
         <Typography>{title}</Typography>
       </Stack>
     </MenuItem>
@@ -135,7 +135,7 @@ export default function MobileNavbar() {
             />
             <CustomMenuItem
               MenuIcon={isDarkMode ? LightModeIcon : DarkModeIcon}
-              title={isDarkMode ? 'Light Mode' : 'Dark Mode'}
+              title={isDarkMode ? t('lightMode') : t('darkMode')}
               onClick={toggleColorMode}
             />
             <CustomMenuItem

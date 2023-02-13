@@ -11,6 +11,8 @@
     "projects": "Proyectos",
     "resume": "Currículo",
     "contact": "Contacto",
+    "darkMode": "Modo Oscuro",
+    "lightMode": "Modo Claro",
     "404": {
         "imageAlt": "Una computadora portátil que muestra un mensaje de 404",
         "pageNotFound": "Página no existe",
