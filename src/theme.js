@@ -38,6 +38,9 @@ const darkTheme = {
     footer: rawTheme.palette.augmentColor({
       color: { main: '#141d29' },
     }),
+    text: {
+      primary: '#e3e3e3',
+    },
   },
   typography: {
     fontFamily: "'Sora', sans-serif",

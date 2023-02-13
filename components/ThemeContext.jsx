@@ -5,7 +5,7 @@ import React, {
   useEffect,
   useMemo,
 } from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
+// import useMediaQuery from '@mui/material/useMediaQuery';
 import {
   createTheme,
   ThemeProvider,
@@ -21,34 +21,17 @@ export function useThemeUpdate() {
 
 /* eslint-disable react/prop-types */
 export default function MUIThemeProvider({ children }) {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const [mode, setMode] = useState();
-  const [mounted, setMounted] = useState(false);
-
-  // sets theme to user preference and if none, will default to system preference
-  useEffect(() => {
-    const userSetPreference = localStorage.getItem('theme');
-    if (userSetPreference !== null && userSetPreference !== mode) {
-      setMode(userSetPreference);
-    } else {
-      setMode(prefersDarkMode ? 'dark' : 'light');
-    }
-  }, [prefersDarkMode]);
+  const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
 
   useEffect(() => {
-    if (mode) {
-      localStorage.setItem('theme', mode);
-    }
-  }, [mode]);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+    document.body.dataset.theme = activeTheme;
+    localStorage.setItem('theme', activeTheme);
+  }, [activeTheme]);
 
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+        setActiveTheme((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
       },
     }),
     []
@@ -57,15 +40,11 @@ export default function MUIThemeProvider({ children }) {
   const theme = useMemo(() =>
     responsiveFontSizes(
       createTheme({
-        ...(mode === 'light' ? lightTheme : darkTheme),
+        ...(activeTheme === 'light' ? lightTheme : darkTheme),
       }),
       []
     )
   );
-
-  if (!mounted) {
-    return <div />;
-  }
 
   return (
     <ColorModeContext.Provider value={colorMode}>

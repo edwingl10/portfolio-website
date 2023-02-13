@@ -11,6 +11,16 @@ export default class MyDocument extends Document {
     const currentLocale =
       this.props.__NEXT_DATA__.locale ?? i18nextConfig.i18n.defaultLocale;
 
+    const setInitialTheme = `
+    function getUserPreference() {
+      if(window.localStorage.getItem('theme')) {
+        return window.localStorage.getItem('theme')
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+    document.body.dataset.theme = getUserPreference();
+  `;
+
     return (
       <Html lang={currentLocale}>
         <Head>
@@ -53,6 +63,7 @@ export default class MyDocument extends Document {
           {this.props.emotionStyleTags}
         </Head>
         <body>
+          <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <Main />
           <NextScript />
         </body>

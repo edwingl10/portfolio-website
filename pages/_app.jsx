@@ -3,9 +3,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import { GlobalStyles } from '@mui/material';
 import { appWithTranslation } from 'next-i18next';
+import dynamic from 'next/dynamic';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
-import MUIThemeProvider from '../components/ThemeContext';
+import '../styles/globals.css';
+
+const MUIThemeProvider = dynamic(() => import('../components/ThemeContext'), {
+  ssr: false,
+});
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
