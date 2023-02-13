@@ -1,7 +1,6 @@
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import { GlobalStyles } from '@mui/material';
 import { appWithTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import createEmotionCache from '../src/createEmotionCache';
@@ -23,7 +22,6 @@ function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <MUIThemeProvider>
         <CssBaseline />
-        <GlobalStyles />
         <Layout>
           <Component {...pageProps} />
         </Layout>
