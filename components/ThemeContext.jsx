@@ -5,7 +5,6 @@ import React, {
   useEffect,
   useMemo,
 } from 'react';
-// import useMediaQuery from '@mui/material/useMediaQuery';
 import {
   createTheme,
   ThemeProvider,
