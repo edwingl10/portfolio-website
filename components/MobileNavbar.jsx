@@ -17,7 +17,7 @@ import GridViewIcon from '@mui/icons-material/GridView';
 import PersonIcon from '@mui/icons-material/Person';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DescriptionIcon from '@mui/icons-material/Description';
-import LanguageIcon from '@mui/icons-material/Language';
+import TranslateIcon from '@mui/icons-material/Translate';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import SendIcon from '@mui/icons-material/Send';
@@ -127,7 +127,7 @@ export default function MobileNavbar() {
               onClick={() => setAnchorEl(null)}
             />
             <CustomMenuItem
-              MenuIcon={LanguageIcon}
+              MenuIcon={TranslateIcon}
               title={router.locale === 'en' ? 'Español' : 'English'}
               onClick={() =>
                 onToggleLanguageClick(router.locale === 'en' ? 'es' : 'en')

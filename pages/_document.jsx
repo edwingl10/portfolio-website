@@ -63,6 +63,7 @@ export default class MyDocument extends Document {
           {this.props.emotionStyleTags}
         </Head>
         <body>
+          {/* eslint-disable react/no-danger */}
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <Main />
           <NextScript />

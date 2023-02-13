@@ -10,6 +10,7 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 import { darkTheme, lightTheme } from '../src/theme';
 
 const ColorModeContext = createContext({ toggleColorMode: () => {} });
@@ -18,7 +19,6 @@ export function useThemeUpdate() {
   return useContext(ColorModeContext);
 }
 
-/* eslint-disable react/prop-types */
 export default function MUIThemeProvider({ children }) {
   const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
 
@@ -51,3 +51,7 @@ export default function MUIThemeProvider({ children }) {
     </ColorModeContext.Provider>
   );
 }
+
+MUIThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

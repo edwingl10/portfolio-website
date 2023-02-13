@@ -1,14 +1,15 @@
 import { IconButton, Menu, MenuItem } from '@mui/material';
-import LanguageIcon from '@mui/icons-material/Language';
+import TranslateIcon from '@mui/icons-material/Translate';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
 const languages = {
   en: 'English',
   es: 'Español',
 };
 
-export default function TranslationMenu() {
+export default function TranslationMenu({ btnStyle }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const router = useRouter();
 
@@ -24,12 +25,8 @@ export default function TranslationMenu() {
       <IconButton
         aria-label="select language"
         onClick={(e) => setAnchorEl(e.currentTarget)}
-        sx={{
-          mx: 1,
-          color: (theme) => theme.palette.text.primary,
-          opacity: '0.6',
-        }}>
-        <LanguageIcon />
+        sx={{ ...btnStyle }}>
+        <TranslateIcon />
       </IconButton>
 
       <Menu
@@ -50,3 +47,10 @@ export default function TranslationMenu() {
     </>
   );
 }
+
+TranslationMenu.propTypes = {
+  btnStyle: PropTypes.objectOf([PropTypes.string, PropTypes.number]),
+};
+TranslationMenu.defaultProps = {
+  btnStyle: {},
+};

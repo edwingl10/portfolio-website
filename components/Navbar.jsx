@@ -24,7 +24,8 @@ const links = {
 };
 const iconStyles = {
   color: (theme) => theme.palette.text.primary,
-  opacity: '0.6',
+  opacity: 0.8,
+  mx: 1,
 };
 
 export default function Navbar() {
@@ -82,6 +83,7 @@ export default function Navbar() {
                 sx={{
                   textTransform: 'none',
                   p: 0,
+                  opacity: 0.8,
                 }}
               />
             </Link>
@@ -98,13 +100,12 @@ export default function Navbar() {
           {t('resume')}
         </Button>
 
-        <TranslationMenu />
+        <TranslationMenu btnStyle={{ ...iconStyles }} />
 
         <IconButton
           aria-label="change theme"
           onClick={toggleColorMode}
           sx={{
-            mx: 1,
             ...iconStyles,
           }}>
           {currentTheme.palette.mode === 'light' ? (
