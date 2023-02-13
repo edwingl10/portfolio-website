@@ -49,7 +49,11 @@ export default function TranslationMenu({ btnStyle }) {
 }
 
 TranslationMenu.propTypes = {
-  btnStyle: PropTypes.objectOf([PropTypes.string, PropTypes.number]),
+  btnStyle: PropTypes.shape({
+    color: PropTypes.func,
+    opacity: PropTypes.number,
+    mx: PropTypes.number,
+  }),
 };
 TranslationMenu.defaultProps = {
   btnStyle: {},
