@@ -5,25 +5,34 @@ import {
   Toolbar,
   SvgIcon,
   Button,
-  // IconButton,
+  IconButton,
   Link as MuiLink,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-// import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
+import { useThemeUpdate } from './ThemeContext';
 
 const links = {
   about: '/about',
   projects: '/projects',
+};
+const iconStyles = {
+  color: (theme) => theme.palette.text.primary,
+  opacity: '0.6',
 };
 
 export default function Navbar() {
   const { t } = useTranslation('common');
   const router = useRouter();
   let currentTab = false;
+  const currentTheme = useTheme();
+  const { toggleColorMode } = useThemeUpdate();
 
   Object.entries(links).forEach(([title, link]) => {
     if (router.pathname === link) {
@@ -84,25 +93,33 @@ export default function Navbar() {
           href="/resume.pdf"
           sx={{
             textTransform: 'none',
-            color: (theme) => theme.palette.text.primary,
-            opacity: '0.6',
+            ...iconStyles,
           }}>
           {t('resume')}
         </Button>
 
         <TranslationMenu />
 
-        {/* <IconButton aria-label="change theme" sx={{ mx: 1 }}>
-          <DarkModeOutlinedIcon />
-        </IconButton> */}
+        <IconButton
+          aria-label="change theme"
+          onClick={toggleColorMode}
+          sx={{
+            mx: 1,
+            ...iconStyles,
+          }}>
+          {currentTheme.palette.mode === 'light' ? (
+            <DarkModeOutlinedIcon />
+          ) : (
+            <LightModeOutlinedIcon />
+          )}
+        </IconButton>
 
         <Button
           component={MuiLink}
           href="mailto:edwingl@uci.edu"
           sx={{
             textTransform: 'none',
-            color: (theme) => theme.palette.text.primary,
-            opacity: '0.6',
+            ...iconStyles,
           }}>
           {t('contact')}
         </Button>

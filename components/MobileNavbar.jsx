@@ -12,31 +12,37 @@ import {
   Link as MuiLink,
   Backdrop,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import GridViewIcon from '@mui/icons-material/GridView';
 import PersonIcon from '@mui/icons-material/Person';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DescriptionIcon from '@mui/icons-material/Description';
 import LanguageIcon from '@mui/icons-material/Language';
-// import DarkModeIcon from '@mui/icons-material/DarkMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import SendIcon from '@mui/icons-material/Send';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import Icon from './Icon';
+import { useThemeUpdate } from './ThemeContext';
 
 const links = {
-  about: { link: '/about', icon: <PersonIcon color="primary" /> },
+  about: {
+    link: '/about',
+    icon: <PersonIcon color="primary" sx={{ mb: 0.5 }} />,
+  },
   projects: {
     link: '/projects',
-    icon: <IntegrationInstructionsIcon color="primary" />,
+    icon: <IntegrationInstructionsIcon color="primary" sx={{ mb: 0.5 }} />,
   },
 };
 
 function CustomMenuItem({ MenuIcon, title, ...menuProps }) {
   return (
     <MenuItem {...menuProps}>
-      <Stack alignItems="center" sx={{ width: 85 }}>
-        <MenuIcon color="primary" />
+      <Stack alignItems="center" sx={{ width: 75 }}>
+        <MenuIcon color="primary" sx={{ mb: 0.5 }} />
         <Typography>{title}</Typography>
       </Stack>
     </MenuItem>
@@ -52,6 +58,9 @@ export default function MobileNavbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const router = useRouter();
   const { t } = useTranslation('common');
+  const { toggleColorMode } = useThemeUpdate();
+  const currentTheme = useTheme();
+  const isDarkMode = currentTheme.palette.mode === 'dark';
 
   const onToggleLanguageClick = (newLocale) => {
     const { pathname, asPath, query } = router;
@@ -91,17 +100,17 @@ export default function MobileNavbar() {
           transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}>
           <Stack
             direction="row"
-            rowGap={2}
+            rowGap={3}
             columnGap={{ xs: 2, sm: 3 }}
             justifyContent="center"
             sx={{
               flexWrap: 'wrap',
-              maxWidth: 500,
+              maxWidth: 450,
             }}>
             {Object.entries(links).map(([title, content]) => (
               <Link href={content.link} passHref key={title} value={title}>
                 <MenuItem onClick={() => setAnchorEl(null)}>
-                  <Stack alignItems="center" sx={{ width: 85 }}>
+                  <Stack alignItems="center" sx={{ width: 75 }}>
                     {content.icon}
                     <Typography>{t(title)}</Typography>
                   </Stack>
@@ -124,7 +133,11 @@ export default function MobileNavbar() {
                 onToggleLanguageClick(router.locale === 'en' ? 'es' : 'en')
               }
             />
-            {/* <CustomMenuItem MenuIcon={DarkModeIcon} title="Dark Mode" /> */}
+            <CustomMenuItem
+              MenuIcon={isDarkMode ? LightModeIcon : DarkModeIcon}
+              title={isDarkMode ? 'Light Mode' : 'Dark Mode'}
+              onClick={toggleColorMode}
+            />
             <CustomMenuItem
               component={MuiLink}
               href="mailto:edwingl@uci.edu"

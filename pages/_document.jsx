@@ -11,13 +11,21 @@ export default class MyDocument extends Document {
     const currentLocale =
       this.props.__NEXT_DATA__.locale ?? i18nextConfig.i18n.defaultLocale;
 
-    const theme = lightTheme;
+    const setInitialTheme = `
+    function getUserPreference() {
+      if(window.localStorage.getItem('theme')) {
+        return window.localStorage.getItem('theme')
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+    document.body.dataset.theme = getUserPreference();
+  `;
 
     return (
       <Html lang={currentLocale}>
         <Head>
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta name="theme-color" content={lightTheme.palette.primary.main} />
 
           <link
             rel="apple-touch-icon"
@@ -40,11 +48,11 @@ export default class MyDocument extends Document {
           <link
             rel="mask-icon"
             href="/safari-pinned-tab.svg"
-            color={theme.palette.primary.main}
+            color={lightTheme.palette.primary.main}
           />
           <meta
             name="msapplication-TileColor"
-            content={theme.palette.primary.main}
+            content={lightTheme.palette.primary.main}
           />
 
           <link
@@ -55,6 +63,7 @@ export default class MyDocument extends Document {
           {this.props.emotionStyleTags}
         </Head>
         <body>
+          <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <Main />
           <NextScript />
         </body>

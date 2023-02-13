@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import { GlobalStyles } from '@mui/material';
 import { appWithTranslation } from 'next-i18next';
-/* eslint-disable no-unused-vars */
-import { lightTheme, darkTheme } from '../src/theme';
+import dynamic from 'next/dynamic';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
+import '../styles/globals.css';
+
+const MUIThemeProvider = dynamic(() => import('../components/ThemeContext'), {
+  ssr: false,
+});
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -18,21 +20,12 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={lightTheme}>
+      <MUIThemeProvider>
         <CssBaseline />
-        <GlobalStyles
-          styles={`
-            :root {
-              body {
-                background-color: #fff;
-              }
-            }
-          `}
-        />
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </ThemeProvider>
+      </MUIThemeProvider>
     </CacheProvider>
   );
 }
