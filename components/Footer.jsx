@@ -13,7 +13,7 @@ export default function Footer() {
           <IconButton
             size="small"
             sx={{
-              bgcolor: 'common.white',
+              bgcolor: 'grey.50',
               color: 'common.black',
               '&:hover': { bgcolor: 'grey.500' },
             }}
@@ -29,12 +29,12 @@ export default function Footer() {
             xs={12}
             md={3}
             justifyContent={{ xs: 'center', md: 'flex-start' }}>
-            <SocialLinks color="common.white" />
+            <SocialLinks color="grey.50" />
           </Grid>
 
           <Grid item xs={12} md={9}>
             <Typography
-              color="grey.400"
+              color="grey.300"
               variant="subtitle2"
               textAlign={{ xs: 'center', md: 'right' }}>
               &copy; {new Date().getFullYear()} {t('rightsReserved')}
