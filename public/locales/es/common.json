@@ -18,5 +18,11 @@
         "pageNotFound": "Página no existe",
         "notAvailable": "Lo sentimos, la página que busca no está disponible."
     },
-    "copiedToClipboard": "Copiado al portapapeles"
+    "copiedToClipboard": "Copiado al portapapeles",
+    "scrollTop": "Vuelva al comienzo",
+    "home": "Iniciar",
+    "navMenu": "Menú de navegación",
+    "navTabs": "Pestañas de navegación",
+    "changeTheme": "Cambiar modo",
+    "selectLang": "Seleccionar idioma"
 }

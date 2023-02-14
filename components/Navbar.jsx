@@ -56,7 +56,7 @@ export default function Navbar() {
         </Link>
 
         <Tabs
-          aria-label="navbar tabs"
+          aria-label={t('navTabs')}
           value={currentTab}
           sx={{
             ml: 'auto',
@@ -103,7 +103,7 @@ export default function Navbar() {
         <TranslationMenu btnStyle={{ ...iconStyles }} />
 
         <IconButton
-          aria-label="change theme"
+          aria-label={t('changeTheme')}
           onClick={toggleColorMode}
           sx={{
             ...iconStyles,

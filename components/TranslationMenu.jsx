@@ -3,6 +3,7 @@ import TranslateIcon from '@mui/icons-material/Translate';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'next-i18next';
 
 const languages = {
   en: 'English',
@@ -12,6 +13,7 @@ const languages = {
 export default function TranslationMenu({ btnStyle }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const router = useRouter();
+  const { t } = useTranslation('common');
 
   const onToggleLanguageClick = (newLocale) => {
     const { pathname, asPath, query } = router;
@@ -23,13 +25,16 @@ export default function TranslationMenu({ btnStyle }) {
   return (
     <>
       <IconButton
-        aria-label="select language"
+        aria-label={t('selectLang')}
+        aria-controls="menu-language"
+        aria-haspopup="true"
         onClick={(e) => setAnchorEl(e.currentTarget)}
         sx={{ ...btnStyle }}>
         <TranslateIcon />
       </IconButton>
 
       <Menu
+        id="menu-language"
         open={Boolean(anchorEl)}
         anchorEl={anchorEl}
         onClose={() => setAnchorEl(null)}

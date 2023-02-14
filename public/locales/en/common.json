@@ -18,5 +18,11 @@
         "pageNotFound": "Page Not Found",
         "notAvailable": "Sorry, the page you are looking for is not available."
     },
-    "copiedToClipboard": "Copied to clipboard"
+    "copiedToClipboard": "Copied to clipboard",
+    "scrollTop": "Scroll to top",
+    "home": "Home",
+    "navMenu": "Navigation menu",
+    "navTabs": "Navigation tabs",
+    "changeTheme": "Change theme",
+    "selectLang": "Select language"
 }
