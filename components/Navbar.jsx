@@ -91,8 +91,8 @@ export default function Navbar() {
         </Tabs>
 
         <Button
-          download
           href="/resume.pdf"
+          target="_blank"
           sx={{
             textTransform: 'none',
             ...iconStyles,

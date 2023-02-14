@@ -120,8 +120,8 @@ export default function MobileNavbar() {
 
             <CustomMenuItem
               component="button"
-              download
               href="/resume.pdf"
+              target="_blank"
               MenuIcon={DescriptionIcon}
               title={t('resume')}
               onClick={() => setAnchorEl(null)}
