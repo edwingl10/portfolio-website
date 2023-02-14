@@ -14,13 +14,13 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import GridViewIcon from '@mui/icons-material/GridView';
-import PersonIcon from '@mui/icons-material/Person';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import DescriptionIcon from '@mui/icons-material/Description';
-import TranslateIcon from '@mui/icons-material/Translate';
+import LanguageIcon from '@mui/icons-material/Language';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import SendIcon from '@mui/icons-material/Send';
+import EmailIcon from '@mui/icons-material/Email';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
@@ -30,7 +30,7 @@ import { useThemeUpdate } from './ThemeContext';
 const links = {
   about: {
     link: '/about',
-    icon: <PersonIcon color="primary" sx={{ mb: 1 }} />,
+    icon: <AccountBoxIcon color="primary" sx={{ mb: 1 }} />,
   },
   projects: {
     link: '/projects',
@@ -127,7 +127,7 @@ export default function MobileNavbar() {
               onClick={() => setAnchorEl(null)}
             />
             <CustomMenuItem
-              MenuIcon={TranslateIcon}
+              MenuIcon={LanguageIcon}
               title={router.locale === 'en' ? 'Español' : 'English'}
               onClick={() =>
                 onToggleLanguageClick(router.locale === 'en' ? 'es' : 'en')
@@ -141,7 +141,7 @@ export default function MobileNavbar() {
             <CustomMenuItem
               component={MuiLink}
               href="mailto:edwingl@uci.edu"
-              MenuIcon={SendIcon}
+              MenuIcon={EmailIcon}
               title={t('contact')}
             />
           </Stack>
