@@ -19,10 +19,10 @@
         "notAvailable": "Lo sentimos, la página que busca no está disponible."
     },
     "copiedToClipboard": "Copiado al portapapeles",
-    "scrollTop": "vuelva al comienzo",
-    "home": "iniciar",
-    "navMenu": "menú de navegación",
-    "navTabs": "pestañas de navegación",
-    "changeTheme": "cambiar modo",
-    "selectLang": "seleccionar idioma"
+    "scrollTop": "Vuelva al comienzo",
+    "home": "Iniciar",
+    "navMenu": "Menú de navegación",
+    "navTabs": "Pestañas de navegación",
+    "changeTheme": "Cambiar modo",
+    "selectLang": "Seleccionar idioma"
 }
