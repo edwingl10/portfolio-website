@@ -11,6 +11,7 @@ export default function Footer() {
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Grid container item justifyContent="flex-end" sx={{ mb: 2 }}>
           <IconButton
+            aria-label={t('scrollTop')}
             size="small"
             sx={{
               bgcolor: 'grey.50',

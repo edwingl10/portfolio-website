@@ -74,6 +74,7 @@ export default function MobileNavbar() {
       <Paper sx={{ position: 'sticky', bottom: 0 }} elevation={3}>
         <BottomNavigation showLabels sx={{ justifyContent: 'space-between' }}>
           <BottomNavigationAction
+            aria-label={t('home')}
             icon={
               <Link href="/">
                 <SvgIcon color="primary" sx={{ fontSize: 25 }}>
@@ -84,6 +85,9 @@ export default function MobileNavbar() {
             sx={{ maxWidth: 50 }}
           />
           <BottomNavigationAction
+            aria-label={t('navMenu')}
+            aria-haspopup="true"
+            aria-controls="menu-appbar"
             icon={<GridViewIcon color="primary" sx={{ fontSize: 25 }} />}
             sx={{ maxWidth: 50 }}
             onClick={(e) => setAnchorEl(e.currentTarget)}
@@ -93,6 +97,7 @@ export default function MobileNavbar() {
 
       <Backdrop open={Boolean(anchorEl)} sx={{ bgcolor: 'rgba(0,0,0,0.2)' }}>
         <Menu
+          id="menu-appbar"
           open={Boolean(anchorEl)}
           anchorEl={anchorEl}
           onClose={() => setAnchorEl(null)}

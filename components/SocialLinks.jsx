@@ -15,21 +15,28 @@ export default function SocialLinks({ color }) {
     linkedIn: {
       link: 'https://www.linkedin.com/in/edwinglopez/',
       icon: <LinkedInIcon sx={socialIconStyles} />,
+      aria: 'LinkedIn',
     },
     github: {
       link: 'https://github.com/edwingl10',
       icon: <GitHubIcon sx={socialIconStyles} />,
+      aria: 'GitHub',
     },
     mail: {
       link: 'mailto:edwingl@uci.edu',
       icon: <EmailIcon sx={socialIconStyles} />,
+      aria: 'Email',
     },
   };
 
   return (
     <Stack direction="row" spacing={2}>
       {Object.entries(socialLinks).map(([key, val]) => (
-        <MuiLink href={val.link} target="_blank" key={key}>
+        <MuiLink
+          href={val.link}
+          target="_blank"
+          key={key}
+          aria-label={val.aria}>
           {val.icon}
         </MuiLink>
       ))}
