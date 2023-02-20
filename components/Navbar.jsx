@@ -49,7 +49,7 @@ export default function Navbar() {
         color: (theme) => theme.palette.text.primary,
       }}>
       <Toolbar>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <SvgIcon fontSize="large" color="primary" sx={{ cursor: 'pointer' }}>
             <Icon name="logo" height="100%" width="100%" />
           </SvgIcon>
@@ -76,7 +76,7 @@ export default function Navbar() {
             children: <span className="MuiTabs-indicatorSpan" />,
           }}>
           {Object.entries(links).map(([title, link]) => (
-            <Link href={link} passHref key={title} value={title}>
+            <Link href={link} passHref key={title} value={title} legacyBehavior>
               <Tab
                 label={t(title)}
                 component="a"

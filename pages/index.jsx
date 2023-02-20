@@ -8,7 +8,7 @@ import {
   Link as MuiLink,
   SvgIcon,
 } from '@mui/material';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
 import PropTypes from 'prop-types';
@@ -127,7 +127,7 @@ export default function Home({ placeholders, bannerBlur }) {
 
         <ProjectSection projects={Projects.slice(0, 6)} {...{ placeholders }} />
 
-        <Link href="/projects" passHref>
+        <Link href="/projects" passHref legacyBehavior>
           <Button color="secondary" variant="contained" sx={{ mt: 4 }}>
             {t('common:btn.viewMore')}
           </Button>

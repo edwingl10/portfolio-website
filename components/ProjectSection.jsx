@@ -8,7 +8,7 @@ import {
   Grid,
 } from '@mui/material';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 
@@ -30,7 +30,7 @@ export default function ProjectSection({ projects, placeholders }) {
           md={4}
           sx={{ m: { xs: 'auto', sm: 0 } }}>
           <Card sx={{ height: '100%' }}>
-            <Link href={`projects/${project.id}`}>
+            <Link href={`projects/${project.id}`} legacyBehavior>
               <CardActionArea>
                 <CardMedia
                   sx={{ position: 'relative', width: '100%', height: 145 }}>
