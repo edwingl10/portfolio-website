@@ -30,7 +30,7 @@ export default function ProjectSection({ projects, placeholders }) {
           md={4}
           sx={{ m: { xs: 'auto', sm: 0 } }}>
           <Card sx={{ height: '100%' }}>
-            <Link href={`projects/${project.id}`}>
+            <Link href={`projects/${project.id}`} legacyBehavior>
               <CardActionArea>
                 <CardMedia
                   sx={{ position: 'relative', width: '100%', height: 145 }}>

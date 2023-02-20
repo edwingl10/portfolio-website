@@ -76,7 +76,7 @@ export default function MobileNavbar() {
           <BottomNavigationAction
             aria-label={t('home')}
             icon={
-              <Link href="/">
+              <Link href="/" legacyBehavior>
                 <SvgIcon color="primary" sx={{ fontSize: 25 }}>
                   <Icon name="logo" />
                 </SvgIcon>
@@ -113,7 +113,12 @@ export default function MobileNavbar() {
               maxWidth: 450,
             }}>
             {Object.entries(links).map(([title, content]) => (
-              <Link href={content.link} passHref key={title} value={title}>
+              <Link
+                href={content.link}
+                passHref
+                key={title}
+                value={title}
+                legacyBehavior>
                 <MenuItem onClick={() => setAnchorEl(null)}>
                   <Stack alignItems="center" sx={{ width: 75 }}>
                     {content.icon}

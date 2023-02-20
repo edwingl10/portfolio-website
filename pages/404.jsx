@@ -28,7 +28,7 @@ export default function NotFound({ blurData }) {
           {t('404.notAvailable')}
         </Typography>
 
-        <Link href="/" passHref>
+        <Link href="/" passHref legacyBehavior>
           <Button variant="contained" color="secondary">
             {t('btn.backToHome')}
           </Button>
