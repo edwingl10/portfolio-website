@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Container, Grid, Typography, Box } from '@mui/material';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';

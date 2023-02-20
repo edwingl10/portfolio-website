@@ -8,7 +8,7 @@ import {
   Grid,
 } from '@mui/material';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 

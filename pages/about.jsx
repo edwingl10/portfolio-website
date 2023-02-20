@@ -6,7 +6,7 @@ import {
   Link as MuiLink,
   Box,
 } from '@mui/material';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';

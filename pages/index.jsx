@@ -8,7 +8,7 @@ import {
   Link as MuiLink,
   SvgIcon,
 } from '@mui/material';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
 import PropTypes from 'prop-types';

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { Button, Container, Typography, Box } from '@mui/material';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
