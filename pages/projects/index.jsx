@@ -79,7 +79,12 @@ export default function ListProjects({ placeholders, bannerBlur }) {
           ))}
         </Stack>
         <Container>
-          <ProjectSection projects={Projects} {...{ placeholders }} />
+          <ProjectSection
+            projects={Projects.filter(
+              (p) => projectType === 'all' || p.type === projectType
+            )}
+            {...{ placeholders }}
+          />
         </Container>
       </Box>
     </>
