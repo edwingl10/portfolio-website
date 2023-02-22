@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Container, Grid, Typography, Box } from '@mui/material';
+import { useState } from 'react';
+import { Container, Grid, Typography, Box, Stack, Button } from '@mui/material';
 import Image from 'next/legacy/image';
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -10,10 +11,18 @@ import SEOHead from '../../components/SEOHead';
 
 export default function ListProjects({ placeholders, bannerBlur }) {
   const { t } = useTranslation('projects');
+  const [projectType, setProjectType] = useState('all');
 
   const title = t('head.title');
   const description = t('head.description');
   const keywords = t('head.keywords');
+
+  const filters = [
+    { type: 'all', active: projectType === 'all' },
+    { type: 'web', active: projectType === 'web' },
+    { type: 'game', active: projectType === 'game' },
+    { type: 'other', active: projectType === 'other' },
+  ];
 
   return (
     <>
@@ -50,8 +59,32 @@ export default function ListProjects({ placeholders, bannerBlur }) {
       </Container>
 
       <Box bgcolor="background.default" sx={{ py: 5 }}>
+        <Stack
+          direction="row"
+          justifyContent="center"
+          spacing={2}
+          sx={{ mb: 3 }}>
+          {filters.map((f) => (
+            <Button
+              onClick={() => setProjectType(f.type)}
+              color={f.active ? 'primary' : 'inherit'}
+              variant={f.active ? 'contained' : 'text'}
+              sx={{
+                borderRadius: 4,
+                textTransform: 'capitalize',
+                padding: '6px 8px',
+              }}>
+              {f.type}
+            </Button>
+          ))}
+        </Stack>
         <Container>
-          <ProjectSection projects={Projects} {...{ placeholders }} />
+          <ProjectSection
+            projects={Projects.filter(
+              (p) => projectType === 'all' || p.type === projectType
+            )}
+            {...{ placeholders }}
+          />
         </Container>
       </Box>
     </>
