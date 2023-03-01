@@ -5,6 +5,7 @@ import { appWithTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { AnimatePresence, motion } from 'framer-motion';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
@@ -37,9 +38,21 @@ function MyApp(props) {
       <CacheProvider value={emotionCache}>
         <MUIThemeProvider>
           <CssBaseline />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <AnimatePresence mode="wait" initial={false}>
+            <Layout>
+              <motion.div
+                key={router.route}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: 0.2,
+                  type: 'tween',
+                }}>
+                <Component {...pageProps} />
+              </motion.div>
+            </Layout>
+          </AnimatePresence>
         </MUIThemeProvider>
       </CacheProvider>
     </>
