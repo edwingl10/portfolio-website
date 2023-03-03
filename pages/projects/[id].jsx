@@ -119,7 +119,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
 
               <Button
                 color="secondary"
-                variant="contained"
+                variant="outlined"
                 onClick={shareClick}
                 sx={{ mt: 2 }}>
                 {t('common:btn.share')}
