@@ -38,7 +38,7 @@ function MyApp(props) {
       <CacheProvider value={emotionCache}>
         <MUIThemeProvider>
           <CssBaseline />
-          <AnimatePresence mode="wait" initial={false}>
+          <AnimatePresence mode="wait">
             <Layout>
               <motion.div
                 key={router.route}
@@ -46,8 +46,7 @@ function MyApp(props) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{
-                  duration: 0.2,
-                  type: 'tween',
+                  ease: 'linear',
                 }}>
                 <Component {...pageProps} />
               </motion.div>
