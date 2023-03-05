@@ -137,7 +137,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           direction="row"
           sx={{ flexWrap: 'wrap' }}
           rowGap={3}
-          columnGap={{ xs: 4, md: 6 }}
+          spacing={{ xs: 4, md: 6 }}
           justifyContent="center">
           {project.techUsed.map((name) => (
             <Tooltip

@@ -105,11 +105,10 @@ export default function MobileNavbar() {
           transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}>
           <Stack
             direction="row"
-            rowGap={{ xs: 3, sm: 4 }}
-            columnGap={{ xs: 2, sm: 3 }}
             justifyContent="center"
             sx={{
               flexWrap: 'wrap',
+              gap: 1,
               maxWidth: 400,
             }}>
             {Object.entries(links).map(([title, content]) => (
