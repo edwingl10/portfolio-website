@@ -35,9 +35,9 @@ export default function ProjectSection({ projects, placeholders }) {
             sx={{ m: { xs: 'auto', sm: 0 } }}
             component={motion.div}
             layout
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ ease: 'linear' }}>
             <Card sx={{ height: '100%' }}>
               <Link href={`projects/${project.id}`} legacyBehavior>
