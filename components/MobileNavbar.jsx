@@ -41,7 +41,7 @@ const links = {
 function CustomMenuItem({ MenuIcon, title, ...menuProps }) {
   return (
     <MenuItem {...menuProps}>
-      <Stack alignItems="center" sx={{ width: 75 }}>
+      <Stack alignItems="center" sx={{ width: { xs: 75, sm: 90 } }}>
         <MenuIcon color="primary" sx={{ mb: 1 }} />
         <Typography>{title}</Typography>
       </Stack>
@@ -105,12 +105,12 @@ export default function MobileNavbar() {
           transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}>
           <Stack
             direction="row"
-            rowGap={3}
+            rowGap={{ xs: 3, sm: 4 }}
             columnGap={{ xs: 2, sm: 3 }}
             justifyContent="center"
             sx={{
               flexWrap: 'wrap',
-              maxWidth: 450,
+              maxWidth: 400,
             }}>
             {Object.entries(links).map(([title, content]) => (
               <Link
@@ -120,7 +120,7 @@ export default function MobileNavbar() {
                 value={title}
                 legacyBehavior>
                 <MenuItem onClick={() => setAnchorEl(null)}>
-                  <Stack alignItems="center" sx={{ width: 75 }}>
+                  <Stack alignItems="center" sx={{ width: { xs: 75, sm: 90 } }}>
                     {content.icon}
                     <Typography>{t(title)}</Typography>
                   </Stack>
