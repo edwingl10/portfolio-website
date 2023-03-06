@@ -5,8 +5,8 @@ import {
   CardActionArea,
   CardMedia,
   CardContent,
-  Grid,
 } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import Image from 'next/legacy/image';
 import PropTypes from 'prop-types';
@@ -26,7 +26,6 @@ export default function ProjectSection({ projects, placeholders }) {
         {projects.map((project) => (
           <Grid
             key={project.id}
-            item
             xs={12}
             sm={6}
             md={4}
