@@ -3,7 +3,6 @@ import Image from 'next/legacy/image';
 import { useState } from 'react';
 import {
   Container,
-  Grid,
   Typography,
   Button,
   Link as MuiLink,
@@ -14,6 +13,7 @@ import {
   Zoom,
   Snackbar,
 } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -47,7 +47,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
           spacing={3}>
-          <Grid item xs={12} sm={7}>
+          <Grid xs={12} md={7}>
             <Typography variant="h3" paragraph color="secondary">
               {project.name}
             </Typography>
@@ -66,7 +66,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
             </Button>
           </Grid>
 
-          <Grid item xs={12} sm={5}>
+          <Grid xs={12} md={5}>
             <Box
               sx={{
                 position: 'relative',
@@ -92,7 +92,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
             container
             direction={{ xs: 'column-reverse', md: 'row' }}
             spacing={3}>
-            <Grid item xs={12} sm={5}>
+            <Grid xs={12} md={5}>
               <Box
                 sx={{
                   position: 'relative',
@@ -109,7 +109,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={7}>
+            <Grid item xs={12} md={7}>
               <Typography variant="h4" paragraph color="primary">
                 {t('behindTheScenes')}
               </Typography>
