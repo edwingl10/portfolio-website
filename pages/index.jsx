@@ -1,13 +1,13 @@
 import {
   Container,
   Typography,
-  Grid,
   Stack,
   Box,
   Button,
   Link as MuiLink,
   SvgIcon,
 } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
@@ -49,7 +49,7 @@ export default function Home({ placeholders, bannerBlur }) {
           justifyContent="space-between"
           alignItems="center"
           spacing={3}>
-          <Grid item xs={12} sm={8}>
+          <Grid xs={12} md={8}>
             <Typography variant="h3" paragraph color="primary">
               {t('hi')}
               <Box component="span" sx={{ color: 'secondary.main' }}>
@@ -72,7 +72,7 @@ export default function Home({ placeholders, bannerBlur }) {
             <SocialLinks />
           </Grid>
 
-          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid sx={{ m: { xs: 'auto', md: 0 } }}>
             <Image
               priority
               src="/images/welcome.png"
