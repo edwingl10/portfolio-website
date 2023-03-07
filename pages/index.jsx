@@ -1,7 +1,6 @@
 import {
   Container,
   Typography,
-  Stack,
   Box,
   Button,
   Link as MuiLink,
@@ -101,21 +100,16 @@ export default function Home({ placeholders, bannerBlur }) {
             {t('mySkills')}
           </Typography>
           <Container maxWidth="sm">
-            <Stack
-              direction="row"
-              sx={{ flexWrap: 'wrap' }}
-              rowGap={3}
-              columnGap={{ xs: 2, sm: 4 }}
-              justifyContent="center">
+            <Grid container spacing={4}>
               {skillsIcons.map((name) => (
-                <Box key={iconTitles[name]} sx={{ width: 85, height: 80 }}>
+                <Grid key={iconTitles[name]} xs={4} sm={3}>
                   <SvgIcon fontSize="large" color="primary">
                     <Icon name={`${name}`} height="100%" width="100%" />
                   </SvgIcon>
                   <Typography>{iconTitles[name]}</Typography>
-                </Box>
+                </Grid>
               ))}
-            </Stack>
+            </Grid>
           </Container>
         </Box>
       </Box>
