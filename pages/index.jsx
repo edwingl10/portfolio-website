@@ -7,7 +7,7 @@ import {
   Link as MuiLink,
   SvgIcon,
 } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
+import Grid from '@mui/material/Unstable_Grid2';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
