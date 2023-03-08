@@ -5,13 +5,20 @@ import {
   CardActionArea,
   CardMedia,
   CardContent,
-  Grid,
 } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import Image from 'next/legacy/image';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const projectAnims = {
+  initial: { opacity: 0, transform: 'scale(0)' },
+  animate: { opacity: 1, transform: 'scale(1)' },
+  exit: { opacity: 0, transform: 'scale(0)' },
+  transition: { ease: 'easeInOut' },
+};
 
 export default function ProjectSection({ projects, placeholders }) {
   const { t } = useTranslation('projects');
@@ -26,17 +33,17 @@ export default function ProjectSection({ projects, placeholders }) {
         {projects.map((project) => (
           <Grid
             key={project.id}
-            item
             xs={12}
             sm={6}
             md={4}
             sx={{ m: { xs: 'auto', sm: 0 } }}
             component={motion.div}
             layout
-            initial={{ transform: 'scale(0)' }}
-            animate={{ transform: 'scale(1)' }}
-            exit={{ transform: 'scale(0)' }}
-            transition={{ ease: 'linear' }}>
+            variants={projectAnims}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition="transition">
             <Card sx={{ height: '100%' }}>
               <Link href={`projects/${project.id}`} legacyBehavior>
                 <CardActionArea>

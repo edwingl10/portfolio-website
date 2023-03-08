@@ -1,13 +1,12 @@
 import {
   Container,
   Typography,
-  Grid,
-  Stack,
   Box,
   Button,
   Link as MuiLink,
   SvgIcon,
 } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
@@ -49,7 +48,7 @@ export default function Home({ placeholders, bannerBlur }) {
           justifyContent="space-between"
           alignItems="center"
           spacing={3}>
-          <Grid item xs={12} sm={8}>
+          <Grid xs={12} md={8}>
             <Typography variant="h3" paragraph color="primary">
               {t('hi')}
               <Box component="span" sx={{ color: 'secondary.main' }}>
@@ -72,7 +71,7 @@ export default function Home({ placeholders, bannerBlur }) {
             <SocialLinks />
           </Grid>
 
-          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid sx={{ m: { xs: 'auto', md: 0 } }}>
             <Image
               priority
               src="/images/welcome.png"
@@ -87,37 +86,32 @@ export default function Home({ placeholders, bannerBlur }) {
       </Container>
 
       <Box bgcolor="background.default" sx={{ py: 5 }}>
-        <Box textAlign="center">
-          <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-            {t('dedicatedDeveloper')}
-          </Typography>
-          <Container maxWidth="md">
+        <Container maxWidth="md">
+          <Box sx={{ mb: 10 }}>
+            <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
+              {t('dedicatedDeveloper')}
+            </Typography>
             <Typography>{t('IGraduatedFrom')}</Typography>
-          </Container>
-        </Box>
+          </Box>
 
-        <Box sx={{ pt: 5 }} textAlign="center">
-          <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
-            {t('mySkills')}
-          </Typography>
-          <Container maxWidth="sm">
-            <Stack
-              direction="row"
-              sx={{ flexWrap: 'wrap' }}
-              rowGap={3}
-              columnGap={{ xs: 2, sm: 4 }}
-              justifyContent="center">
-              {skillsIcons.map((name) => (
-                <Box key={iconTitles[name]} sx={{ width: 85, height: 80 }}>
-                  <SvgIcon fontSize="large" color="primary">
-                    <Icon name={`${name}`} height="100%" width="100%" />
-                  </SvgIcon>
-                  <Typography>{iconTitles[name]}</Typography>
-                </Box>
-              ))}
-            </Stack>
-          </Container>
-        </Box>
+          <Box textAlign="center">
+            <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
+              {t('mySkills')}
+            </Typography>
+            <Container maxWidth="sm">
+              <Grid container spacing={4}>
+                {skillsIcons.map((name) => (
+                  <Grid key={iconTitles[name]} xs={4} sm={3}>
+                    <SvgIcon fontSize="large" color="primary">
+                      <Icon name={`${name}`} height="100%" width="100%" />
+                    </SvgIcon>
+                    <Typography>{iconTitles[name]}</Typography>
+                  </Grid>
+                ))}
+              </Grid>
+            </Container>
+          </Box>
+        </Container>
       </Box>
 
       <Container sx={{ py: 5, textAlign: 'center' }} id="projects">
