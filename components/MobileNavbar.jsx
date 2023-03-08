@@ -30,19 +30,19 @@ import { useThemeUpdate } from './ThemeContext';
 const links = {
   about: {
     link: '/about',
-    icon: <AccountBoxIcon color="primary" sx={{ mb: 1 }} />,
+    icon: <AccountBoxIcon color="primary" />,
   },
   projects: {
     link: '/projects',
-    icon: <IntegrationInstructionsIcon color="primary" sx={{ mb: 1 }} />,
+    icon: <IntegrationInstructionsIcon color="primary" />,
   },
 };
 
 function CustomMenuItem({ MenuIcon, title, ...menuProps }) {
   return (
-    <MenuItem {...menuProps}>
-      <Stack alignItems="center" sx={{ width: { xs: 75, sm: 90 } }}>
-        <MenuIcon color="primary" sx={{ mb: 1 }} />
+    <MenuItem {...menuProps} sx={{ my: 1, mx: 0.5 }}>
+      <Stack alignItems="center" spacing={1} sx={{ width: { xs: 75, sm: 95 } }}>
+        <MenuIcon color="primary" />
         <Typography>{title}</Typography>
       </Stack>
     </MenuItem>
@@ -106,11 +106,7 @@ export default function MobileNavbar() {
           <Stack
             direction="row"
             justifyContent="center"
-            sx={{
-              flexWrap: 'wrap',
-              gap: 1,
-              maxWidth: 400,
-            }}>
+            sx={{ flexWrap: 'wrap', maxWidth: 410 }}>
             {Object.entries(links).map(([title, content]) => (
               <Link
                 href={content.link}
@@ -118,8 +114,13 @@ export default function MobileNavbar() {
                 key={title}
                 value={title}
                 legacyBehavior>
-                <MenuItem onClick={() => setAnchorEl(null)}>
-                  <Stack alignItems="center" sx={{ width: { xs: 75, sm: 90 } }}>
+                <MenuItem
+                  onClick={() => setAnchorEl(null)}
+                  sx={{ my: 1, mx: 0.5 }}>
+                  <Stack
+                    alignItems="center"
+                    spacing={1}
+                    sx={{ width: { xs: 75, sm: 95 } }}>
                     {content.icon}
                     <Typography>{t(title)}</Typography>
                   </Stack>
