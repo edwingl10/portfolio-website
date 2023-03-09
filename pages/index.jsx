@@ -5,8 +5,8 @@ import {
   Button,
   Link as MuiLink,
   SvgIcon,
+  Grid,
 } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
@@ -48,7 +48,7 @@ export default function Home({ placeholders, bannerBlur }) {
           justifyContent="space-between"
           alignItems="center"
           spacing={3}>
-          <Grid xs={12} md={8}>
+          <Grid item xs={12} md={8}>
             <Typography variant="h3" paragraph color="primary">
               {t('hi')}
               <Box component="span" sx={{ color: 'secondary.main' }}>
@@ -71,7 +71,7 @@ export default function Home({ placeholders, bannerBlur }) {
             <SocialLinks />
           </Grid>
 
-          <Grid sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
             <Image
               priority
               src="/images/welcome.png"
@@ -101,7 +101,7 @@ export default function Home({ placeholders, bannerBlur }) {
             <Container maxWidth="sm">
               <Grid container spacing={4}>
                 {skillsIcons.map((name) => (
-                  <Grid key={iconTitles[name]} xs={4} sm={3}>
+                  <Grid item key={iconTitles[name]} xs={4} sm={3}>
                     <SvgIcon fontSize="large" color="primary">
                       <Icon name={`${name}`} height="100%" width="100%" />
                     </SvgIcon>
