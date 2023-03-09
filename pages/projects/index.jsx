@@ -66,6 +66,7 @@ export default function ListProjects({ placeholders, bannerBlur }) {
           sx={{ mb: 3 }}>
           {filters.map((f) => (
             <Button
+              key={f.type}
               onClick={() => setProjectType(f.type)}
               color={f.active ? 'primary' : 'inherit'}
               variant={f.active ? 'contained' : 'text'}
