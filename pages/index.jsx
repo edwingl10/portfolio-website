@@ -91,7 +91,8 @@ export default function Home({ placeholders, bannerBlur }) {
             <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
               {t('dedicatedDeveloper')}
             </Typography>
-            <Typography>{t('IGraduatedFrom')}</Typography>
+            <Typography paragraph>{t('aboutMe')}</Typography>
+            <Typography>{t('moreAboutMe')}</Typography>
           </Box>
 
           <Box textAlign="center">
