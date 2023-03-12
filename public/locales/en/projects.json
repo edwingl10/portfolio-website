@@ -37,15 +37,15 @@
     },
     "pacificMarineApp": {
         "overview": "An interactive game aimed at educating vistors of the Pacific Marine Mammal Center.",
-        "description":  "A game created for displaying and educating users about the rehabilitation work the Pacific Marine Mammal Center does. The game tells the story of four sea-lions and allows users to walkthrough the rehab process of each animal.",
-        "moreDetails": "I worked on this as my capstone project for UCI with 4 other team members. The game was made with Unity, and I was responsible for the scripting, animations and level design. In addition to programming, I was also responsible for the UI, game assets and sound effects as well as overseeing the progress of the other members of my team.",
+        "description":  "An interactive game designed to showcase and educate users about the rehabilitation work carried out by the Pacific Marine Mammal Center. The game takes users on a journey through the rehabilitation process of four sea lions, offering a comprehensive insight into the efforts of the center in nursing marine mammals back to health. ",
+        "moreDetails": "As part of my capstone project at UCI, I collaborated with four other team members to create this innovative game using Unity. My primary contributions included designing and implementing scripts, animations, and level designs, while also ensuring that the user interface, game assets, and sound effects were up to standard. Beyond programming, I also took on a leadership role, overseeing the work of my team members and ensuring that the project was on track. By working together, we were able to create an immersive and educational experience that showcases the crucial work of the Pacific Marine Mammal Center in rehabilitating marine mammals",
         "mainAltText": "A tablet showing a sea lion with an inventory of tools below it.",
         "secondaryAltText": "Multiple tablets showing different sea lions being treated and rehabilited by the tools in the inventory."
     },
     "partyBash": {
         "overview": "A companion application to a board game I created.",
-        "description":  "Party bash consists of players moving along a game board, trying to reach the finish line first. Each board square contains an event such as winning/losing coins, buying actions, winning prizes, challenging and stealing coins from others.",
-        "moreDetails": "The app allows players to roll dice, switch turns, and perform calculations that would otherwise be tedious. Calculations include coin management, winning random prizes, challenging players, and purchasing perks.",
+        "description":  "The objective of Party Bash is for players to compete against each other, by moving along a game board and aiming to reach the finish line before their opponents do. The game board is designed with a variety of squares that introduce exciting events and challenges to the game. Each square contains a unique event, which may result in winning or losing coins, purchasing additional actions, receiving prizes, or even stealing coins from other players.",
+        "moreDetails": "The app provides players with a seamless gaming experience, by automating various aspects of gameplay that would otherwise be tedious and time-consuming. For example, the app allows players to roll virtual dice with ease. Additionally, the app simplifies calculations related to coin management, such as keeping track of coins won or lost during gameplay. Players can also use the app to manage random prize winnings, challenges, and purchases of perks or upgrades.",
         "mainAltText": "A phone displaying the menu of the game, with 2 players ready to play.",
         "secondaryAltText": "Numerous phones showcasing the coins, shop, wheel, challenge and dice roll screens"
     },
