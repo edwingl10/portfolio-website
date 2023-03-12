@@ -23,15 +23,15 @@
     },
     "casaMagda": {
         "overview": "Un sitio web que destaca los servicios de una pequeña empresa de limpieza.",
-        "description":  "Casa Magda es un sitio de una página para mostrar los servicios de una pequeña empresa de limpieza. Además, el sitio destaca la historia de la empresa, las razones para trabajar con ellos, las ubicaciones y un formulario de contacto.",
-        "moreDetails": "El sitio está escrito usando HTML, CSS, Javascript y JQuery. Utilizando animaciones CSS, técnicas de SEO y principios de UX, el sitio web aumentó la visibilidad y las ganancias en más del 50%.",
+        "description":  "Casa Magda es un sitio web de una sola página que sirve como escaparate de los servicios de una pequeña empresa de limpieza. Además de destacar la gama de servicios de la empresa, el sitio también proporciona información valiosa sobre la historia, la misión y los valores de la empresa.",
+        "moreDetails": "Construido con una combinación de HTML, CSS, JavaScript y JQuery, el sitio proporciona una experiencia de usuario muy atractiva e intuitiva. Mediante animaciones de CSS, técnicas de SEO y principios de UX, el sitio web pudo aumentar su visibilidad y sus ganancias en un 50%.",
         "mainAltText": "Un iPhone y un Macbook que muestran la página de destino del sitio web.",
         "secondaryAltText": "2 pantallas que muestran la página de inicio, sobre nosotros, nuestros servicios, ubicaciones y secciones del formulario de contacto del sitio web."
     },
     "trapd": {
         "overview": "Un juego de plataformas móvil de acción sin fin disponible en Google Play Store.",
-        "description":  "TRAPD es un juego de plataformas de acción donde el objetivo del juego es sobrevivir el mayor tiempo posible mientras esquivas obstáculos, cañones y láseres. El juego ofrece varios personajes jugables, cada uno con diferentes poderes para ayudarlos en el juego. Hay varias monedas, cada una con un valor y XP diferente, así como obstáculos que aparecen aleatoriamente en el juego.",
-        "moreDetails": "TRAPD es mi proyecto en solitario más ambicioso y se puede descargar gratis en Google Play Store. El progreso y las puntuaciones más altas de los jugadores se guardan y rastrean automáticamente, y se admiten transacciones. Con monedas, los jugadores pueden mejorar las habilidades de sus personajes y comprar nuevos personajes. La interfaz de usuario, las animaciones, las secuencias de comandos, los activos/sprites del juego y la música fueron creados por mí.",
+        "description":  "TRAPD es un juego de plataformas de acción en el que el objetivo del juego es sobrevivir el mayor tiempo posible mientras esquivas una andanada de obstáculos, cañones y láseres. El juego ofrece un elenco de diversos personajes jugables para elegir, cada uno con su habilidad única. A lo largo del juego, descubrirás una variedad de monedas coleccionables, cada una con un valor diferente de puntos de experiencia (XP) que puedes usar para subir de nivel a tu personaje.",
+        "moreDetails": "TRAPD es mi proyecto en solitario más ambicioso y se puede descargar gratis en Google Play Store. El juego cuenta con seguimiento de progreso automático y registro de puntaje alto. También se admiten transacciones en el juego, lo que permite a los jugadores usar las monedas que recolectan para mejorar las habilidades de su personaje y desbloquear nuevos personajes jugables. Como creador del juego, me enorgullece decir que he manejado todos los aspectos de su desarrollo, desde el diseño de la interfaz de usuario hasta la creación de animaciones, secuencias de comandos, recursos y sprites del juego, e incluso la composición de la música.",
         "mainAltText": "Un teléfono móvil que muestra el menú principal del juego TRAPD.",
         "secondaryAltText": "Múltiples teléfonos que muestran la tienda, las criaturas, las puntuaciones más altas, el fin del juego y las pantallas de juego."
     },

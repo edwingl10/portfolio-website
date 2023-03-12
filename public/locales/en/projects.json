@@ -23,15 +23,15 @@
     },
     "casaMagda": {
         "overview": "A website highlighting the services of a small housekeeping company.",
-        "description":  "Casa Magda is a one-page site to showcase the services for a small cleaning company. Furthermore, the site highlights the company history, reasons to work with them, locations, and a contact form.",
-        "moreDetails": "The site is written using HTML, CSS, Javascript and JQuery. Utilizing CSS animations, SEO techniques and UX principles, the website increased visibility and profits by over 50 %.",
+        "description":  "Casa Magda is a one-page website that serves as a showcase for a small cleaning company's services. In addition to highlighting the company's range of services, the site also provides valuable information about the company's history, mission, and values.",
+        "moreDetails": "Built using a combination of HTML, CSS, JavaScript, and JQuery, the site provides a highly engaging and intuitive user experience. By utilizing CSS animations, SEO techniques, and UX principles, the website was able to increase its visibility and profits by 50%. ",
         "mainAltText": "An iPhone and Macbook displaying the landing page of the website.",
         "secondaryAltText": "2 screens showing the landing page, about us, our services, locations and contact form sections of the website."
     },
     "trapd": {
         "overview": "An endless action mobile platformer game available on the Google Play store.",
-        "description":  "TRAPD is an action platformer where the goal of the game is to survive as long as possible while dodging obstacles, cannons and lasers. The game offers various playable characters, each with different supers to aid them in game. There are various coins, each with a different value and XP, as well as obstacles that appear randomly in the game.",
-        "moreDetails": "TRAPD is my most ambitious solo project and it's free to download on the Google play store. Players' progress and high scores are automatically saved and tracked, and transactions are supported. With coins, players can upgrade their character abilities and purchase new characters. The UI, animations, scripting, game assets/sprites, and music were all created by me.",
+        "description":  "TRAPD is an action platformer where the goal of the game is to survive as long as possible while dodging a barrage of obstacles, cannons and lasers. The game offers a cast of diverse playable characters to choose from, each with their unique set of abilities. Through out the game, you'll discover an array of collectible coins, each worth different amounts of experience points (XP) that you can use to level up your character.",
+        "moreDetails": "TRAPD is my most ambitious solo project and it's free to download on the Google play store. The game features automatic progress tracking and high score recording. In-game transactions are also supported, allowing players to use the coins they collect to upgrade their character's abilities and unlock new playable characters. As the creator of the game, I'm proud to say that I've handled every aspect of its development, from designing the user interface to creating the animations, scripting, game assets and sprites, and even composing the music.",
         "mainAltText": "A mobile phone showcasing the main menu of the TRAPD game.",
         "secondaryAltText": "Multiple phones displaying the shop, creatures, highscores, game over and gameplay screens."
     },
