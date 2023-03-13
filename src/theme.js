@@ -1,4 +1,12 @@
 import { createTheme } from '@mui/material';
+import { Sora } from '@next/font/google';
+
+export const sora = Sora({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Helvetica', 'Arial', 'sans-serif'],
+});
 
 const rawTheme = createTheme();
 const lightTheme = {
@@ -18,7 +26,7 @@ const lightTheme = {
     }),
   },
   typography: {
-    fontFamily: "'Sora', sans-serif",
+    fontFamily: sora.style.fontFamily,
   },
 };
 
@@ -43,7 +51,7 @@ const darkTheme = {
     },
   },
   typography: {
-    fontFamily: "'Sora', sans-serif",
+    fontFamily: sora.style.fontFamily,
   },
 };
 
