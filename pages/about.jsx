@@ -85,6 +85,7 @@ export default function about({ placeholders }) {
                 {t('myPassion')}
               </Typography>
               <Typography paragraph>{t('uncoveredMyPassion')}</Typography>
+              <Typography>{t('moreAboutMyPassion')}</Typography>
             </Grid>
           </Grid>
         </Container>

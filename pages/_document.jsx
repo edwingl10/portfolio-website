@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import { lightTheme } from '../src/theme';
+import { lightTheme, sora } from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 import i18nextConfig from '../next-i18next.config';
 
@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
   `;
 
     return (
-      <Html lang={currentLocale}>
+      <Html lang={currentLocale} className={sora.className}>
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={lightTheme.palette.primary.main} />
@@ -53,12 +53,6 @@ export default class MyDocument extends Document {
           <meta
             name="msapplication-TileColor"
             content={lightTheme.palette.primary.main}
-          />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap"
-            rel="stylesheet"
           />
           <meta name="emotion-insertion-point" content="" />
           {this.props.emotionStyleTags}
