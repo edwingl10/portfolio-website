@@ -16,7 +16,6 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.1",
-    "@next/font": "^13.2.4",
     "@plaiceholder/next": "^2.5.0",
     "framer-motion": "^9.0.7",
     "i18next": "^22.4.3",

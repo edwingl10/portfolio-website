@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import { Sora } from '@next/font/google';
+import { Sora } from 'next/font/google';
 
 export const sora = Sora({
   weight: ['300', '400', '500', '700'],
