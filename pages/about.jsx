@@ -51,8 +51,8 @@ export default function about({ placeholders }) {
               priority
               src="/images/wave.png"
               alt={t('images.wave')}
-              height={260}
-              width={220}
+              height={280}
+              width={240}
               placeholder="blur"
               blurDataURL={placeholders.bannerBlur}
             />
@@ -62,12 +62,16 @@ export default function about({ placeholders }) {
 
       <Box bgcolor="background.default" sx={{ py: 5 }}>
         <Container>
-          <Grid container direction={{ xs: 'column', md: 'row' }} spacing={3}>
+          <Grid
+            container
+            direction={{ xs: 'column', md: 'row' }}
+            spacing={3}
+            alignItems={{ md: 'center' }}>
             <Grid item xs={12} sm={5}>
               <Box
                 sx={{
                   position: 'relative',
-                  height: { xs: 270, sm: 320 },
+                  height: { xs: 250, sm: 300, md: 330 },
                 }}>
                 <Image
                   src="/images/coding.svg"
