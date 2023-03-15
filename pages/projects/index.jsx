@@ -49,8 +49,8 @@ export default function ListProjects({ placeholders, bannerBlur }) {
               priority
               src="/images/projects.png"
               alt={t('behindLaptopImgAlt')}
-              height={260}
-              width={220}
+              height={280}
+              width={240}
               placeholder="blur"
               blurDataURL={bannerBlur}
             />

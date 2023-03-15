@@ -46,7 +46,8 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
-          spacing={3}>
+          spacing={3}
+          alignItems={{ md: 'center' }}>
           <Grid item xs={12} md={7}>
             <Typography variant="h3" paragraph color="secondary">
               {project.name}
@@ -91,7 +92,8 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           <Grid
             container
             direction={{ xs: 'column-reverse', md: 'row' }}
-            spacing={3}>
+            spacing={3}
+            alignItems={{ md: 'center' }}>
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -159,6 +161,12 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         autoHideDuration={2000}
         message={t('common:copiedToClipboard')}
+        ContentProps={{
+          sx: {
+            bgcolor: 'background.default',
+            color: (theme) => theme.palette.text.primary,
+          },
+        }}
       />
     </>
   );

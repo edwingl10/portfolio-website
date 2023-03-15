@@ -88,7 +88,7 @@ export default function MobileNavbar() {
             aria-label={t('navMenu')}
             aria-haspopup="true"
             aria-controls="menu-appbar"
-            icon={<GridViewIcon color="primary" sx={{ fontSize: 25 }} />}
+            icon={<GridViewIcon color="primary" sx={{ fontSize: 28 }} />}
             sx={{ maxWidth: 50 }}
             onClick={(e) => setAnchorEl(e.currentTarget)}
           />

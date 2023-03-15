@@ -76,8 +76,8 @@ export default function Home({ placeholders, bannerBlur }) {
               priority
               src="/images/welcome.png"
               alt={t('images.welcome')}
-              height={250}
-              width={220}
+              height={270}
+              width={240}
               placeholder="blur"
               blurDataURL={bannerBlur}
             />
