@@ -9,17 +9,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
+import { pageTransition } from '../utils/animations';
 
 const MUIThemeProvider = dynamic(() => import('../components/ThemeContext'), {
   ssr: false,
 });
 
-const pageTransitionAnim = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 20 },
-  transition: { ease: 'linear' },
-};
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -48,7 +43,7 @@ function MyApp(props) {
             <Layout>
               <motion.div
                 key={router.route}
-                variants={pageTransitionAnim}
+                variants={pageTransition}
                 initial="initial"
                 animate="animate"
                 exit="exit"

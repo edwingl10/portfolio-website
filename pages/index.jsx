@@ -13,11 +13,18 @@ import { getPlaiceholder } from 'plaiceholder';
 import PropTypes from 'prop-types';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
 import Projects from '../src/projectData';
 import Icon, { iconTitles } from '../components/Icon';
 import SEOHead from '../components/SEOHead';
+import {
+  fadeInUp,
+  fadeIn,
+  fadeInRight,
+  inViewDefault,
+} from '../utils/animations';
 
 const skillsIcons = [
   'react',
@@ -71,7 +78,11 @@ export default function Home({ placeholders, bannerBlur }) {
             <SocialLinks />
           </Grid>
 
-          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid
+            item
+            sx={{ m: { xs: 'auto', md: 0 } }}
+            component={motion.div}
+            variants={fadeInRight}>
             <Image
               priority
               src="/images/welcome.png"
@@ -95,11 +106,15 @@ export default function Home({ placeholders, bannerBlur }) {
             <Typography>{t('moreAboutMe')}</Typography>
           </Box>
 
-          <Box textAlign="center">
+          <Box
+            textAlign="center"
+            component={motion.div}
+            viewport={{ once: true, amount: 0.5 }}
+            {...inViewDefault}>
             <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
               {t('mySkills')}
             </Typography>
-            <Container maxWidth="sm">
+            <Container maxWidth="sm" component={motion.div} variants={fadeIn}>
               <Grid container spacing={4}>
                 {skillsIcons.map((name) => (
                   <Grid item key={iconTitles[name]} xs={4} sm={3}>
@@ -115,12 +130,22 @@ export default function Home({ placeholders, bannerBlur }) {
         </Container>
       </Box>
 
-      <Container sx={{ py: 5, textAlign: 'center' }} id="projects">
+      <Container
+        sx={{ py: 5, textAlign: 'center' }}
+        id="projects"
+        component={motion.div}
+        viewport={{ once: true, amount: 0.2 }}
+        {...inViewDefault}>
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           {t('projects')}
         </Typography>
 
-        <ProjectSection projects={Projects.slice(0, 6)} {...{ placeholders }} />
+        <Box component={motion.div} variants={fadeInUp}>
+          <ProjectSection
+            projects={Projects.slice(0, 6)}
+            {...{ placeholders }}
+          />
+        </Box>
 
         <Link href="/projects" passHref legacyBehavior>
           <Button color="secondary" variant="contained" sx={{ mt: 4 }}>
