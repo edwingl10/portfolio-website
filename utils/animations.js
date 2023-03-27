@@ -9,6 +9,11 @@ export const fadeInUp = {
   animate: { y: 0, opacity: 1, transition: customTransition },
 };
 
+export const fadeInDown = {
+  initial: { y: -60, opacity: 0, transition: customTransition },
+  animate: { y: 0, opacity: 1, transition: customTransition },
+};
+
 export const fadeIn = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
@@ -25,8 +30,8 @@ export const fadeInLeft = {
 };
 
 export const pageTransition = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 20 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
   transition: { ease: [0.6, -0.05, 0.01, 0.99] },
 };

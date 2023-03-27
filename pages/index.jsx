@@ -24,6 +24,8 @@ import {
   fadeIn,
   fadeInRight,
   inViewDefault,
+  fadeInLeft,
+  fadeInDown,
 } from '../utils/animations';
 
 const skillsIcons = [
@@ -48,7 +50,10 @@ export default function Home({ placeholders, bannerBlur }) {
     <Box bgcolor="background.paper">
       <SEOHead {...{ title, description, keywords }} />
 
-      <Container sx={{ my: 5, py: 2 }}>
+      <Container
+        sx={{ my: 5, py: 2 }}
+        component={motion.div}
+        variants={fadeInRight}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
@@ -78,11 +83,7 @@ export default function Home({ placeholders, bannerBlur }) {
             <SocialLinks />
           </Grid>
 
-          <Grid
-            item
-            sx={{ m: { xs: 'auto', md: 0 } }}
-            component={motion.div}
-            variants={fadeInRight}>
+          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
             <Image
               priority
               src="/images/welcome.png"
@@ -97,7 +98,7 @@ export default function Home({ placeholders, bannerBlur }) {
       </Container>
 
       <Box bgcolor="background.default" sx={{ py: 5 }}>
-        <Container maxWidth="md">
+        <Container maxWidth="md" component={motion.div} variants={fadeInDown}>
           <Box sx={{ mb: 10 }}>
             <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
               {t('dedicatedDeveloper')}
