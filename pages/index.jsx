@@ -24,7 +24,6 @@ import {
   fadeIn,
   fadeInRight,
   inViewDefault,
-  fadeInLeft,
   fadeInDown,
 } from '../utils/animations';
 

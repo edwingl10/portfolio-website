@@ -10,6 +10,8 @@ import Image from 'next/legacy/image';
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
+import { fadeInLeft, fadeInRight } from '../utils/animations';
 import SEOHead from '../components/SEOHead';
 
 export default function about({ placeholders }) {
@@ -23,7 +25,10 @@ export default function about({ placeholders }) {
     <Box bgcolor="background.paper">
       <SEOHead {...{ title, description, keywords }} />
 
-      <Container sx={{ my: 5, py: 2 }}>
+      <Container
+        sx={{ my: 5, py: 2 }}
+        component={motion.div}
+        variants={fadeInLeft}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
@@ -61,7 +66,7 @@ export default function about({ placeholders }) {
       </Container>
 
       <Box bgcolor="background.default" sx={{ py: 5 }}>
-        <Container>
+        <Container component={motion.div} variants={fadeInRight}>
           <Grid
             container
             direction={{ xs: 'column', md: 'row' }}
