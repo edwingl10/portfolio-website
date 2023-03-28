@@ -12,3 +12,14 @@ body {
   font-family: 'Sora', sans-serif;
   transition: background 0.25s ease-in-out;
 }
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Prevents overflow on the x-axis */
+  overflow-x: hidden;
+}
