@@ -5,6 +5,8 @@ import Image from 'next/legacy/image';
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
+import { fadeInDown } from '../../utils/animations';
 import Projects from '../../src/projectData';
 import ProjectSection from '../../components/ProjectSection';
 import SEOHead from '../../components/SEOHead';
@@ -28,7 +30,10 @@ export default function ListProjects({ placeholders, bannerBlur }) {
     <>
       <SEOHead {...{ title, description, keywords }} />
 
-      <Container sx={{ my: 5, py: 2 }}>
+      <Container
+        sx={{ my: 5, py: 2 }}
+        component={motion.div}
+        variants={fadeInDown}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
