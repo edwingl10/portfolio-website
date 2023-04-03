@@ -96,7 +96,12 @@ export default function Home({ placeholders, bannerBlur }) {
         </Grid>
       </Container>
 
-      <Box bgcolor="background.default" sx={{ py: 5 }}>
+      <Box
+        bgcolor="background.default"
+        sx={{ py: 5 }}
+        component={motion.div}
+        viewport={{ once: true, amount: 0.2 }}
+        {...inViewDefault}>
         <Container maxWidth="md" component={motion.div} variants={fadeInDown}>
           <Box sx={{ mb: 10 }}>
             <Typography variant="h4" color="primary" sx={{ mb: 4 }}>

@@ -11,7 +11,7 @@ import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
-import { fadeInLeft, fadeInRight } from '../utils/animations';
+import { fadeInLeft, fadeInRight, inViewDefault } from '../utils/animations';
 import SEOHead from '../components/SEOHead';
 
 export default function about({ placeholders }) {
@@ -65,7 +65,12 @@ export default function about({ placeholders }) {
         </Grid>
       </Container>
 
-      <Box bgcolor="background.default" sx={{ py: 5 }}>
+      <Box
+        bgcolor="background.default"
+        sx={{ py: 5 }}
+        component={motion.div}
+        viewport={{ once: true, amount: 0.2 }}
+        {...inViewDefault}>
         <Container component={motion.div} variants={fadeInRight}>
           <Grid
             container

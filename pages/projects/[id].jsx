@@ -21,7 +21,7 @@ import { motion } from 'framer-motion';
 import Projects from '../../src/projectData';
 import Icon, { iconTitles } from '../../components/Icon';
 import SEOHead from '../../components/SEOHead';
-import { fadeInDown, fadeInUp } from '../../utils/animations';
+import { fadeInDown, fadeInUp, inViewDefault } from '../../utils/animations';
 
 export default function ViewProject({ project, mainBlurData, secondBlurData }) {
   const { t } = useTranslation(['project', 'projects', 'common']);
@@ -92,7 +92,12 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         </Grid>
       </Container>
 
-      <Box bgcolor="background.default" sx={{ py: 5 }}>
+      <Box
+        bgcolor="background.default"
+        sx={{ py: 5 }}
+        component={motion.div}
+        viewport={{ once: true, amount: 0.2 }}
+        {...inViewDefault}>
         <Container component={motion.div} variants={fadeInUp}>
           <Grid
             container

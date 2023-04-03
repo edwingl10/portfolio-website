@@ -39,7 +39,9 @@ function MyApp(props) {
       <CacheProvider value={emotionCache}>
         <MUIThemeProvider>
           <CssBaseline />
-          <AnimatePresence mode="wait">
+          <AnimatePresence
+            mode="wait"
+            onExitComplete={() => window.scrollTo(0, 0)}>
             <Layout>
               <motion.div
                 key={router.route}
