@@ -98,6 +98,7 @@ export default function Home({ placeholders, bannerBlur }) {
 
       <Box
         bgcolor="background.default"
+        s
         sx={{ py: 5 }}
         component={motion.div}
         viewport={{ once: true, amount: 0.2 }}

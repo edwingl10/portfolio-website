@@ -26,6 +26,7 @@ function MyApp(props) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {router.locales.map((locale) => (
           <link
             key={locale}
@@ -39,9 +40,7 @@ function MyApp(props) {
       <CacheProvider value={emotionCache}>
         <MUIThemeProvider>
           <CssBaseline />
-          <AnimatePresence
-            mode="wait"
-            onExitComplete={() => window.scrollTo(0, 0)}>
+          <AnimatePresence mode="wait">
             <Layout>
               <motion.div
                 key={router.route}
