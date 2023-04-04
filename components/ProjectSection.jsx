@@ -22,7 +22,9 @@ export default function ProjectSection({ projects, placeholders }) {
       container
       justifyContent="flex-start"
       alignItems="stretch"
-      spacing={4}>
+      spacing={4}
+      component={motion.div}
+      layout>
       <AnimatePresence>
         {projects.map((project) => (
           <Grid
