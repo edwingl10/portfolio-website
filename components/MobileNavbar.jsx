@@ -24,8 +24,10 @@ import EmailIcon from '@mui/icons-material/Email';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
 import Icon from './Icon';
 import { useThemeUpdate } from './ThemeContext';
+import { fadeInUp } from '../utils/animations';
 
 const links = {
   about: {
@@ -71,7 +73,13 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <Paper sx={{ position: 'sticky', bottom: 0 }} elevation={3}>
+      <Paper
+        sx={{ position: 'sticky', bottom: 0 }}
+        elevation={3}
+        component={motion.div}
+        initial="initial"
+        animate="animate"
+        variants={fadeInUp}>
         <BottomNavigation showLabels sx={{ justifyContent: 'space-between' }}>
           <BottomNavigationAction
             aria-label={t('home')}

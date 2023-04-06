@@ -17,9 +17,11 @@ import { useTranslation } from 'next-i18next';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
 import { useThemeUpdate } from './ThemeContext';
+import { fadeInDown } from '../utils/animations';
 
 const links = {
   about: '/about',
@@ -63,7 +65,11 @@ export default function Navbar() {
         sx={{
           '& .MuiToolbar-root': { bgcolor: 'background.paper' },
           color: (theme) => theme.palette.text.primary,
-        }}>
+        }}
+        component={motion.div}
+        initial="initial"
+        animate="animate"
+        variants={fadeInDown}>
         <Toolbar>
           <Link href="/" legacyBehavior>
             <SvgIcon
