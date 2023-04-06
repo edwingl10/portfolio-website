@@ -49,11 +49,11 @@ export const moveUpOnHover = {
   transition: { ease: [0.6, -0.05, 0.01, 0.99] },
 };
 
-/* export const stagger = {
+export const staggerChildren = {
   animate: {
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.1,
     },
   },
-}; */
+};

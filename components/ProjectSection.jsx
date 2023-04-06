@@ -41,7 +41,9 @@ export default function ProjectSection({ projects, placeholders }) {
               <Link href={`projects/${project.id}`} legacyBehavior>
                 <CardActionArea>
                   <CardMedia
-                    sx={{ position: 'relative', width: '100%', height: 145 }}>
+                    sx={{ position: 'relative', width: '100%', height: 145 }}
+                    component={motion.div}
+                    whileHover={{ scale: 1.05 }}>
                     <Image
                       src={project.mainImg}
                       alt={t(project.mainImgAltText)}

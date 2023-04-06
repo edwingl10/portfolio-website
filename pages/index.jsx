@@ -25,6 +25,7 @@ import {
   fadeInRight,
   inViewDefault,
   fadeInDown,
+  staggerChildren,
 } from '../utils/animations';
 
 const skillsIcons = [
@@ -120,10 +121,19 @@ export default function Home({ placeholders, bannerBlur }) {
             <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
               {t('mySkills')}
             </Typography>
-            <Container maxWidth="sm" component={motion.div} variants={fadeIn}>
+            <Container
+              maxWidth="sm"
+              component={motion.div}
+              variants={staggerChildren}>
               <Grid container spacing={4}>
                 {skillsIcons.map((name) => (
-                  <Grid item key={iconTitles[name]} xs={4} sm={3}>
+                  <Grid
+                    item
+                    key={iconTitles[name]}
+                    xs={4}
+                    sm={3}
+                    component={motion.div}
+                    variants={fadeIn}>
                     <SvgIcon fontSize="large" color="primary">
                       <Icon name={`${name}`} height="100%" width="100%" />
                     </SvgIcon>

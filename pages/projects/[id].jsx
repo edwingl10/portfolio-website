@@ -21,7 +21,12 @@ import { motion } from 'framer-motion';
 import Projects from '../../src/projectData';
 import Icon, { iconTitles } from '../../components/Icon';
 import SEOHead from '../../components/SEOHead';
-import { fadeInDown, fadeInUp, inViewDefault } from '../../utils/animations';
+import {
+  fadeInDown,
+  fadeInUp,
+  inViewDefault,
+  staggerChildren,
+} from '../../utils/animations';
 
 export default function ViewProject({ project, mainBlurData, secondBlurData }) {
   const { t } = useTranslation(['project', 'projects', 'common']);
@@ -141,7 +146,12 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         </Container>
       </Box>
 
-      <Box sx={{ py: 5 }} textAlign="center">
+      <Box
+        sx={{ py: 5 }}
+        textAlign="center"
+        component={motion.div}
+        viewport={{ once: true, amount: 0.2 }}
+        {...inViewDefault}>
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           {t('technologyUsed')}
         </Typography>
@@ -150,13 +160,17 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           sx={{ flexWrap: 'wrap' }}
           rowGap={3}
           spacing={{ xs: 4, md: 6 }}
-          justifyContent="center">
+          justifyContent="center"
+          component={motion.div}
+          variants={staggerChildren}>
           {project.techUsed.map((name) => (
             <Tooltip
               key={iconTitles[name]}
               title={iconTitles[name]}
               enterTouchDelay={50}
-              TransitionComponent={Zoom}>
+              TransitionComponent={Zoom}
+              component={motion.div}
+              variants={fadeInDown}>
               <SvgIcon fontSize="large" color="primary">
                 <Icon name={`${name}`} height="inherit" width="inherit" />
               </SvgIcon>
