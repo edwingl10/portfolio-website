@@ -29,7 +29,6 @@ export const fadeInLeft = {
   animate: { x: 0, opacity: 1, transition: customTransition },
 };
 
-/* used for project section */
 export const fadeInScale = {
   initial: { opacity: 0, scale: 0, transition: customTransition },
   animate: { opacity: 1, scale: 1, transition: customTransition },
@@ -43,7 +42,6 @@ export const pageTransition = {
   transition: { ease: [0.6, -0.05, 0.01, 0.99] },
 };
 
-/* hover animations */
 export const moveUpOnHover = {
   y: -5,
   transition: { ease: [0.6, -0.05, 0.01, 0.99] },
@@ -54,6 +52,15 @@ export const staggerChildren = {
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.1,
+    },
+  },
+};
+
+export const navbarStagger = {
+  animate: {
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.03,
     },
   },
 };

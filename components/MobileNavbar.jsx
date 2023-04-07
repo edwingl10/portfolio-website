@@ -27,7 +27,12 @@ import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
 import Icon from './Icon';
 import { useThemeUpdate } from './ThemeContext';
-import { fadeInUp } from '../utils/animations';
+import {
+  fadeInScale,
+  fadeInUp,
+  inViewDefault,
+  navbarStagger,
+} from '../utils/animations';
 
 const links = {
   about: {
@@ -43,7 +48,12 @@ const links = {
 function CustomMenuItem({ MenuIcon, title, ...menuProps }) {
   return (
     <MenuItem {...menuProps} sx={{ my: 1, mx: 0.5 }}>
-      <Stack alignItems="center" spacing={1} sx={{ width: { xs: 75, sm: 95 } }}>
+      <Stack
+        alignItems="center"
+        spacing={1}
+        sx={{ width: { xs: 75, sm: 95 } }}
+        component={motion.div}
+        variants={fadeInScale}>
         <MenuIcon color="primary" />
         <Typography>{title}</Typography>
       </Stack>
@@ -110,11 +120,18 @@ export default function MobileNavbar() {
           anchorEl={anchorEl}
           onClose={() => setAnchorEl(null)}
           anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
-          transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}>
+          transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}
+          sx={{ overflow: 'hidden' }}
+          component={motion.div}
+          {...inViewDefault}
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}>
           <Stack
             direction="row"
             justifyContent="center"
-            sx={{ flexWrap: 'wrap', maxWidth: 410 }}>
+            sx={{ flexWrap: 'wrap', maxWidth: 410 }}
+            component={motion.div}
+            variants={navbarStagger}>
             {Object.entries(links).map(([title, content]) => (
               <Link
                 href={content.link}
@@ -124,7 +141,9 @@ export default function MobileNavbar() {
                 legacyBehavior>
                 <MenuItem
                   onClick={() => setAnchorEl(null)}
-                  sx={{ my: 1, mx: 0.5 }}>
+                  sx={{ my: 1, mx: 0.5 }}
+                  component={motion.div}
+                  variants={fadeInScale}>
                   <Stack
                     alignItems="center"
                     spacing={1}

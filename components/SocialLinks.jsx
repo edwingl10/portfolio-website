@@ -31,7 +31,7 @@ export default function SocialLinks({ color }) {
   return (
     <Stack direction="row" spacing={2}>
       {Object.entries(socialLinks).map(([key, val]) => (
-        <motion.div whileHover={moveUpOnHover}>
+        <motion.div whileHover={moveUpOnHover} key={key}>
           <MuiLink
             href={val.link}
             target="_blank"
