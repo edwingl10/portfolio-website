@@ -17,9 +17,18 @@ import {
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
 import Projects from '../../src/projectData';
 import Icon, { iconTitles } from '../../components/Icon';
 import SEOHead from '../../components/SEOHead';
+import {
+  fadeInDown,
+  fadeInLeft,
+  fadeInRight,
+  fadeInUp,
+  inViewProps,
+  staggerChildren,
+} from '../../utils/animations';
 
 export default function ViewProject({ project, mainBlurData, secondBlurData }) {
   const { t } = useTranslation(['project', 'projects', 'common']);
@@ -48,7 +57,12 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           direction={{ xs: 'column-reverse', md: 'row' }}
           spacing={3}
           alignItems={{ md: 'center' }}>
-          <Grid item xs={12} md={7}>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            component={motion.div}
+            variants={fadeInLeft}>
             <Typography variant="h3" paragraph color="secondary">
               {project.name}
             </Typography>
@@ -67,7 +81,12 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
             </Button>
           </Grid>
 
-          <Grid item xs={12} md={5}>
+          <Grid
+            item
+            xs={12}
+            md={5}
+            component={motion.div}
+            variants={fadeInRight}>
             <Box
               sx={{
                 position: 'relative',
@@ -94,7 +113,13 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
             direction={{ xs: 'column-reverse', md: 'row' }}
             spacing={3}
             alignItems={{ md: 'center' }}>
-            <Grid item xs={12} md={5}>
+            <Grid
+              item
+              xs={12}
+              md={5}
+              component={motion.div}
+              {...inViewProps}
+              variants={fadeInLeft}>
               <Box
                 sx={{
                   position: 'relative',
@@ -111,7 +136,13 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={7}>
+            <Grid
+              item
+              xs={12}
+              md={7}
+              component={motion.div}
+              {...inViewProps}
+              variants={fadeInUp}>
               <Typography variant="h4" paragraph color="primary">
                 {t('behindTheScenes')}
               </Typography>
@@ -140,13 +171,18 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           sx={{ flexWrap: 'wrap' }}
           rowGap={3}
           spacing={{ xs: 4, md: 6 }}
-          justifyContent="center">
+          justifyContent="center"
+          component={motion.div}
+          {...inViewProps}
+          variants={staggerChildren}>
           {project.techUsed.map((name) => (
             <Tooltip
               key={iconTitles[name]}
               title={iconTitles[name]}
               enterTouchDelay={50}
-              TransitionComponent={Zoom}>
+              TransitionComponent={Zoom}
+              component={motion.div}
+              variants={fadeInDown}>
               <SvgIcon fontSize="large" color="primary">
                 <Icon name={`${name}`} height="inherit" width="inherit" />
               </SvgIcon>

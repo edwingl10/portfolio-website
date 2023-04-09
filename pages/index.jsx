@@ -13,11 +13,19 @@ import { getPlaiceholder } from 'plaiceholder';
 import PropTypes from 'prop-types';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
 import SocialLinks from '../components/SocialLinks';
 import ProjectSection from '../components/ProjectSection';
 import Projects from '../src/projectData';
 import Icon, { iconTitles } from '../components/Icon';
 import SEOHead from '../components/SEOHead';
+import {
+  fadeInUp,
+  fadeIn,
+  fadeInRight,
+  inViewProps,
+  staggerChildren,
+} from '../utils/animations';
 
 const skillsIcons = [
   'react',
@@ -48,7 +56,7 @@ export default function Home({ placeholders, bannerBlur }) {
           justifyContent="space-between"
           alignItems="center"
           spacing={3}>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={8} component={motion.div} variants={fadeIn}>
             <Typography variant="h3" paragraph color="primary">
               {t('hi')}
               <Box component="span" sx={{ color: 'secondary.main' }}>
@@ -71,7 +79,11 @@ export default function Home({ placeholders, bannerBlur }) {
             <SocialLinks />
           </Grid>
 
-          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid
+            item
+            sx={{ m: { xs: 'auto', md: 0 } }}
+            component={motion.div}
+            variants={fadeInRight}>
             <Image
               priority
               src="/images/welcome.png"
@@ -88,21 +100,46 @@ export default function Home({ placeholders, bannerBlur }) {
       <Box bgcolor="background.default" sx={{ py: 5 }}>
         <Container maxWidth="md">
           <Box sx={{ mb: 10 }}>
-            <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
+            <Typography
+              variant="h4"
+              color="primary"
+              sx={{ mb: 4 }}
+              component={motion.p}
+              {...inViewProps}
+              variants={fadeIn}>
               {t('dedicatedDeveloper')}
             </Typography>
-            <Typography paragraph>{t('aboutMe')}</Typography>
-            <Typography>{t('moreAboutMe')}</Typography>
+
+            <motion.div {...inViewProps} variants={fadeInUp}>
+              <Typography paragraph>{t('aboutMe')}</Typography>
+              <Typography>{t('moreAboutMe')}</Typography>
+            </motion.div>
           </Box>
 
           <Box textAlign="center">
-            <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
+            <Typography
+              variant="h4"
+              color="primary"
+              sx={{ mb: 4 }}
+              component={motion.p}
+              {...inViewProps}
+              variants={fadeIn}>
               {t('mySkills')}
             </Typography>
-            <Container maxWidth="sm">
+            <Container
+              maxWidth="sm"
+              component={motion.div}
+              {...inViewProps}
+              variants={staggerChildren}>
               <Grid container spacing={4}>
                 {skillsIcons.map((name) => (
-                  <Grid item key={iconTitles[name]} xs={4} sm={3}>
+                  <Grid
+                    item
+                    key={iconTitles[name]}
+                    xs={4}
+                    sm={3}
+                    component={motion.div}
+                    variants={fadeIn}>
                     <SvgIcon fontSize="large" color="primary">
                       <Icon name={`${name}`} height="100%" width="100%" />
                     </SvgIcon>
@@ -115,7 +152,13 @@ export default function Home({ placeholders, bannerBlur }) {
         </Container>
       </Box>
 
-      <Container sx={{ py: 5, textAlign: 'center' }} id="projects">
+      <Container
+        sx={{ py: 5, textAlign: 'center' }}
+        id="projects"
+        component={motion.div}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.1 }}>
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           {t('projects')}
         </Typography>

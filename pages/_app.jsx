@@ -5,7 +5,7 @@ import { appWithTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import createEmotionCache from '../src/createEmotionCache';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
@@ -14,12 +14,6 @@ const MUIThemeProvider = dynamic(() => import('../components/ThemeContext'), {
   ssr: false,
 });
 
-const pageTransitionAnim = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 20 },
-  transition: { ease: 'linear' },
-};
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -31,6 +25,7 @@ function MyApp(props) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {router.locales.map((locale) => (
           <link
             key={locale}
@@ -44,19 +39,11 @@ function MyApp(props) {
       <CacheProvider value={emotionCache}>
         <MUIThemeProvider>
           <CssBaseline />
-          <AnimatePresence mode="wait">
-            <Layout>
-              <motion.div
-                key={router.route}
-                variants={pageTransitionAnim}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition="transition">
-                <Component {...pageProps} />
-              </motion.div>
-            </Layout>
-          </AnimatePresence>
+          <Layout>
+            <motion.div key={router.route} initial="initial" animate="animate">
+              <Component {...pageProps} />
+            </motion.div>
+          </Layout>
         </MUIThemeProvider>
       </CacheProvider>
     </>

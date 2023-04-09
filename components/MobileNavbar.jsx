@@ -24,8 +24,10 @@ import EmailIcon from '@mui/icons-material/Email';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
 import Icon from './Icon';
 import { useThemeUpdate } from './ThemeContext';
+import { fadeInScale, fadeInUp, navbarStagger } from '../utils/animations';
 
 const links = {
   about: {
@@ -41,7 +43,12 @@ const links = {
 function CustomMenuItem({ MenuIcon, title, ...menuProps }) {
   return (
     <MenuItem {...menuProps} sx={{ my: 1, mx: 0.5 }}>
-      <Stack alignItems="center" spacing={1} sx={{ width: { xs: 75, sm: 95 } }}>
+      <Stack
+        alignItems="center"
+        spacing={1}
+        sx={{ width: { xs: 75, sm: 95 } }}
+        component={motion.li}
+        variants={fadeInScale}>
         <MenuIcon color="primary" />
         <Typography>{title}</Typography>
       </Stack>
@@ -71,7 +78,13 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <Paper sx={{ position: 'sticky', bottom: 0 }} elevation={3}>
+      <Paper
+        sx={{ position: 'sticky', bottom: 0 }}
+        elevation={3}
+        component={motion.div}
+        initial="initial"
+        animate="animate"
+        variants={fadeInUp}>
         <BottomNavigation showLabels sx={{ justifyContent: 'space-between' }}>
           <BottomNavigationAction
             aria-label={t('home')}
@@ -106,7 +119,11 @@ export default function MobileNavbar() {
           <Stack
             direction="row"
             justifyContent="center"
-            sx={{ flexWrap: 'wrap', maxWidth: 410 }}>
+            sx={{ flexWrap: 'wrap', maxWidth: 410 }}
+            component={motion.div}
+            initial="initial"
+            animate="animate"
+            variants={navbarStagger}>
             {Object.entries(links).map(([title, content]) => (
               <Link
                 href={content.link}
@@ -116,7 +133,9 @@ export default function MobileNavbar() {
                 legacyBehavior>
                 <MenuItem
                   onClick={() => setAnchorEl(null)}
-                  sx={{ my: 1, mx: 0.5 }}>
+                  sx={{ my: 1, mx: 0.5 }}
+                  component={motion.li}
+                  variants={fadeInScale}>
                   <Stack
                     alignItems="center"
                     spacing={1}
