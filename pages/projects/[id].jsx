@@ -164,11 +164,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         </Container>
       </Box>
 
-      <Box
-        sx={{ py: 5 }}
-        textAlign="center"
-        component={motion.div}
-        {...inViewProps}>
+      <Box sx={{ py: 5 }} textAlign="center">
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           {t('technologyUsed')}
         </Typography>
@@ -179,6 +175,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
           spacing={{ xs: 4, md: 6 }}
           justifyContent="center"
           component={motion.div}
+          {...inViewProps}
           variants={staggerChildren}>
           {project.techUsed.map((name) => (
             <Tooltip
