@@ -16,8 +16,8 @@ export const fadeInDown = {
 };
 
 export const fadeIn = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
+  initial: { opacity: 0, transition: customTransition },
+  animate: { opacity: 1, transition: customTransition },
 };
 
 export const fadeInRight = {
