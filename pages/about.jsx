@@ -11,7 +11,13 @@ import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
-import { fadeInLeft, fadeInRight, inViewProps } from '../utils/animations';
+import {
+  fadeIn,
+  fadeInLeft,
+  fadeInRight,
+  fadeInUp,
+  inViewProps,
+} from '../utils/animations';
 import SEOHead from '../components/SEOHead';
 
 export default function about({ placeholders }) {
@@ -25,17 +31,14 @@ export default function about({ placeholders }) {
     <Box bgcolor="background.paper">
       <SEOHead {...{ title, description, keywords }} />
 
-      <Container
-        sx={{ my: 5, py: 2 }}
-        component={motion.div}
-        variants={fadeInLeft}>
+      <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
           justifyContent="space-between"
           alignItems="center"
           spacing={3}>
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={12} sm={8} component={motion.div} variants={fadeIn}>
             <Typography variant="h3" paragraph color="secondary">
               {t('about')}
             </Typography>
@@ -51,7 +54,11 @@ export default function about({ placeholders }) {
             </Button>
           </Grid>
 
-          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid
+            item
+            sx={{ m: { xs: 'auto', md: 0 } }}
+            component={motion.div}
+            variants={fadeInRight}>
             <Image
               priority
               src="/images/wave.png"
@@ -70,13 +77,18 @@ export default function about({ placeholders }) {
         sx={{ py: 5 }}
         component={motion.div}
         {...inViewProps}>
-        <Container component={motion.div} variants={fadeInRight}>
+        <Container>
           <Grid
             container
             direction={{ xs: 'column', md: 'row' }}
             spacing={3}
             alignItems={{ md: 'center' }}>
-            <Grid item xs={12} sm={5}>
+            <Grid
+              item
+              xs={12}
+              sm={5}
+              component={motion.div}
+              variants={fadeInLeft}>
               <Box
                 sx={{
                   position: 'relative',
@@ -94,11 +106,18 @@ export default function about({ placeholders }) {
             </Grid>
 
             <Grid item xs={12} sm={7}>
-              <Typography variant="h4" paragraph color="primary">
+              <Typography
+                variant="h4"
+                paragraph
+                color="primary"
+                component={motion.p}
+                variants={fadeIn}>
                 {t('myPassion')}
               </Typography>
-              <Typography paragraph>{t('uncoveredMyPassion')}</Typography>
-              <Typography>{t('moreAboutMyPassion')}</Typography>
+              <motion.p variants={fadeInUp}>
+                <Typography paragraph>{t('uncoveredMyPassion')}</Typography>
+                <Typography>{t('moreAboutMyPassion')}</Typography>
+              </motion.p>
             </Grid>
           </Grid>
         </Container>

@@ -49,17 +49,14 @@ export default function Home({ placeholders, bannerBlur }) {
     <Box bgcolor="background.paper">
       <SEOHead {...{ title, description, keywords }} />
 
-      <Container
-        sx={{ my: 5, py: 2 }}
-        component={motion.div}
-        variants={fadeInRight}>
+      <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
           justifyContent="space-between"
           alignItems="center"
           spacing={3}>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={8} component={motion.div} variants={fadeIn}>
             <Typography variant="h3" paragraph color="primary">
               {t('hi')}
               <Box component="span" sx={{ color: 'secondary.main' }}>
@@ -82,7 +79,11 @@ export default function Home({ placeholders, bannerBlur }) {
             <SocialLinks />
           </Grid>
 
-          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid
+            item
+            sx={{ m: { xs: 'auto', md: 0 } }}
+            component={motion.div}
+            variants={fadeInRight}>
             <Image
               priority
               src="/images/welcome.png"
@@ -101,17 +102,30 @@ export default function Home({ placeholders, bannerBlur }) {
         sx={{ py: 5 }}
         component={motion.div}
         {...inViewProps}>
-        <Container maxWidth="md" component={motion.div} variants={fadeInUp}>
+        <Container maxWidth="md">
           <Box sx={{ mb: 10 }}>
-            <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
+            <Typography
+              variant="h4"
+              color="primary"
+              sx={{ mb: 4 }}
+              component={motion.p}
+              variants={fadeIn}>
               {t('dedicatedDeveloper')}
             </Typography>
-            <Typography paragraph>{t('aboutMe')}</Typography>
-            <Typography>{t('moreAboutMe')}</Typography>
+
+            <motion.div variants={fadeInUp}>
+              <Typography paragraph>{t('aboutMe')}</Typography>
+              <Typography>{t('moreAboutMe')}</Typography>
+            </motion.div>
           </Box>
 
           <Box textAlign="center" component={motion.div} {...inViewProps}>
-            <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
+            <Typography
+              variant="h4"
+              color="primary"
+              sx={{ mb: 4 }}
+              component={motion.p}
+              variants={fadeIn}>
               {t('mySkills')}
             </Typography>
             <Container

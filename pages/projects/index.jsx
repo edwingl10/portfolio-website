@@ -6,7 +6,7 @@ import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
-import { fadeInDown } from '../../utils/animations';
+import { fadeInDown, fadeInRight } from '../../utils/animations';
 import Projects from '../../src/projectData';
 import ProjectSection from '../../components/ProjectSection';
 import SEOHead from '../../components/SEOHead';
@@ -30,17 +30,19 @@ export default function ListProjects({ placeholders, bannerBlur }) {
     <>
       <SEOHead {...{ title, description, keywords }} />
 
-      <Container
-        sx={{ my: 5, py: 2 }}
-        component={motion.div}
-        variants={fadeInDown}>
+      <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
           justifyContent="space-between"
           alignItems="center"
           spacing={3}>
-          <Grid item xs={12} sm={8}>
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            component={motion.div}
+            variants={fadeInDown}>
             <Typography variant="h3" paragraph color="secondary">
               {t('projects')}
             </Typography>
@@ -49,7 +51,11 @@ export default function ListProjects({ placeholders, bannerBlur }) {
             </Typography>
           </Grid>
 
-          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid
+            item
+            sx={{ m: { xs: 'auto', md: 0 } }}
+            component={motion.div}
+            variants={fadeInRight}>
             <Image
               priority
               src="/images/projects.png"

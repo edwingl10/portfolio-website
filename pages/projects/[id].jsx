@@ -23,6 +23,8 @@ import Icon, { iconTitles } from '../../components/Icon';
 import SEOHead from '../../components/SEOHead';
 import {
   fadeInDown,
+  fadeInLeft,
+  fadeInRight,
   fadeInUp,
   inViewProps,
   staggerChildren,
@@ -49,16 +51,18 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
     <>
       <SEOHead {...{ title, description, keywords }} />
 
-      <Container
-        sx={{ my: 5, py: 2 }}
-        component={motion.div}
-        variants={fadeInDown}>
+      <Container sx={{ my: 5, py: 2 }}>
         <Grid
           container
           direction={{ xs: 'column-reverse', md: 'row' }}
           spacing={3}
           alignItems={{ md: 'center' }}>
-          <Grid item xs={12} md={7}>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            component={motion.div}
+            variants={fadeInDown}>
             <Typography variant="h3" paragraph color="secondary">
               {project.name}
             </Typography>
@@ -77,7 +81,12 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
             </Button>
           </Grid>
 
-          <Grid item xs={12} md={5}>
+          <Grid
+            item
+            xs={12}
+            md={5}
+            component={motion.div}
+            variants={fadeInRight}>
             <Box
               sx={{
                 position: 'relative',
@@ -102,13 +111,18 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         sx={{ py: 5 }}
         component={motion.div}
         {...inViewProps}>
-        <Container component={motion.div} variants={fadeInUp}>
+        <Container>
           <Grid
             container
             direction={{ xs: 'column-reverse', md: 'row' }}
             spacing={3}
             alignItems={{ md: 'center' }}>
-            <Grid item xs={12} md={5}>
+            <Grid
+              item
+              xs={12}
+              md={5}
+              component={motion.div}
+              variants={fadeInLeft}>
               <Box
                 sx={{
                   position: 'relative',
@@ -125,7 +139,12 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={7}>
+            <Grid
+              item
+              xs={12}
+              md={7}
+              component={motion.div}
+              variants={fadeInUp}>
               <Typography variant="h4" paragraph color="primary">
                 {t('behindTheScenes')}
               </Typography>
