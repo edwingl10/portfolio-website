@@ -97,11 +97,7 @@ export default function Home({ placeholders, bannerBlur }) {
         </Grid>
       </Container>
 
-      <Box
-        bgcolor="background.default"
-        sx={{ py: 5 }}
-        component={motion.div}
-        {...inViewProps}>
+      <Box bgcolor="background.default" sx={{ py: 5 }}>
         <Container maxWidth="md">
           <Box sx={{ mb: 10 }}>
             <Typography
@@ -109,28 +105,31 @@ export default function Home({ placeholders, bannerBlur }) {
               color="primary"
               sx={{ mb: 4 }}
               component={motion.p}
+              {...inViewProps}
               variants={fadeIn}>
               {t('dedicatedDeveloper')}
             </Typography>
 
-            <motion.div variants={fadeInUp}>
+            <motion.div {...inViewProps} variants={fadeInUp}>
               <Typography paragraph>{t('aboutMe')}</Typography>
               <Typography>{t('moreAboutMe')}</Typography>
             </motion.div>
           </Box>
 
-          <Box textAlign="center" component={motion.div} {...inViewProps}>
+          <Box textAlign="center">
             <Typography
               variant="h4"
               color="primary"
               sx={{ mb: 4 }}
               component={motion.p}
+              {...inViewProps}
               variants={fadeIn}>
               {t('mySkills')}
             </Typography>
             <Container
               maxWidth="sm"
               component={motion.div}
+              {...inViewProps}
               variants={staggerChildren}>
               <Grid container spacing={4}>
                 {skillsIcons.map((name) => (
