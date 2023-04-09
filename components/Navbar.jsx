@@ -21,7 +21,7 @@ import { motion } from 'framer-motion';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
 import { useThemeUpdate } from './ThemeContext';
-import { fadeInDown } from '../utils/animations';
+import { fadeIn, staggerChildren } from '../utils/animations';
 
 const links = {
   about: '/about',
@@ -69,13 +69,15 @@ export default function Navbar() {
         component={motion.div}
         initial="initial"
         animate="animate"
-        variants={fadeInDown}>
+        variants={staggerChildren}>
         <Toolbar>
           <Link href="/" legacyBehavior>
             <SvgIcon
               fontSize="large"
               color="primary"
-              sx={{ cursor: 'pointer' }}>
+              sx={{ cursor: 'pointer' }}
+              component={motion.svg}
+              variants={fadeIn}>
               <Icon name="logo" height="100%" width="100%" />
             </SvgIcon>
           </Link>
@@ -99,7 +101,9 @@ export default function Navbar() {
             }}
             TabIndicatorProps={{
               children: <span className="MuiTabs-indicatorSpan" />,
-            }}>
+            }}
+            component={motion.div}
+            variants={fadeIn}>
             {Object.entries(links).map(([title, link]) => (
               <Link
                 href={link}
@@ -120,40 +124,42 @@ export default function Navbar() {
             ))}
           </Tabs>
 
-          <Button
-            href="/resume.pdf"
-            target="_blank"
-            sx={{
-              textTransform: 'none',
-              ...iconStyles,
-            }}>
-            {t('resume')}
-          </Button>
+          <motion.div variants={fadeIn}>
+            <Button
+              href="/resume.pdf"
+              target="_blank"
+              sx={{
+                textTransform: 'none',
+                ...iconStyles,
+              }}>
+              {t('resume')}
+            </Button>
 
-          <TranslationMenu btnStyle={{ ...iconStyles }} />
+            <TranslationMenu btnStyle={{ ...iconStyles }} />
 
-          <IconButton
-            aria-label={t('changeTheme')}
-            onClick={toggleColorMode}
-            sx={{
-              ...iconStyles,
-            }}>
-            {currentTheme.palette.mode === 'light' ? (
-              <DarkModeOutlinedIcon />
-            ) : (
-              <LightModeOutlinedIcon />
-            )}
-          </IconButton>
+            <IconButton
+              aria-label={t('changeTheme')}
+              onClick={toggleColorMode}
+              sx={{
+                ...iconStyles,
+              }}>
+              {currentTheme.palette.mode === 'light' ? (
+                <DarkModeOutlinedIcon />
+              ) : (
+                <LightModeOutlinedIcon />
+              )}
+            </IconButton>
 
-          <Button
-            component={MuiLink}
-            href="mailto:edwingl@uci.edu"
-            sx={{
-              textTransform: 'none',
-              ...iconStyles,
-            }}>
-            {t('contact')}
-          </Button>
+            <Button
+              component={MuiLink}
+              href="mailto:edwingl@uci.edu"
+              sx={{
+                textTransform: 'none',
+                ...iconStyles,
+              }}>
+              {t('contact')}
+            </Button>
+          </motion.div>
         </Toolbar>
       </AppBar>
     </HideOnScroll>
