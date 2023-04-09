@@ -123,8 +123,7 @@ export default function MobileNavbar() {
           transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}
           sx={{ overflow: 'hidden' }}
           component={motion.div}
-          {...inViewProps}
-          variants={fadeInUp}>
+          {...inViewProps}>
           <Stack
             direction="row"
             justifyContent="center"
