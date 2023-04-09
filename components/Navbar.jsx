@@ -134,9 +134,13 @@ export default function Navbar() {
               }}>
               {t('resume')}
             </Button>
+          </motion.div>
 
+          <motion.div variants={fadeIn}>
             <TranslationMenu btnStyle={{ ...iconStyles }} />
+          </motion.div>
 
+          <motion.div variants={fadeIn}>
             <IconButton
               aria-label={t('changeTheme')}
               onClick={toggleColorMode}
@@ -149,7 +153,9 @@ export default function Navbar() {
                 <LightModeOutlinedIcon />
               )}
             </IconButton>
+          </motion.div>
 
+          <motion.div variants={fadeIn}>
             <Button
               component={MuiLink}
               href="mailto:edwingl@uci.edu"
