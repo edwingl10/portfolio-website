@@ -5,6 +5,8 @@ import Image from 'next/legacy/image';
 import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
+import { fadeInLeft, fadeInRight } from '../../utils/animations';
 import Projects from '../../src/projectData';
 import ProjectSection from '../../components/ProjectSection';
 import SEOHead from '../../components/SEOHead';
@@ -35,7 +37,12 @@ export default function ListProjects({ placeholders, bannerBlur }) {
           justifyContent="space-between"
           alignItems="center"
           spacing={3}>
-          <Grid item xs={12} sm={8}>
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            component={motion.div}
+            variants={fadeInLeft}>
             <Typography variant="h3" paragraph color="secondary">
               {t('projects')}
             </Typography>
@@ -44,7 +51,11 @@ export default function ListProjects({ placeholders, bannerBlur }) {
             </Typography>
           </Grid>
 
-          <Grid item sx={{ m: { xs: 'auto', md: 0 } }}>
+          <Grid
+            item
+            sx={{ m: { xs: 'auto', md: 0 } }}
+            component={motion.div}
+            variants={fadeInRight}>
             <Image
               priority
               src="/images/projects.png"
