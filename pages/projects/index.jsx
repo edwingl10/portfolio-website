@@ -6,7 +6,7 @@ import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
-import { fadeInDown, fadeInRight } from '../../utils/animations';
+import { fadeInLeft, fadeInRight } from '../../utils/animations';
 import Projects from '../../src/projectData';
 import ProjectSection from '../../components/ProjectSection';
 import SEOHead from '../../components/SEOHead';
@@ -42,7 +42,7 @@ export default function ListProjects({ placeholders, bannerBlur }) {
             xs={12}
             sm={8}
             component={motion.div}
-            variants={fadeInDown}>
+            variants={fadeInLeft}>
             <Typography variant="h3" paragraph color="secondary">
               {t('projects')}
             </Typography>

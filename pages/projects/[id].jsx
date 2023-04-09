@@ -62,7 +62,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
             xs={12}
             md={7}
             component={motion.div}
-            variants={fadeInDown}>
+            variants={fadeInLeft}>
             <Typography variant="h3" paragraph color="secondary">
               {project.name}
             </Typography>
@@ -106,11 +106,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         </Grid>
       </Container>
 
-      <Box
-        bgcolor="background.default"
-        sx={{ py: 5 }}
-        component={motion.div}
-        {...inViewProps}>
+      <Box bgcolor="background.default" sx={{ py: 5 }}>
         <Container>
           <Grid
             container
@@ -122,6 +118,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               xs={12}
               md={5}
               component={motion.div}
+              {...inViewProps}
               variants={fadeInLeft}>
               <Box
                 sx={{
@@ -144,6 +141,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               xs={12}
               md={7}
               component={motion.div}
+              {...inViewProps}
               variants={fadeInUp}>
               <Typography variant="h4" paragraph color="primary">
                 {t('behindTheScenes')}

@@ -156,7 +156,9 @@ export default function Home({ placeholders, bannerBlur }) {
         sx={{ py: 5, textAlign: 'center' }}
         id="projects"
         component={motion.div}
-        {...inViewProps}>
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.1 }}>
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           {t('projects')}
         </Typography>
