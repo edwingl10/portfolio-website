@@ -47,7 +47,7 @@ function CustomMenuItem({ MenuIcon, title, ...menuProps }) {
         alignItems="center"
         spacing={1}
         sx={{ width: { xs: 75, sm: 95 } }}
-        component={motion.div}
+        component={motion.li}
         variants={fadeInScale}>
         <MenuIcon color="primary" />
         <Typography>{title}</Typography>
@@ -115,8 +115,7 @@ export default function MobileNavbar() {
           anchorEl={anchorEl}
           onClose={() => setAnchorEl(null)}
           anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
-          transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}
-          sx={{ overflow: 'hidden' }}>
+          transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}>
           <Stack
             direction="row"
             justifyContent="center"
@@ -135,7 +134,7 @@ export default function MobileNavbar() {
                 <MenuItem
                   onClick={() => setAnchorEl(null)}
                   sx={{ my: 1, mx: 0.5 }}
-                  component={motion.div}
+                  component={motion.li}
                   variants={fadeInScale}>
                   <Stack
                     alignItems="center"
