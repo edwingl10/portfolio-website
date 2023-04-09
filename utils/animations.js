@@ -1,6 +1,7 @@
-export const inViewDefault = {
+export const inViewProps = {
   initial: 'initial',
   whileInView: 'animate',
+  viewport: { once: true, amount: 0.2 },
 };
 const customTransition = { duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] };
 

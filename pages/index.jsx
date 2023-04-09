@@ -23,7 +23,7 @@ import {
   fadeInUp,
   fadeIn,
   fadeInRight,
-  inViewDefault,
+  inViewProps,
   fadeInDown,
   staggerChildren,
 } from '../utils/animations';
@@ -102,8 +102,7 @@ export default function Home({ placeholders, bannerBlur }) {
         s
         sx={{ py: 5 }}
         component={motion.div}
-        viewport={{ once: true, amount: 0.2 }}
-        {...inViewDefault}>
+        {...inViewProps}>
         <Container maxWidth="md" component={motion.div} variants={fadeInDown}>
           <Box sx={{ mb: 10 }}>
             <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
@@ -113,11 +112,7 @@ export default function Home({ placeholders, bannerBlur }) {
             <Typography>{t('moreAboutMe')}</Typography>
           </Box>
 
-          <Box
-            textAlign="center"
-            component={motion.div}
-            viewport={{ once: true, amount: 0.5 }}
-            {...inViewDefault}>
+          <Box textAlign="center" component={motion.div} {...inViewProps}>
             <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
               {t('mySkills')}
             </Typography>
@@ -150,8 +145,7 @@ export default function Home({ placeholders, bannerBlur }) {
         sx={{ py: 5, textAlign: 'center' }}
         id="projects"
         component={motion.div}
-        viewport={{ once: true, amount: 0.2 }}
-        {...inViewDefault}>
+        {...inViewProps}>
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           {t('projects')}
         </Typography>

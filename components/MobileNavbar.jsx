@@ -30,7 +30,7 @@ import { useThemeUpdate } from './ThemeContext';
 import {
   fadeInScale,
   fadeInUp,
-  inViewDefault,
+  inViewProps,
   navbarStagger,
 } from '../utils/animations';
 
@@ -123,8 +123,7 @@ export default function MobileNavbar() {
           transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}
           sx={{ overflow: 'hidden' }}
           component={motion.div}
-          {...inViewDefault}
-          viewport={{ once: true, amount: 0.2 }}
+          {...inViewProps}
           variants={fadeInUp}>
           <Stack
             direction="row"

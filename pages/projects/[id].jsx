@@ -24,7 +24,7 @@ import SEOHead from '../../components/SEOHead';
 import {
   fadeInDown,
   fadeInUp,
-  inViewDefault,
+  inViewProps,
   staggerChildren,
 } from '../../utils/animations';
 
@@ -101,8 +101,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         bgcolor="background.default"
         sx={{ py: 5 }}
         component={motion.div}
-        viewport={{ once: true, amount: 0.2 }}
-        {...inViewDefault}>
+        {...inViewProps}>
         <Container component={motion.div} variants={fadeInUp}>
           <Grid
             container
@@ -150,8 +149,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
         sx={{ py: 5 }}
         textAlign="center"
         component={motion.div}
-        viewport={{ once: true, amount: 0.2 }}
-        {...inViewDefault}>
+        {...inViewProps}>
         <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
           {t('technologyUsed')}
         </Typography>
