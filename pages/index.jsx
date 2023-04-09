@@ -24,7 +24,6 @@ import {
   fadeIn,
   fadeInRight,
   inViewProps,
-  fadeInDown,
   staggerChildren,
 } from '../utils/animations';
 
@@ -99,11 +98,10 @@ export default function Home({ placeholders, bannerBlur }) {
 
       <Box
         bgcolor="background.default"
-        s
         sx={{ py: 5 }}
         component={motion.div}
         {...inViewProps}>
-        <Container maxWidth="md" component={motion.div} variants={fadeInDown}>
+        <Container maxWidth="md" component={motion.div} variants={fadeInUp}>
           <Box sx={{ mb: 10 }}>
             <Typography variant="h4" color="primary" sx={{ mb: 4 }}>
               {t('dedicatedDeveloper')}
