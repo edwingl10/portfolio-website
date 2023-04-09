@@ -36,13 +36,6 @@ export const fadeInScale = {
   exit: { opacity: 0, scale: 0, transition: customTransition },
 };
 
-export const pageTransition = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-  transition: { ease: [0.6, -0.05, 0.01, 0.99] },
-};
-
 export const moveUpOnHover = {
   y: -5,
   transition: { ease: [0.6, -0.05, 0.01, 0.99] },
