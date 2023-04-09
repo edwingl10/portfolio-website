@@ -27,12 +27,7 @@ import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
 import Icon from './Icon';
 import { useThemeUpdate } from './ThemeContext';
-import {
-  fadeInScale,
-  fadeInUp,
-  inViewProps,
-  navbarStagger,
-} from '../utils/animations';
+import { fadeInScale, fadeInUp, navbarStagger } from '../utils/animations';
 
 const links = {
   about: {
@@ -121,14 +116,14 @@ export default function MobileNavbar() {
           onClose={() => setAnchorEl(null)}
           anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
           transformOrigin={{ horizontal: 'center', vertical: 'bottom' }}
-          sx={{ overflow: 'hidden' }}
-          component={motion.div}
-          {...inViewProps}>
+          sx={{ overflow: 'hidden' }}>
           <Stack
             direction="row"
             justifyContent="center"
             sx={{ flexWrap: 'wrap', maxWidth: 410 }}
             component={motion.div}
+            initial="initial"
+            animate="animate"
             variants={navbarStagger}>
             {Object.entries(links).map(([title, content]) => (
               <Link
