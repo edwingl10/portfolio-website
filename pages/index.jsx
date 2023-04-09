@@ -162,12 +162,7 @@ export default function Home({ placeholders, bannerBlur }) {
           {t('projects')}
         </Typography>
 
-        <Box component={motion.div} variants={fadeInUp}>
-          <ProjectSection
-            projects={Projects.slice(0, 6)}
-            {...{ placeholders }}
-          />
-        </Box>
+        <ProjectSection projects={Projects.slice(0, 6)} {...{ placeholders }} />
 
         <Link href="/projects" passHref legacyBehavior>
           <Button color="secondary" variant="contained" sx={{ mt: 4 }}>
