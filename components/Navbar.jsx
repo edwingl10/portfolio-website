@@ -17,9 +17,11 @@ import { useTranslation } from 'next-i18next';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import Icon from './Icon';
 import TranslationMenu from './TranslationMenu';
 import { useThemeUpdate } from './ThemeContext';
+import { fadeIn, staggerChildren } from '../utils/animations';
 
 const links = {
   about: '/about',
@@ -63,13 +65,19 @@ export default function Navbar() {
         sx={{
           '& .MuiToolbar-root': { bgcolor: 'background.paper' },
           color: (theme) => theme.palette.text.primary,
-        }}>
+        }}
+        component={motion.div}
+        initial="initial"
+        animate="animate"
+        variants={staggerChildren}>
         <Toolbar>
           <Link href="/" legacyBehavior>
             <SvgIcon
               fontSize="large"
               color="primary"
-              sx={{ cursor: 'pointer' }}>
+              sx={{ cursor: 'pointer' }}
+              component={motion.svg}
+              variants={fadeIn}>
               <Icon name="logo" height="100%" width="100%" />
             </SvgIcon>
           </Link>
@@ -93,7 +101,9 @@ export default function Navbar() {
             }}
             TabIndicatorProps={{
               children: <span className="MuiTabs-indicatorSpan" />,
-            }}>
+            }}
+            component={motion.div}
+            variants={fadeIn}>
             {Object.entries(links).map(([title, link]) => (
               <Link
                 href={link}
@@ -114,40 +124,48 @@ export default function Navbar() {
             ))}
           </Tabs>
 
-          <Button
-            href="/resume.pdf"
-            target="_blank"
-            sx={{
-              textTransform: 'none',
-              ...iconStyles,
-            }}>
-            {t('resume')}
-          </Button>
+          <motion.div variants={fadeIn}>
+            <Button
+              href="/resume.pdf"
+              target="_blank"
+              sx={{
+                textTransform: 'none',
+                ...iconStyles,
+              }}>
+              {t('resume')}
+            </Button>
+          </motion.div>
 
-          <TranslationMenu btnStyle={{ ...iconStyles }} />
+          <motion.div variants={fadeIn}>
+            <TranslationMenu btnStyle={{ ...iconStyles }} />
+          </motion.div>
 
-          <IconButton
-            aria-label={t('changeTheme')}
-            onClick={toggleColorMode}
-            sx={{
-              ...iconStyles,
-            }}>
-            {currentTheme.palette.mode === 'light' ? (
-              <DarkModeOutlinedIcon />
-            ) : (
-              <LightModeOutlinedIcon />
-            )}
-          </IconButton>
+          <motion.div variants={fadeIn}>
+            <IconButton
+              aria-label={t('changeTheme')}
+              onClick={toggleColorMode}
+              sx={{
+                ...iconStyles,
+              }}>
+              {currentTheme.palette.mode === 'light' ? (
+                <DarkModeOutlinedIcon />
+              ) : (
+                <LightModeOutlinedIcon />
+              )}
+            </IconButton>
+          </motion.div>
 
-          <Button
-            component={MuiLink}
-            href="mailto:edwingl@uci.edu"
-            sx={{
-              textTransform: 'none',
-              ...iconStyles,
-            }}>
-            {t('contact')}
-          </Button>
+          <motion.div variants={fadeIn}>
+            <Button
+              component={MuiLink}
+              href="mailto:edwingl@uci.edu"
+              sx={{
+                textTransform: 'none',
+                ...iconStyles,
+              }}>
+              {t('contact')}
+            </Button>
+          </motion.div>
         </Toolbar>
       </AppBar>
     </HideOnScroll>
