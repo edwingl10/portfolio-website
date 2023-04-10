@@ -4,12 +4,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { Stack, Link as MuiLink } from '@mui/material';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import { moveUpOnHover } from '../utils/animations';
 
 export default function SocialLinks({ color }) {
-  const socialIconStyles = {
-    '&:hover': { color: 'secondary.main' },
-    color,
-  };
+  const socialIconStyles = { color };
 
   const socialLinks = {
     linkedIn: {
@@ -32,13 +31,15 @@ export default function SocialLinks({ color }) {
   return (
     <Stack direction="row" spacing={2}>
       {Object.entries(socialLinks).map(([key, val]) => (
-        <MuiLink
-          href={val.link}
-          target="_blank"
-          key={key}
-          aria-label={val.aria}>
-          {val.icon}
-        </MuiLink>
+        <motion.div whileHover={moveUpOnHover} key={key}>
+          <MuiLink
+            href={val.link}
+            target="_blank"
+            key={key}
+            aria-label={val.aria}>
+            {val.icon}
+          </MuiLink>
+        </motion.div>
       ))}
     </Stack>
   );
