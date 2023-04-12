@@ -1,6 +1,6 @@
 const Projects = [
   {
-    id: 1,
+    id: 'dreamscholars',
     name: 'DreamScholars',
     overview: 'dreamScholars.overview',
     description: 'dreamScholars.description',
@@ -14,7 +14,7 @@ const Projects = [
     secondImgAltText: 'dreamScholars.secondaryAltText',
   },
   {
-    id: 2,
+    id: 'nedflix',
     name: 'Nedflix',
     overview: 'nedflix.overview',
     description: 'nedflix.description',
@@ -28,7 +28,7 @@ const Projects = [
     secondImgAltText: 'nedflix.secondaryAltText',
   },
   {
-    id: 3,
+    id: 'casa-magda',
     name: 'Casa Magda',
     overview: 'casaMagda.overview',
     description: 'casaMagda.description',
@@ -42,7 +42,7 @@ const Projects = [
     secondImgAltText: 'casaMagda.secondaryAltText',
   },
   {
-    id: 4,
+    id: 'trapd',
     name: 'TRAPD',
     overview: 'trapd.overview',
     description: 'trapd.description',
@@ -56,7 +56,7 @@ const Projects = [
     secondImgAltText: 'trapd.secondaryAltText',
   },
   {
-    id: 5,
+    id: 'pacific-marine-app',
     name: 'Pacific Marine App',
     overview: 'pacificMarineApp.overview',
     description: 'pacificMarineApp.description',
@@ -70,7 +70,7 @@ const Projects = [
     secondImgAltText: 'pacificMarineApp.secondaryAltText',
   },
   {
-    id: 6,
+    id: 'party-bash-companion',
     name: 'Party Bash Companion',
     overview: 'partyBash.overview',
     description: 'partyBash.description',
@@ -84,7 +84,7 @@ const Projects = [
     secondImgAltText: 'partyBash.secondaryAltText',
   },
   {
-    id: 7,
+    id: 'search-ed',
     name: 'Search-ED',
     overview: 'searchEd.overview',
     description: 'searchEd.description',
@@ -98,7 +98,7 @@ const Projects = [
     secondImgAltText: 'searchEd.secondaryAltText',
   },
   {
-    id: 8,
+    id: 'fault-localization',
     name: 'Fault Localization',
     overview: 'faultLocalization.overview',
     description: 'faultLocalization.description',
@@ -112,7 +112,7 @@ const Projects = [
     secondImgAltText: 'faultLocalization.secondaryAltText',
   },
   {
-    id: 9,
+    id: 'operating-system-gui',
     name: 'Operating System GUI',
     overview: 'operatingSystemGui.overview',
     description: 'operatingSystemGui.description',
@@ -126,7 +126,7 @@ const Projects = [
     secondImgAltText: 'operatingSystemGui.secondaryAltText',
   },
   {
-    id: 10,
+    id: 'info-weather',
     name: 'Info Weather',
     overview: 'infoWeather.overview',
     description: 'infoWeather.description',
