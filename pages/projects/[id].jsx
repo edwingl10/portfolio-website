@@ -253,7 +253,7 @@ export async function getStaticProps({ locale, params }) {
 export async function getStaticPaths({ locales }) {
   const paths = Projects.map((project) =>
     locales.map((locale) => ({
-      params: { id: project.id.toString() },
+      params: { id: project.id },
       locale,
     }))
   ).flat();
