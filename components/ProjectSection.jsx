@@ -12,7 +12,7 @@ import Image from 'next/legacy/image';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { fadeInScale } from '../utils/animations';
+import { filterAnimation } from '../utils/animations';
 
 export default function ProjectSection({ projects, placeholders }) {
   const { t } = useTranslation('projects');
@@ -36,7 +36,7 @@ export default function ProjectSection({ projects, placeholders }) {
             sx={{ m: { xs: 'auto', sm: 0 } }}
             component={motion.div}
             layout
-            variants={fadeInScale}>
+            variants={filterAnimation}>
             <Card sx={{ height: '100%' }}>
               <Link href={`projects/${project.id}`} legacyBehavior>
                 <CardActionArea>

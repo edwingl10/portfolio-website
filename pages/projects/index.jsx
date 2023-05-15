@@ -6,7 +6,12 @@ import { getPlaiceholder } from 'plaiceholder';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
-import { fadeInLeft, fadeInRight } from '../../utils/animations';
+import {
+  fadeInDown,
+  fadeInLeft,
+  fadeInRight,
+  staggerChildren,
+} from '../../utils/animations';
 import Projects from '../../src/projectData';
 import ProjectSection from '../../components/ProjectSection';
 import SEOHead from '../../components/SEOHead';
@@ -74,7 +79,9 @@ export default function ListProjects({ placeholders, bannerBlur }) {
           direction="row"
           justifyContent="center"
           spacing={2}
-          sx={{ mb: 3 }}>
+          sx={{ mb: 3 }}
+          component={motion.div}
+          variants={staggerChildren}>
           {filters.map((f) => (
             <Button
               key={f.type}
@@ -85,11 +92,14 @@ export default function ListProjects({ placeholders, bannerBlur }) {
                 borderRadius: 4,
                 textTransform: 'capitalize',
                 padding: '6px 8px',
-              }}>
+              }}
+              component={motion.button}
+              variants={fadeInDown}>
               {f.type}
             </Button>
           ))}
         </Stack>
+
         <Container>
           <ProjectSection
             projects={Projects.filter(

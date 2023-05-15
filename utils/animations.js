@@ -33,7 +33,12 @@ export const fadeInLeft = {
 export const fadeInScale = {
   initial: { opacity: 0, scale: 0, transition: customTransition },
   animate: { opacity: 1, scale: 1, transition: customTransition },
-  exit: { opacity: 0, scale: 0, transition: customTransition },
+};
+
+export const filterAnimation = {
+  initial: { opacity: 0, transition: customTransition },
+  animate: { opacity: 1, transition: customTransition },
+  exit: { opacity: 0, transition: customTransition },
 };
 
 export const moveUpOnHover = {
