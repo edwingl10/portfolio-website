@@ -2735,7 +2735,7 @@ eslint-config-airbnb@^19.0.4:
     object.assign "^4.1.2"
     object.entries "^1.1.5"
 
-eslint-config-next@^13.1.6:
+eslint-config-next@^13.4.4:
   version "13.4.4"
   resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-13.4.4.tgz#95356e96f3796ad0587fa2aaa51ec4a81e71cedc"
   integrity sha512-z/PMbm6L0iC/fwISULxe8IVy4DtNqZk2wQY711o35klenq70O6ns82A8yuMVCFjHC0DIyB2lyugesRtuk9u8dQ==
@@ -3937,7 +3937,7 @@ next-i18next@^13.0.1:
     hoist-non-react-statics "^3.3.2"
     i18next-fs-backend "^2.1.1"
 
-next@^13.1.6:
+next@^13.4.4:
   version "13.4.4"
   resolved "https://registry.yarnpkg.com/next/-/next-13.4.4.tgz#d1027c8d77f4c51be0b39f671b4820db03c93e60"
   integrity sha512-C5S0ysM0Ily9McL4Jb48nOQHT1BukOWI59uC3X/xCMlYIh9rJZCv7nzG92J6e1cOBqQbKovlpgvHWFmz4eKKEA==
