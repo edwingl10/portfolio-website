@@ -29,7 +29,7 @@
     "sharp": "^0.32.1"
   },
   "devDependencies": {
-    "@svgr/webpack": "^7.0.0",
+    "@svgr/webpack": "^8.0.1",
     "eslint": "8.38.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^13.4.4",
