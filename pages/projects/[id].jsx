@@ -184,7 +184,7 @@ export default function ViewProject({ project, mainBlurData, secondBlurData }) {
               component={motion.div}
               variants={fadeInDown}>
               <SvgIcon fontSize="large" color="primary">
-                <Icon name={`${name}`} height="inherit" width="inherit" />
+                <Icon name={name} height="inherit" width="inherit" />
               </SvgIcon>
             </Tooltip>
           ))}
@@ -255,7 +255,7 @@ export async function getStaticPaths({ locales }) {
     locales.map((locale) => ({
       params: { id: project.id },
       locale,
-    }))
+    })),
   ).flat();
 
   return { paths, fallback: false };
