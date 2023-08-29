@@ -132,7 +132,7 @@ export async function getStaticProps({ locale }) {
   });
   const { base64: secondaryBlur } = await getPlaiceholder(
     '/images/coding.svg',
-    { size: 10 }
+    { size: 10 },
   );
   const placeholders = { bannerBlur, secondaryBlur };
   return {

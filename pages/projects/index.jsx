@@ -103,7 +103,7 @@ export default function ListProjects({ placeholders, bannerBlur }) {
         <Container>
           <ProjectSection
             projects={Projects.filter(
-              (p) => projectType === 'all' || p.type === projectType
+              (p) => projectType === 'all' || p.type === projectType,
             )}
             {...{ placeholders }}
           />
@@ -128,7 +128,7 @@ export async function getStaticProps({ locale }) {
     Projects.map(async (data) => {
       const { base64 } = await getPlaiceholder(data.mainImg, { size: 10 });
       placeholders[data.id] = base64;
-    })
+    }),
   );
 
   return {

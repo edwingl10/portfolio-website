@@ -141,7 +141,7 @@ export default function Home({ placeholders, bannerBlur }) {
                     component={motion.div}
                     variants={fadeIn}>
                     <SvgIcon fontSize="large" color="primary">
-                      <Icon name={`${name}`} height="100%" width="100%" />
+                      <Icon name={name} height="100%" width="100%" />
                     </SvgIcon>
                     <Typography>{iconTitles[name]}</Typography>
                   </Grid>
@@ -190,7 +190,7 @@ export async function getStaticProps({ locale }) {
     Projects.map(async (data) => {
       const { base64 } = await getPlaiceholder(data.mainImg, { size: 10 });
       placeholders[data.id] = base64;
-    })
+    }),
   );
 
   return {

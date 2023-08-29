@@ -33,7 +33,7 @@ export default function MUIThemeProvider({ children }) {
         setActiveTheme((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
       },
     }),
-    []
+    [],
   );
 
   const theme = useMemo(() =>
@@ -41,8 +41,8 @@ export default function MUIThemeProvider({ children }) {
       createTheme({
         ...(activeTheme === 'light' ? lightTheme : darkTheme),
       }),
-      []
-    )
+      [],
+    ),
   );
 
   return (

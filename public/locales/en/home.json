@@ -1,17 +1,17 @@
 {
-    "head":  {
-        "title": "Edwin Lopez | Home",
-        "description": "Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks.",
-        "keywords": "portfolio, software engineer, web development, mobile development, computer science, game development"
-    },
-    "hi": "Hi, I'm ",
-    "IamASoftwareEngineer": "I am a software engineer currently developing (and occasionally designing) responsive and dynamic websites using modern web technologies.",
-    "dedicatedDeveloper": "I'm a dedicated software developer",
-    "aboutMe": "Welcome to my portfolio website! My name is Edwin Lopez and I’m a software engineer currently focusing on web development. I graduated from the University of California, Irvine and have since been working on a variety of projects that have allowed me to gain experience with many coding languages, frameworks, and technologies.",
-    "moreAboutMe": "I love creating clean, efficient, and visually appealing websites that are both functional and beautiful. I'm always on the lookout for interesting and challenging projects that push my limits and allow me to grow as a developer. When I'm not coding, you can find me spending time with my dog, working out, or working on my next DIY project. If you're interested in working together or just want to say hello, feel free to get in touch!",
-    "mySkills": "My Skills",
-    "projects": "Featured Projects",
-    "images": {
-        "welcome": "Memoji of myself smiling."
-    }
+  "head": {
+    "title": "Edwin Lopez | Home",
+    "description": "Edwin Lopez is a software engineer who has designed and built various projects in different languages and frameworks.",
+    "keywords": "portfolio, software engineer, web development, mobile development, computer science, game development"
+  },
+  "hi": "Hi, I'm ",
+  "IamASoftwareEngineer": "I am a software engineer currently developing (and occasionally designing) responsive and dynamic websites using modern web technologies.",
+  "dedicatedDeveloper": "I'm a dedicated software developer",
+  "aboutMe": "Welcome to my portfolio website! My name is Edwin Lopez and I’m a software engineer currently focusing on web development. I graduated from the University of California, Irvine and have since been working on a variety of projects that have allowed me to gain experience with many coding languages, frameworks, and technologies.",
+  "moreAboutMe": "I love creating clean, efficient, and visually appealing websites that are both functional and beautiful. I'm always on the lookout for interesting and challenging projects that push my limits and allow me to grow as a developer. When I'm not coding, you can find me spending time with my dog, working out, or working on my next DIY project. If you're interested in working together or just want to say hello, feel free to get in touch!",
+  "mySkills": "My Skills",
+  "projects": "Featured Projects",
+  "images": {
+    "welcome": "Memoji of myself smiling."
+  }
 }

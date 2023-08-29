@@ -1,17 +1,17 @@
 {
-     "head":  {
-        "title": "Edwin Lopez | Inicio",
-        "description": "Edwin López es un ingeniero de software que ha diseñado y construido varios proyectos en diferentes lenguajes y frameworks de software.",
-        "keywords": "portafolio, ingeniero de software, desarrollo web, desarrollo móvil, ciencias de la computación, desarrollo de juegos"
-    },
-    "hi": "Hola, soy ",
-    "IamASoftwareEngineer": "Soy un ingeniero de software que actualmente desarrolla (y ocasionalmente diseña) sitios web receptivos y dinámicos utilizando tecnologías web modernas.",
-    "dedicatedDeveloper": "Soy un desarrollador de software dedicado",
-    "aboutMe": "¡Bienvenido al sitio web de mi portafolio! Mi nombre es Edwin López y soy un ingeniero de software que actualmente se enfoca en el desarrollo web. Me gradué de la Universidad de California, Irvine y desde entonces he estado trabajando en una variedad de proyectos que me han permitido ganar experiencia con muchos lenguajes de codificación, marcos y tecnologías.",
-    "moreAboutMe": "Me encanta crear sitios web limpios, eficientes y visualmente atractivos que sean a la vez funcionales y hermosos. Siempre estoy buscando proyectos interesantes y desafiantes que superen mis límites y me permitan crecer como desarrollador. Cuando no estoy programando, puedes encontrarme pasando tiempo con mi perro, haciendo ejercicio o trabajando en mi próximo proyecto de bricolaje. Si estás interesado en trabajar juntos o simplemente quieres saludarme, ¡no dudes en ponerte en contacto!",
-    "mySkills": "Mis habilidades",
-    "projects": "Proyectos destacados",
-    "images": {
-        "welcome": "Memoji de mi mismo sonriendo."
-    }
+  "head": {
+    "title": "Edwin Lopez | Inicio",
+    "description": "Edwin López es un ingeniero de software que ha diseñado y construido varios proyectos en diferentes lenguajes y frameworks de software.",
+    "keywords": "portafolio, ingeniero de software, desarrollo web, desarrollo móvil, ciencias de la computación, desarrollo de juegos"
+  },
+  "hi": "Hola, soy ",
+  "IamASoftwareEngineer": "Soy un ingeniero de software que actualmente desarrolla (y ocasionalmente diseña) sitios web receptivos y dinámicos utilizando tecnologías web modernas.",
+  "dedicatedDeveloper": "Soy un desarrollador de software dedicado",
+  "aboutMe": "¡Bienvenido al sitio web de mi portafolio! Mi nombre es Edwin López y soy un ingeniero de software que actualmente se enfoca en el desarrollo web. Me gradué de la Universidad de California, Irvine y desde entonces he estado trabajando en una variedad de proyectos que me han permitido ganar experiencia con muchos lenguajes de codificación, marcos y tecnologías.",
+  "moreAboutMe": "Me encanta crear sitios web limpios, eficientes y visualmente atractivos que sean a la vez funcionales y hermosos. Siempre estoy buscando proyectos interesantes y desafiantes que superen mis límites y me permitan crecer como desarrollador. Cuando no estoy programando, puedes encontrarme pasando tiempo con mi perro, haciendo ejercicio o trabajando en mi próximo proyecto de bricolaje. Si estás interesado en trabajar juntos o simplemente quieres saludarme, ¡no dudes en ponerte en contacto!",
+  "mySkills": "Mis habilidades",
+  "projects": "Proyectos destacados",
+  "images": {
+    "welcome": "Memoji de mi mismo sonriendo."
+  }
 }

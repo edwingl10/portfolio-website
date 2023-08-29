@@ -86,7 +86,7 @@ ProjectSection.propTypes = {
       secondImg: PropTypes.string,
       mainImgAltText: PropTypes.string,
       secondImgAltText: PropTypes.string,
-    })
+    }),
   ).isRequired,
   placeholders: PropTypes.objectOf(PropTypes.string).isRequired,
 };

@@ -20,7 +20,7 @@ href="${URL}${route}"/>
 rel="alternate" 
 hreflang="es"
 href="${URL}/es${route}"/>
-</url>`
+</url>`,
   )
   .join('')}
 
@@ -37,7 +37,7 @@ href="${URL}/es${route}"/>
     rel="alternate"
     hreflang="es"
     href="${URL}/es/projects/${id}"/>
-  </url>`
+  </url>`,
   ).join('')}
 </urlset>`;
 }

@@ -1,16 +1,16 @@
 {
-     "head":  {
-        "title": "Edwin Lopez | About",
-        "description": "Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects.",
-        "keywords": "software engineer, university of california irvine, front end, back end"
-    },
-    "about": "Who I Am",
-    "ImAFirstGen": "I am a first generation college student that graduated from the University of California, Irvine as a Software Engineer. I enjoy working on various projects, from game development to web development. Currently, I am looking for opportunities to work on exciting and challenging software development projects, where I can use my technical expertise to create innovative solutions. Whether it's front-end/back-end web development or mobile app development, I am eager to take on new challenges and contribute to the field of software engineering.",
-    "myPassion": "My Purpose and Passion",
-    "uncoveredMyPassion": "My passion for coding was initially sparked when I took a semester long computer science class in High School. Although it was about moving code blocks to program, when I finished a functional replica of the Mario game, it piqued my curiosity and I quickly discovered that programming offered so much more. I fell in love with the problem-solving aspect of programming, the satisfaction that comes with creating something from scratch, and the constant learning that is required to keep up with advancements in technology.",
-    "moreAboutMyPassion": "To me, the process of building a program is just as rewarding as the final product. I relish the challenge of finding solutions to problems and the new skills I learn along the way. Whether it's debugging a stubborn bug or figuring out how to integrate a new feature into an existing program, I find the entire process to be intellectually stimulating and fulfilling. Overall, my passion for coding has only continued to grow, and I am excited to continue exploring new programming languages, technologies, and project ideas in the future.",
-    "images": {
-        "wave": "Memoji of myself smiling and waving.",
-        "coding": "Hands typing on a keyboard with a plant, coffee, mouse, and monitor on the workspace."
-    }
+  "head": {
+    "title": "Edwin Lopez | About",
+    "description": "Edwin Lopez graduated from the University of California, Irvine as a software engineer and enjoys working on front-end/back-end web projects.",
+    "keywords": "software engineer, university of california irvine, front end, back end"
+  },
+  "about": "Who I Am",
+  "ImAFirstGen": "I am a first generation college student that graduated from the University of California, Irvine as a Software Engineer. I enjoy working on various projects, from game development to web development. Currently, I am looking for opportunities to work on exciting and challenging software development projects, where I can use my technical expertise to create innovative solutions. Whether it's front-end/back-end web development or mobile app development, I am eager to take on new challenges and contribute to the field of software engineering.",
+  "myPassion": "My Purpose and Passion",
+  "uncoveredMyPassion": "My passion for coding was initially sparked when I took a semester long computer science class in High School. Although it was about moving code blocks to program, when I finished a functional replica of the Mario game, it piqued my curiosity and I quickly discovered that programming offered so much more. I fell in love with the problem-solving aspect of programming, the satisfaction that comes with creating something from scratch, and the constant learning that is required to keep up with advancements in technology.",
+  "moreAboutMyPassion": "To me, the process of building a program is just as rewarding as the final product. I relish the challenge of finding solutions to problems and the new skills I learn along the way. Whether it's debugging a stubborn bug or figuring out how to integrate a new feature into an existing program, I find the entire process to be intellectually stimulating and fulfilling. Overall, my passion for coding has only continued to grow, and I am excited to continue exploring new programming languages, technologies, and project ideas in the future.",
+  "images": {
+    "wave": "Memoji of myself smiling and waving.",
+    "coding": "Hands typing on a keyboard with a plant, coffee, mouse, and monitor on the workspace."
+  }
 }
