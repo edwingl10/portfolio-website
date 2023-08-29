@@ -1,28 +1,28 @@
 {
-    "btn":{
-        "contact": "contact",
-        "viewMore": "view more",
-        "explore": "explore",
-        "share": "share",
-        "backToHome": "back to home"
-    },
-    "rightsReserved": "All rights reserved. - Designed & coded by Edwin Lopez.",
-    "about": "About",
-    "projects": "Projects",
-    "resume": "Resume",
-    "contact": "Contact",
-    "darkMode": "Dark Mode",
-    "lightMode": "Light Mode",
-    "404": {
-        "imageAlt": "A laptop showing a 404 message",
-        "pageNotFound": "Page Not Found",
-        "notAvailable": "Sorry, the page you are looking for is not available."
-    },
-    "copiedToClipboard": "Copied to clipboard",
-    "scrollTop": "Scroll to top",
-    "home": "Home",
-    "navMenu": "Navigation menu",
-    "navTabs": "Navigation tabs",
-    "changeTheme": "Change theme",
-    "selectLang": "Select language"
+  "btn": {
+    "contact": "contact",
+    "viewMore": "view more",
+    "explore": "explore",
+    "share": "share",
+    "backToHome": "back to home"
+  },
+  "rightsReserved": "All rights reserved. - Designed & coded by Edwin Lopez.",
+  "about": "About",
+  "projects": "Projects",
+  "resume": "Resume",
+  "contact": "Contact",
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode",
+  "404": {
+    "imageAlt": "A laptop showing a 404 message",
+    "pageNotFound": "Page Not Found",
+    "notAvailable": "Sorry, the page you are looking for is not available."
+  },
+  "copiedToClipboard": "Copied to clipboard",
+  "scrollTop": "Scroll to top",
+  "home": "Home",
+  "navMenu": "Navigation menu",
+  "navTabs": "Navigation tabs",
+  "changeTheme": "Change theme",
+  "selectLang": "Select language"
 }

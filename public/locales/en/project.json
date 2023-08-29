@@ -1,7 +1,7 @@
 {
-     "head":  {
-        "description": "Explore {{project}} and learn how {{tech}} were used to create this project."
-    },
-    "behindTheScenes": "Behind the Scenes",
-    "technologyUsed": "Technology Used"
+  "head": {
+    "description": "Explore {{project}} and learn how {{tech}} were used to create this project."
+  },
+  "behindTheScenes": "Behind the Scenes",
+  "technologyUsed": "Technology Used"
 }

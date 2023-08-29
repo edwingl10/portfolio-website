@@ -1,28 +1,28 @@
 {
-    "btn":{
-        "contact": "contacto",
-        "viewMore": "ver más",
-        "explore": "explorar",
-        "share": "compartir",
-        "backToHome": "volver a pagina inicial"
-    },
-    "rightsReserved": "Reservados todos los derechos. - Diseñado y programado por Edwin López.",
-    "about": "Sobre",
-    "projects": "Proyectos",
-    "resume": "Currículo",
-    "contact": "Contacto",
-    "darkMode": "Modo Oscuro",
-    "lightMode": "Modo Claro",
-    "404": {
-        "imageAlt": "Una computadora portátil que muestra un mensaje de 404",
-        "pageNotFound": "Página no existe",
-        "notAvailable": "Lo sentimos, la página que busca no está disponible."
-    },
-    "copiedToClipboard": "Copiado al portapapeles",
-    "scrollTop": "Vuelva al comienzo",
-    "home": "Inicio",
-    "navMenu": "Menú de navegación",
-    "navTabs": "Pestañas de navegación",
-    "changeTheme": "Cambiar modo",
-    "selectLang": "Seleccionar idioma"
+  "btn": {
+    "contact": "contacto",
+    "viewMore": "ver más",
+    "explore": "explorar",
+    "share": "compartir",
+    "backToHome": "volver a pagina inicial"
+  },
+  "rightsReserved": "Reservados todos los derechos. - Diseñado y programado por Edwin López.",
+  "about": "Sobre",
+  "projects": "Proyectos",
+  "resume": "Currículo",
+  "contact": "Contacto",
+  "darkMode": "Modo Oscuro",
+  "lightMode": "Modo Claro",
+  "404": {
+    "imageAlt": "Una computadora portátil que muestra un mensaje de 404",
+    "pageNotFound": "Página no existe",
+    "notAvailable": "Lo sentimos, la página que busca no está disponible."
+  },
+  "copiedToClipboard": "Copiado al portapapeles",
+  "scrollTop": "Vuelva al comienzo",
+  "home": "Inicio",
+  "navMenu": "Menú de navegación",
+  "navTabs": "Pestañas de navegación",
+  "changeTheme": "Cambiar modo",
+  "selectLang": "Seleccionar idioma"
 }
